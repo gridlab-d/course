@@ -1,0 +1,22 @@
+module residential;
+module tape;
+clock {
+	timezone "PST+8PDT";
+	starttime '2001-01-01 00:00:00 PST';
+}
+object shaper {
+	file lights.shape;
+	group "class=lights";
+	property demand;
+	events 1.5;
+};
+object house {
+	object lights {
+		object recorder {
+			file lights.csv;
+			property demand;
+			interval 300;
+			limit 100;
+		};
+	};
+}

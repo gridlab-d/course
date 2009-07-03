@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-2_0.xsl" type="text/xsl"?>
+<gridlabd>
+	<version.major>2</version.major>
+	<version.minor>0</version.minor>
+	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe H:\GridLAB-D Class\Solutions\5.3\Exercise 1.glm"</command_line>
+	<environment>batch</environment>
+	<quiet>0</quiet>
+	<warn>1</warn>
+	<debugger>0</debugger>
+	<gdb>0</gdb>
+	<debug>0</debug>
+	<test>0</test>
+	<verbose>0</verbose>
+	<iteration_limit>100</iteration_limit>
+	<workdir>"H:\GridLAB-D Class\Solutions\5.3"</workdir>
+	<dumpfile>gridlabd.xml</dumpfile>
+	<savefile>""</savefile>
+	<dumpall>0</dumpall>
+	<runchecks>0</runchecks>
+	<threadcount>1</threadcount>
+	<profiler>0</profiler>
+	<pauseatexit>0</pauseatexit>
+	<testoutputfile>test.txt</testoutputfile>
+	<xml_encoding>8</xml_encoding>
+	<clock>INIT</clock>
+	<starttime>2009-05-07 15:28:08 PDT</starttime>
+	<stoptime>NEVER</stoptime>
+	<double_format>%+lg</double_format>
+	<complex_format>%+lg%+lg%c</complex_format>
+	<object_format>%s:%d</object_format>
+	<object_scan>%[^:]:%d</object_scan>
+	<object_tree_balance>FALSE</object_tree_balance>
+	<kmlfile>""</kmlfile>
+	<modelname>"H:\GridLAB-D Class\Solutions\5.3\Exercise 1.glm"</modelname>
+	<execdir>"C:\Program Files\GridLAB-D\bin"</execdir>
+	<strictnames>TRUE</strictnames>
+	<website>http://www.gridlabd.org/</website>
+	<urlbase>http://www.gridlabd.org/</urlbase>
+	<randomseed>0</randomseed>
+	<include>"c:/Program Files/GridLAB-D"</include>
+	<trace>""</trace>
+	<gdb_window>0</gdb_window>
+	<tmp>c:/temp</tmp>
+	<force_compile>0</force_compile>
+	<nolocks>0</nolocks>
+	<skipsafe>0</skipsafe>
+	<timezone>PST8PDT</timezone>
+	<sync-order>
+	</sync-order>
+	<commercial>
+		<version.major>1</version.major>
+		<version.minor>0</version.minor>
+		<office_list>
+			<office>
+				<id>0</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(office:0)</name>
+				<occupancy>+0</occupancy>
+				<floor_height>+8 ft</floor_height>
+				<exterior_ua>+100 Btu/degF/h</exterior_ua>
+				<interior_ua>+100 Btu/degF/h</interior_ua>
+				<interior_mass>+500 Btu/degF</interior_mass>
+				<floor_area>+3500 sf</floor_area>
+				<glazing>+0 sf</glazing>
+				<glazing.north>+0 sf</glazing.north>
+				<glazing.northeast>+0 sf</glazing.northeast>
+				<glazing.east>+0 sf</glazing.east>
+				<glazing.southeast>+0 sf</glazing.southeast>
+				<glazing.south>+0 sf</glazing.south>
+				<glazing.southwest>+0 sf</glazing.southwest>
+				<glazing.west>+0 sf</glazing.west>
+				<glazing.northwest>+0 sf</glazing.northwest>
+				<glazing.horizontal>+0 sf</glazing.horizontal>
+				<glazing.coefficient>+0 pu</glazing.coefficient>
+				<occupants>+0</occupants>
+				<schedule>"1-5 8-17"</schedule>
+				<air_temperature>+59 degF</air_temperature>
+				<mass_temperature>+59 degF</mass_temperature>
+				<temperature_change>+0 degF/h</temperature_change>
+				<Qh>+0 Btu/h</Qh>
+				<Qs>+0 Btu/h</Qs>
+				<Qi>+0 Btu/h</Qi>
+				<Qz>+0 Btu/h</Qz>
+				<hvac.mode>OFF</hvac.mode>
+				<hvac.cooling.balance_temperature>+0 degF</hvac.cooling.balance_temperature>
+				<hvac.cooling.capacity>+72732.8 Btu/h</hvac.cooling.capacity>
+				<hvac.cooling.capacity_perF>+0 Btu/degF/h</hvac.cooling.capacity_perF>
+				<hvac.cooling.design_temperature>+0 degF</hvac.cooling.design_temperature>
+				<hvac.cooling.efficiency>+0 pu</hvac.cooling.efficiency>
+				<hvac.cooling.cop>-3.00937 pu</hvac.cooling.cop>
+				<hvac.heating.balance_temperature>+0 degF</hvac.heating.balance_temperature>
+				<hvac.heating.capacity>+67884 Btu/h</hvac.heating.capacity>
+				<hvac.heating.capacity_perF>+0 Btu/degF/h</hvac.heating.capacity_perF>
+				<hvac.heating.design_temperature>+0 degF</hvac.heating.design_temperature>
+				<hvac.heating.efficiency>+0 pu</hvac.heating.efficiency>
+				<hvac.heating.cop>+1.38905 pu</hvac.heating.cop>
+				<lights.capacity>+0 kW</lights.capacity>
+				<lights.fraction>+0 pu</lights.fraction>
+				<plugs.capacity>+0 kW</plugs.capacity>
+				<plugs.fraction>+0 pu</plugs.fraction>
+				<demand>+0+0i kW</demand>
+				<power>+0+0i kW</power>
+				<energy>+0+0i</energy>
+				<power_factor>+0</power_factor>
+				<hvac.demand>+0+0i kW</hvac.demand>
+				<hvac.power>+0+0i kW</hvac.power>
+				<hvac.energy>+0+0i</hvac.energy>
+				<hvac.power_factor>+1</hvac.power_factor>
+				<lights.demand>+0+0i kW</lights.demand>
+				<lights.power>+0+0i kW</lights.power>
+				<lights.energy>+0+0i</lights.energy>
+				<lights.power_factor>+1</lights.power_factor>
+				<plugs.demand>+0+0i kW</plugs.demand>
+				<plugs.power>+0+0i kW</plugs.power>
+				<plugs.energy>+0+0i</plugs.energy>
+				<plugs.power_factor>+1</plugs.power_factor>
+				<control.cooling_setpoint>+75</control.cooling_setpoint>
+				<control.heating_setpoint>+70</control.heating_setpoint>
+				<control.setpoint_deadband>+1</control.setpoint_deadband>
+				<control.ventilation_fraction>+0</control.ventilation_fraction>
+				<control.lighting_fraction>+0.5</control.lighting_fraction>
+			</office>
+		</office_list>
+		<multizone_list>
+		</multizone_list>
+	</commercial>
+</gridlabd>

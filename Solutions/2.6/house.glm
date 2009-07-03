@@ -1,0 +1,15 @@
+module residential;
+module tape;
+clock {
+	timezone "PST+8PDT";
+	starttime '2001-01-01 00:00:00 PST';
+}
+object house {
+	object recorder {
+		property air_temperature;
+		file plot:house.jpg;
+		output SCREEN;
+		interval 300;
+		limit 100;
+	};
+}

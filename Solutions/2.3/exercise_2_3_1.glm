@@ -1,0 +1,23 @@
+module tape;
+module residential;
+
+clock {
+	timestamp '2001-01-01 00:00:00 PST';
+	stoptime '2001-02-01 00:00:00 PST';
+}
+
+object house{
+	object plugload{
+		object shaper{
+			group class=plugload;
+			property demand;
+			file exercise_2_3_plug.shape;
+		};
+		object recorder{
+			property enduse_load,demand,energy_meter;
+			interval 10800;
+			file exercise_2_3_1.csv;
+		};
+		constant_power 1000 kW;
+	};
+};

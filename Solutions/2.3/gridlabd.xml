@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-2_0.xsl" type="text/xsl"?>
+<gridlabd>
+	<version.major>2</version.major>
+	<version.minor>0</version.minor>
+	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe H:\Solutions\2.3\lights.glm"</command_line>
+	<environment>batch</environment>
+	<quiet>0</quiet>
+	<warn>1</warn>
+	<debugger>0</debugger>
+	<gdb>0</gdb>
+	<debug>0</debug>
+	<test>0</test>
+	<verbose>0</verbose>
+	<iteration_limit>100</iteration_limit>
+	<workdir>H:\Solutions\2.3</workdir>
+	<dumpfile>gridlabd.xml</dumpfile>
+	<savefile>""</savefile>
+	<dumpall>0</dumpall>
+	<runchecks>0</runchecks>
+	<threadcount>1</threadcount>
+	<profiler>0</profiler>
+	<pauseatexit>0</pauseatexit>
+	<testoutputfile>test.txt</testoutputfile>
+	<xml_encoding>8</xml_encoding>
+	<clock>2001-01-01 00:00:00 PST</clock>
+	<starttime>2009-04-16 13:43:41 PDT</starttime>
+	<stoptime>NEVER</stoptime>
+	<double_format>%+lg</double_format>
+	<complex_format>%+lg%+lg%c</complex_format>
+	<object_format>%s:%d</object_format>
+	<object_scan>%[^:]:%d</object_scan>
+	<object_tree_balance>FALSE</object_tree_balance>
+	<kmlfile>""</kmlfile>
+	<modelname>H:\Solutions\2.3\lights.glm</modelname>
+	<execdir>"C:\Program Files\GridLAB-D\bin"</execdir>
+	<strictnames>TRUE</strictnames>
+	<website>http://www.gridlabd.org/</website>
+	<urlbase>http://www.gridlabd.org/</urlbase>
+	<randomseed>0</randomseed>
+	<include>""</include>
+	<trace>""</trace>
+	<gdb_window>0</gdb_window>
+	<tmp>c:/temp</tmp>
+	<force_compile>0</force_compile>
+	<nolocks>0</nolocks>
+	<skipsafe>0</skipsafe>
+	<timezone>PST8PDT</timezone>
+	<sync-order>
+		<pass>
+			<name>pretopdown</name>
+			<rank>
+				<ordinal>2</ordinal>
+				<object>
+					<name>(house:1)</name>
+					<id>1</id>
+				</object>
+			</rank>
+		</pass>
+		<pass>
+			<name>bottomup</name>
+			<rank>
+				<ordinal>0</ordinal>
+				<object>
+					<name>(shaper:0)</name>
+					<id>0</id>
+				</object>
+			</rank>
+			<rank>
+				<ordinal>1</ordinal>
+				<object>
+					<name>(lights:2)</name>
+					<id>2</id>
+				</object>
+			</rank>
+			<rank>
+				<ordinal>2</ordinal>
+				<object>
+					<name>(house:1)</name>
+					<id>1</id>
+				</object>
+			</rank>
+		</pass>
+		<pass>
+			<name>posttopdown</name>
+			<rank>
+				<ordinal>0</ordinal>
+				<object>
+					<name>(recorder:3)</name>
+					<id>3</id>
+				</object>
+			</rank>
+		</pass>
+	</sync-order>
+	<residential>
+		<version.major>1</version.major>
+		<version.minor>0</version.minor>
+		<house_list>
+			<house>
+				<id>1</id>
+				<rank>2</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2001-01-01 00:00:00 PST</clock>
+				<name>(house:1)</name>
+				<floor_area>+2378.48 sf</floor_area>
+				<gross_wall_area>+6242.52 sf</gross_wall_area>
+				<ceiling_height>+8 ft</ceiling_height>
+				<aspect_ratio>+1</aspect_ratio>
+				<envelope_UA>+394.306 Btu/degF</envelope_UA>
+				<window_wall_ratio>+0.15</window_wall_ratio>
+				<glazing_shgc>+0.65</glazing_shgc>
+				<airchange_per_hour>+4.39001</airchange_per_hour>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<thermostat_deadband>+2 degF</thermostat_deadband>
+				<heating_setpoint>+71.8763 degF</heating_setpoint>
+				<cooling_setpoint>+77.1619 degF</cooling_setpoint>
+				<design_heating_capacity>+21.0128 Btu</design_heating_capacity>
+				<design_cooling_capacity>+19.526 Btu</design_cooling_capacity>
+				<heating_COP>+3</heating_COP>
+				<cooling_COP>+3</cooling_COP>
+				<COP_coeff>+0.914081</COP_coeff>
+				<air_temperature>+74.8284 degF</air_temperature>
+				<mass_heat_coeff>+1577.86</mass_heat_coeff>
+				<heat_mode>ELECTRIC</heat_mode>
+				<total_load>+0+0j kW</total_load>
+				<enduse_load>+0+0j kW</enduse_load>
+				<power>+0+0j kW</power>
+				<current>+0+0j A</current>
+				<admittance>+0+0j 1/Ohm</admittance>
+			</house>
+		</house_list>
+		<waterheater_list>
+		</waterheater_list>
+		<lights_list>
+			<lights>
+				<id>2</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>house:1</parent>
+				<name>(lights:2)</name>
+				<type>INCANDESCENT</type>
+				<placement>INDOOR</placement>
+				<installed_power>+2557.53 W</installed_power>
+				<circuit_split>-0.997498</circuit_split>
+				<demand>+1 unit</demand>
+				<enduse_load>+0+0j kW</enduse_load>
+				<constant_power>+2.55753+0j kW</constant_power>
+				<constant_current>+0+0j A</constant_current>
+				<constant_admittance>+0+0j 1/Ohm</constant_admittance>
+				<internal_gains>+0 kW</internal_gains>
+				<energy_meter>+0 kWh</energy_meter>
+			</lights>
+		</lights_list>
+		<refrigerator_list>
+		</refrigerator_list>
+		<clotheswasher_list>
+		</clotheswasher_list>
+		<dishwasher_list>
+		</dishwasher_list>
+		<occupantload_list>
+		</occupantload_list>
+		<plugload_list>
+		</plugload_list>
+		<microwave_list>
+		</microwave_list>
+		<range_list>
+		</range_list>
+		<freezer_list>
+		</freezer_list>
+		<dryer_list>
+		</dryer_list>
+		<evcharger_list>
+		</evcharger_list>
+	</residential>
+	<tape>
+		<version.major>1</version.major>
+		<version.minor>0</version.minor>
+		<player_list>
+		</player_list>
+		<shaper_list>
+			<shaper>
+				<id>0</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2001-01-01 00:00:00 PST</clock>
+				<name>(shaper:0)</name>
+				<file>lights.shape</file>
+				<filetype>txt</filetype>
+				<group>class=lights</group>
+				<property>""</property>
+				<magnitude>+1</magnitude>
+				<events>+0</events>
+			</shaper>
+		</shaper_list>
+		<recorder_list>
+			<recorder>
+				<id>3</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>lights:2</parent>
+				<name>(recorder:3)</name>
+				<property>demand</property>
+				<trigger>""</trigger>
+				<file>lights.csv</file>
+				<interval>3600</interval>
+				<limit>100</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+			</recorder>
+		</recorder_list>
+		<collector_list>
+		</collector_list>
+		<histogram_list>
+		</histogram_list>
+	</tape>
+</gridlabd>

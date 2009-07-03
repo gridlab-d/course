@@ -1,0 +1,82 @@
+// ID
+// Model is 4 node test system given as example in 
+// Grainger & Stevenson, Jr.
+#set savefile="4nodetest.xml"
+#set profiler=1
+
+clock {
+	timestamp '2000-01-01 0:00:00';
+}
+
+module network {
+	acceleration_factor 1.4;
+	convergence_limit 0.001;
+}
+
+//Create model - nodes
+object node {
+	name Birch;
+	V 230000.0;
+	S -50000.0-30990.0j;
+	base_kV 230000;
+	type SWING;
+}
+
+object node {
+	name Elm;
+	parent Birch;
+	V 230000.0;
+	S -170000.0-105350.0j;
+	base_kV 230000;
+	type PQ;
+}
+
+object node {
+	name Pine;
+	parent Birch;
+	V 230000.0;
+	S -200000.0-123940.0j;
+	base_kV 230000;
+	type PQ;
+}
+
+object node {
+	name Maple;
+	parent Birch;
+	V 234600.0;
+	S 238000.0-49580.0j;
+	base_kV 230000;
+	type PV;
+}
+
+object link {
+	name 1-2;
+	from Birch;
+	to Elm;
+	Y 3.815629-19.078144j;
+	B 0.05125;
+}
+
+object link {
+	name 1-3;
+	from Birch;
+	to Pine;
+	Y 5.169561-25.847809j;
+	B 0.03875;
+}
+
+object link {
+	name 2-4;
+	from Elm;
+	to Maple;
+	Y 5.169561-25.847809j;
+	B 0.03875;
+}
+
+object link {
+	name 3-4;
+	from Pine;
+	to Maple;
+	Y 3.023705-15.118528j;
+	B 0.06375;
+}

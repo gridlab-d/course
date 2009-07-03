@@ -1,0 +1,8 @@
+module residential;
+clock {
+	starttime '2009-01-01 0:00:00 PST';
+	stoptime '2009-12-31 23:59:59 PST';
+}
+object house:..10 {
+	name `house_{id}`;
+}

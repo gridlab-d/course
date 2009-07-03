@@ -1,0 +1,287 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BEGIN
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// IEEE 14-bus feeder example
+// Manually written from CDF file available
+
+
+#set savefile="Manual14bus.xml"
+#set iteration_limit=10000
+#set profiler=1
+#set pauseatexit=1
+
+clock {
+	timestamp '2000-01-01 0:00:00';
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// modules
+module network {
+	acceleration_factor 1;
+	convergence_limit 0.000000001;
+}
+
+object node {
+	name 1;
+	V 1.060;
+	S 232.400-16.900j;
+	type SWING;
+}
+
+object node {
+	name 2;
+	parent 1;
+	V 1.04106-.0907144j;
+	S -0.183-0.297j;
+	type PV;
+	Qmax_MVAR 50;
+	Qmin_MVAR -40;
+}
+
+object node {
+	name 3;
+	parent 1;
+	V 0.98521-0.22239j;
+	S .94200-.04400j;
+	type PV;
+	Qmax_MVAR 40;
+}
+
+object node {
+	name 4;
+	parent 1;
+	V 1.000;
+	S 0.47800-0.03900j;
+	type PQ;
+}
+
+object node {
+	name 5;
+	parent 1;
+	V 1.00;
+	S 0.07600+0.01600j;
+	type PQ;
+}
+
+object node {
+	name 6;
+	parent 1;
+	V 1.037215-0.262841j;
+	S 0.11200-0.04700j;
+	type PV;
+	Qmax_MVAR 24;
+	Qmin_MVAR -6;
+}
+
+object node {
+	name 7;
+	parent 1;
+	V 1.00;
+	S 0;
+	type PQ;
+}
+
+object node {
+	name 8;
+	parent 1;
+	V 1.0605-0.251865j;
+	S 0-0.17400j;
+	type PV;
+	Qmax_MVAR 24;
+	Qmin_MVAR -6;
+}
+
+object node {
+	name 9;
+	parent 1;
+	V 1.000;
+	S 0.29500+0.16600j;
+	B 0.19;
+	type PQ;
+}
+
+object node {
+	name 10;
+	parent 1;
+	V 1.000;
+	S 0.09000+0.05800j;
+	type PQ;
+}
+
+object node {
+	name 11;
+	parent 1;
+	V 1.000;
+	S 0.03500+0.01800j;
+	type PQ;
+}
+
+object node {
+	name 12;
+	parent 1;
+	V 1.000;
+	S 0.06100+0.01600j;
+	type PQ;
+}
+
+object node {
+	name 13;
+	parent 1;
+	V 1.000;
+	S 0.13500+0.05800j;
+	type PQ;
+}
+
+object node {
+	name 14;
+	parent 1;
+	V 1.000;
+	S 0.14900+0.05000j;
+	type PQ;
+}
+
+object link {
+	name 1-2;
+	from 1;
+	to 2;
+	Y 4.99913-15.26309j;
+	B 0.0528;
+}
+
+object link {
+	name 1-5;
+	from 1;
+	to 5;
+	Y 1.02590-4.23498j;
+	B 0.0492;
+}
+
+object link {
+	name 2-3;
+	from 2;
+	to 3;
+	Y 1.13502-4.781863j;
+	B 0.0438;
+}
+
+object link {
+	name 2-4;
+	from 2;
+	to 4;
+	Y 1.686033-5.115838j;
+	B 0.0340;
+}
+
+object link {
+	name 2-5;
+	from 2;
+	to 5;
+	Y 1.701140-5.193927j;
+	B 0.0346;
+}
+
+object link {
+	name 3-4;
+	from 3;
+	to 4;
+	Y 1.985976-5.068817j;
+	B 0.0128;
+}
+
+object link {
+	name 4-5;
+	from 4;
+	to 5;
+	Y 6.840981-21.578554j;
+}
+
+object link {
+	name 4-7;
+	from 4;
+	to 7;
+	Y 0-4.781943j;
+}
+
+object link {
+	name 4-9;
+	from 4;
+	to 9;
+	Y 0-1.797979j;
+}
+
+object link {
+	name 5-6;
+	from 5;
+	to 6;
+	Y 0-3.967939j;
+}
+
+object link {
+	name 6-11;
+	from 6;
+	to 11;
+	Y 1.95503-4.09407j;
+}
+
+object link {
+	name 6-12;
+	from 6;
+	to 12;
+	Y 1.525967-3.175964j;
+}
+
+object link {
+	name 6-13;
+	from 6;
+	to 13;
+	Y 3.098927-6.102755j;
+}
+
+object link {
+	name 7-8;
+	from 7;
+	to 8;
+	Y 0-5.6769798j;
+}
+
+object link {
+	name 7-9;
+	from 7;
+	to 9;
+	Y 0-9.09008j;
+}
+
+object link {
+	name 9-10;
+	from 9;
+	to 10;
+	Y 3.90205-10.36539j;
+}
+
+object link {
+	name 9-14;
+	from 9;
+	to 14;
+	Y 1.4240055-3.02905j;
+}
+
+object link {
+	name 10-11;
+	from 10;
+	to 11;
+	Y 1.880885-4.402944j;
+}
+
+object link {
+	name 12-13;
+	from 12;
+	to 13;
+	Y 2.489025-2.251975j;
+}
+
+object link {
+	name 13-14;
+	from 13;
+	to 14;
+	Y 1.1369942-2.314963j;
+}

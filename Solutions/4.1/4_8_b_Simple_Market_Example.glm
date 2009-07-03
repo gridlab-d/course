@@ -1,0 +1,106 @@
+// $Id$
+//	Copyright (C) 2008 Battelle Memorial Institute
+//
+// Market test
+// generates 10000 bids, one each 5 minutes and clear a market once per hour
+
+#set pauseatexit=1
+#define include="c:/program files/gridlab-dnew"
+
+module market;
+module tape;
+
+clock {
+	timezone "CST+6CDT";
+	timestamp '2000-01-01 0:00:00';
+}
+
+object auction {
+	name Market;
+	type DOUBLE;
+	unit "MWh";
+	period 3600;
+	latency 86400;
+	object recorder {
+		file "test.csv";
+		property "last.Q,last.P,next.Q,next.P";
+		limit 8760;
+		interval -1;
+	};
+};
+
+class test {
+	int16 count;
+	object market;
+	enumeration {BUYER=0, SELLER=1} role;
+	int32 lastbid_id;
+	int64 lastmkt_id;
+	double price;		//Added in so price can be specified
+	double quantity;	//Added in so quantity can be specified
+	public int64 *thismkt_id;
+	function auction::submit_bid;
+	intrinsic create (object parent)
+	{
+		return SUCCESS;
+	};
+	intrinsic init (object parent)
+	{
+		lastbid_id = -1;
+		lastmkt_id = -1;
+		if (market==NULL)
+			throw "market is not defined";
+		thismkt_id = (int64*)gl_get_addr(market,"market_id");
+		if (thismkt_id==NULL)
+			throw "market does not define market_id";
+		return SUCCESS;
+	};
+	intrinsic sync (TIMESTAMP t0, TIMESTAMP t1)
+	{
+		//double quantity = gl_random_lognormal(3,1); - specified externally now
+		//double price = gl_random_lognormal(2,1);
+		lastbid_id = (int32)submit_bid(market,my,role==BUYER?-quantity:quantity,price,*thismkt_id!=lastmkt_id?-1:lastbid_id);
+		count--;
+		lastmkt_id = *thismkt_id;
+		if (count>0)
+			return t1+300;
+		else
+			return TS_NEVER;
+	};
+}
+
+//Put bidding and selling objects here
+object test {
+	name Bidder1;
+	role BUYER;
+	count 5000;
+	market Market;
+	price 0.10;
+	quantity 20;
+}
+
+object test {
+	name Bidder2;
+	role BUYER;
+	count 5000;
+	market Market;
+	price 0.20;
+	quantity 31;
+}
+
+object test {
+	name Seller1;
+	role SELLER;
+	count 5000;
+	market Market;
+	price 0.05;
+	quantity 12;
+}
+
+object test {
+	name Seller2;
+	role SELLER;
+	count 5000;
+	market Market;
+	price 0.15;
+	quantity 25;
+}

@@ -1,0 +1,46 @@
+// Exercise 5.1
+
+#setenv GLPATH=c:/program files/gridlab-d/lib;c:/program files/gridlab-d/etc;c:/program files/gridlab-d/tmy
+
+clock {
+	timezone "PST+8PDT";
+	starttime '1980-01-01 0:00:00 GMT';
+}
+
+#include "WA-Yakima.glm"
+
+class weather {
+	timestamp day;
+	object location;
+	intrinsic create (object parent)
+	{
+		return 1;
+	};
+	intrinsic init (object parent)
+	{
+		if (day==0) throw "day not set";
+		if (location==NULL) throw "location not set";
+		return 1;
+	};
+	intrinsic sync (timestamp t0, timestamp t1)
+	{
+		if (t1<day)	return day;
+		if (t1>day+86400) return TS_NEVER;
+		
+		double temperature, humidity, solar_flux, wind_speed;
+		
+		gl_get_value(location,"temperature",temperature);
+		gl_get_value(location,"humidity",humidity);
+		gl_get_value(location,"solar_flux",solar_flux);
+		gl_get_value(location,"wind_speed",wind_speed);
+		
+		gl_output("%s: %.1f degF, %.1f%% RH, %.1f W/sf, %.1f mph", 
+			gl_strftime(t1), temperature, humidity*100, solar_flux,wind_speed);
+		return t1 + 3600;
+	};
+}
+
+object weather {
+	location "Yakima WA";
+	day '2001-04-02';
+}

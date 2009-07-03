@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-2_0.xsl" type="text/xsl"?>
+<gridlabd>
+	<version.major>2</version.major>
+	<version.minor>0</version.minor>
+	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe \\cassie\d3g637\GridLAB-D Class\Solutions\2.1\recorder.glm"</command_line>
+	<environment>batch</environment>
+	<quiet>0</quiet>
+	<warn>1</warn>
+	<debugger>0</debugger>
+	<gdb>0</gdb>
+	<debug>0</debug>
+	<test>0</test>
+	<verbose>0</verbose>
+	<iteration_limit>100</iteration_limit>
+	<workdir>"\\cassie\d3g637\GridLAB-D Class\Solutions\2.1"</workdir>
+	<dumpfile>gridlabd.xml</dumpfile>
+	<savefile>""</savefile>
+	<dumpall>0</dumpall>
+	<runchecks>0</runchecks>
+	<threadcount>1</threadcount>
+	<profiler>0</profiler>
+	<pauseatexit>0</pauseatexit>
+	<testoutputfile>test.txt</testoutputfile>
+	<xml_encoding>8</xml_encoding>
+	<clock>2001-01-01 00:00:00 PST</clock>
+	<starttime>2009-04-16 10:27:55 PDT</starttime>
+	<stoptime>NEVER</stoptime>
+	<double_format>%+lg</double_format>
+	<complex_format>%+lg%+lg%c</complex_format>
+	<object_format>%s:%d</object_format>
+	<object_scan>%[^:]:%d</object_scan>
+	<object_tree_balance>FALSE</object_tree_balance>
+	<kmlfile>""</kmlfile>
+	<modelname>"\\cassie\d3g637\GridLAB-D Class\Solutions\2.1\recorder.glm"</modelname>
+	<execdir>"C:\Program Files\GridLAB-D\bin"</execdir>
+	<strictnames>TRUE</strictnames>
+	<website>http://www.gridlabd.org/</website>
+	<urlbase>http://www.gridlabd.org/</urlbase>
+	<randomseed>0</randomseed>
+	<include>""</include>
+	<trace>""</trace>
+	<gdb_window>0</gdb_window>
+	<tmp>c:/temp</tmp>
+	<force_compile>0</force_compile>
+	<nolocks>0</nolocks>
+	<skipsafe>0</skipsafe>
+	<timezone>PST8PDT</timezone>
+	<sync-order>
+		<pass>
+			<name>pretopdown</name>
+			<rank>
+				<ordinal>2</ordinal>
+				<object>
+					<name>(house:2)</name>
+					<id>2</id>
+				</object>
+			</rank>
+			<rank>
+				<ordinal>1</ordinal>
+				<object>
+					<name>(house:0)</name>
+					<id>0</id>
+				</object>
+			</rank>
+		</pass>
+		<pass>
+			<name>bottomup</name>
+			<rank>
+				<ordinal>1</ordinal>
+				<object>
+					<name>(house:0)</name>
+					<id>0</id>
+				</object>
+				<object>
+					<name>(waterheater:3)</name>
+					<id>3</id>
+				</object>
+			</rank>
+			<rank>
+				<ordinal>2</ordinal>
+				<object>
+					<name>(house:2)</name>
+					<id>2</id>
+				</object>
+			</rank>
+		</pass>
+		<pass>
+			<name>posttopdown</name>
+			<rank>
+				<ordinal>0</ordinal>
+				<object>
+					<name>(recorder:1)</name>
+					<id>1</id>
+				</object>
+				<object>
+					<name>(recorder:4)</name>
+					<id>4</id>
+				</object>
+			</rank>
+		</pass>
+	</sync-order>
+	<residential>
+		<version.major>1</version.major>
+		<version.minor>0</version.minor>
+		<house_list>
+			<house>
+				<id>0</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2001-01-01 00:00:00 PST</clock>
+				<name>(house:0)</name>
+				<floor_area>+2477.69 sf</floor_area>
+				<gross_wall_area>+6371.37 sf</gross_wall_area>
+				<ceiling_height>+8 ft</ceiling_height>
+				<aspect_ratio>+1</aspect_ratio>
+				<envelope_UA>+462.6 Btu/degF</envelope_UA>
+				<window_wall_ratio>+0.15</window_wall_ratio>
+				<glazing_shgc>+0.65</glazing_shgc>
+				<airchange_per_hour>+4.94452</airchange_per_hour>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<thermostat_deadband>+2 degF</thermostat_deadband>
+				<heating_setpoint>+70.4487 degF</heating_setpoint>
+				<cooling_setpoint>+78.8678 degF</cooling_setpoint>
+				<design_heating_capacity>+22.8693 Btu</design_heating_capacity>
+				<design_cooling_capacity>+21.4006 Btu</design_cooling_capacity>
+				<heating_COP>+3</heating_COP>
+				<cooling_COP>+3</cooling_COP>
+				<COP_coeff>+0.966895</COP_coeff>
+				<air_temperature>+74.9838 degF</air_temperature>
+				<mass_heat_coeff>+1905.18</mass_heat_coeff>
+				<heat_mode>ELECTRIC</heat_mode>
+				<total_load>+0+0j kW</total_load>
+				<enduse_load>+0+0j kW</enduse_load>
+				<power>+0+0j kW</power>
+				<current>+0+0j A</current>
+				<admittance>+0+0j 1/Ohm</admittance>
+			</house>
+			<house>
+				<id>2</id>
+				<rank>2</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2001-01-01 00:00:00 PST</clock>
+				<name>(house:2)</name>
+				<floor_area>+2684.25 sf</floor_area>
+				<gross_wall_area>+6631.65 sf</gross_wall_area>
+				<ceiling_height>+8 ft</ceiling_height>
+				<aspect_ratio>+1</aspect_ratio>
+				<envelope_UA>+470.321 Btu/degF</envelope_UA>
+				<window_wall_ratio>+0.15</window_wall_ratio>
+				<glazing_shgc>+0.65</glazing_shgc>
+				<airchange_per_hour>+5.28351</airchange_per_hour>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<thermostat_deadband>+2 degF</thermostat_deadband>
+				<heating_setpoint>+69.5535 degF</heating_setpoint>
+				<cooling_setpoint>+77.4426 degF</cooling_setpoint>
+				<design_heating_capacity>+20.4692 Btu</design_heating_capacity>
+				<design_cooling_capacity>+19.4429 Btu</design_cooling_capacity>
+				<heating_COP>+3</heating_COP>
+				<cooling_COP>+3</cooling_COP>
+				<COP_coeff>+0.972949</COP_coeff>
+				<air_temperature>+75.1015 degF</air_temperature>
+				<mass_heat_coeff>+1548.1</mass_heat_coeff>
+				<heat_mode>ELECTRIC</heat_mode>
+				<total_load>+0+0j kW</total_load>
+				<enduse_load>+0+0j kW</enduse_load>
+				<power>+0+0j kW</power>
+				<current>+0+0j A</current>
+				<admittance>+0+0j 1/Ohm</admittance>
+			</house>
+		</house_list>
+		<waterheater_list>
+			<waterheater>
+				<id>3</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>house:2</parent>
+				<clock>2001-01-01 00:00:00 PST</clock>
+				<name>(waterheater:3)</name>
+				<tank_volume>+50 gal</tank_volume>
+				<tank_UA>+2.05236 Btu/h</tank_UA>
+				<tank_diameter>+1.5 ft</tank_diameter>
+				<water_demand>+0 gpm</water_demand>
+				<heating_element_capacity>+4500 W</heating_element_capacity>
+				<inlet_water_temperature>+60 degF</inlet_water_temperature>
+				<heat_mode>ELECTRIC</heat_mode>
+				<location>GARAGE</location>
+				<tank_setpoint>+140.037 degF</tank_setpoint>
+				<thermostat_deadband>+4.66833 degF</thermostat_deadband>
+				<power>+0+0j kW</power>
+				<meter>+0 kWh</meter>
+				<temperature>+138.273 degF</temperature>
+				<enduse_load>+0+0i kW</enduse_load>
+				<height>+3.78239 ft</height>
+			</waterheater>
+		</waterheater_list>
+		<lights_list>
+		</lights_list>
+		<refrigerator_list>
+		</refrigerator_list>
+		<clotheswasher_list>
+		</clotheswasher_list>
+		<dishwasher_list>
+		</dishwasher_list>
+		<occupantload_list>
+		</occupantload_list>
+		<plugload_list>
+		</plugload_list>
+		<microwave_list>
+		</microwave_list>
+		<range_list>
+		</range_list>
+		<freezer_list>
+		</freezer_list>
+		<dryer_list>
+		</dryer_list>
+		<evcharger_list>
+		</evcharger_list>
+	</residential>
+	<tape>
+		<version.major>1</version.major>
+		<version.minor>0</version.minor>
+		<player_list>
+		</player_list>
+		<shaper_list>
+		</shaper_list>
+		<recorder_list>
+			<recorder>
+				<id>1</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>house:0</parent>
+				<name>(recorder:1)</name>
+				<property>air_temperature,mass_temperature</property>
+				<trigger>""</trigger>
+				<file>tair.csv</file>
+				<interval>3600</interval>
+				<limit>8760</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+			</recorder>
+			<recorder>
+				<id>4</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>waterheater:3</parent>
+				<name>(recorder:4)</name>
+				<property>power</property>
+				<trigger>""</trigger>
+				<file>power.csv</file>
+				<interval>-1</interval>
+				<limit>8760</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+			</recorder>
+		</recorder_list>
+		<collector_list>
+		</collector_list>
+		<histogram_list>
+		</histogram_list>
+	</tape>
+</gridlabd>

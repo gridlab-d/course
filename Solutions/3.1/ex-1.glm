@@ -1,0 +1,22 @@
+#setenv path=c:/mingw/bin
+#define include=c:/program files/gridlab-d
+
+class countdown {
+	int32 a;
+	intrinsic create(object parent) {
+		a = 10;
+		return SUCCESS;
+	};
+	intrinsic init(object parent) {
+		if (a<0) gl_throw("a=%d is not valid",a);
+		return SUCCESS;
+	};
+	intrinsic sync(timestamp t0, timestamp t1) {
+		gl_output("%d",a--);
+		return a>=0 ? t1 + 1 : TS_NEVER;
+	};
+}
+
+object countdown {
+	a 15;
+}

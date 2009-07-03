@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-2_0.xsl" type="text/xsl"?>
+<gridlabd>
+	<version.major>2</version.major>
+	<version.minor>0</version.minor>
+	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe H:\GridLAB-D Class\Solutions\5.4\Exercise 2.glm"</command_line>
+	<environment>batch</environment>
+	<quiet>0</quiet>
+	<warn>1</warn>
+	<debugger>0</debugger>
+	<gdb>0</gdb>
+	<debug>1</debug>
+	<test>0</test>
+	<verbose>1</verbose>
+	<iteration_limit>100</iteration_limit>
+	<workdir>"H:\GridLAB-D Class\Solutions\5.4"</workdir>
+	<dumpfile>gridlabd.xml</dumpfile>
+	<savefile>""</savefile>
+	<dumpall>0</dumpall>
+	<runchecks>0</runchecks>
+	<threadcount>1</threadcount>
+	<profiler>0</profiler>
+	<pauseatexit>0</pauseatexit>
+	<testoutputfile>test.txt</testoutputfile>
+	<xml_encoding>8</xml_encoding>
+	<clock>2000-01-01 00:00:00 PST</clock>
+	<starttime>2009-05-07 19:59:10 PDT</starttime>
+	<stoptime>NEVER</stoptime>
+	<double_format>%+lg</double_format>
+	<complex_format>%+lg%+lg%c</complex_format>
+	<object_format>%s:%d</object_format>
+	<object_scan>%[^:]:%d</object_scan>
+	<object_tree_balance>FALSE</object_tree_balance>
+	<kmlfile>""</kmlfile>
+	<modelname>"H:\GridLAB-D Class\Solutions\5.4\Exercise 2.glm"</modelname>
+	<execdir>"C:\Program Files\GridLAB-D\bin"</execdir>
+	<strictnames>TRUE</strictnames>
+	<website>http://www.gridlabd.org/</website>
+	<urlbase>http://www.gridlabd.org/</urlbase>
+	<randomseed>0</randomseed>
+	<include>"c:/Program Files/GridLAB-D"</include>
+	<trace>""</trace>
+	<gdb_window>0</gdb_window>
+	<tmp>c:/temp</tmp>
+	<force_compile>0</force_compile>
+	<nolocks>0</nolocks>
+	<skipsafe>0</skipsafe>
+	<timezone>PST8PDT</timezone>
+	<sync-order>
+	</sync-order>
+	<plc>
+		<version.major>0</version.major>
+		<version.minor>0</version.minor>
+		<plc_list>
+			<plc>
+				<id>1</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>net</parent>
+				<name>from</name>
+				<source>from.plc</source>
+				<network>net</network>
+			</plc>
+			<plc>
+				<id>2</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>net</parent>
+				<name>to</name>
+				<source>to.plc</source>
+				<network>net</network>
+			</plc>
+		</plc_list>
+		<comm_list>
+			<comm>
+				<id>0</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>net</name>
+				<latency>pareto(1,3)</latency>
+				<reliability>+0.99 pu</reliability>
+				<bitrate>+1.5e+006 b/s</bitrate>
+				<timeout>+10 s</timeout>
+			</comm>
+		</comm_list>
+	</plc>
+</gridlabd>

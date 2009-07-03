@@ -1,0 +1,43 @@
+#setenv path=c:/mingw/bin
+#setenv INCLUDE=c:/mingw/include
+#define include=c:/program files/gridlab-d
+#set debug=1
+#set verbose=0
+clock { timestamp '2009-04-20 10:32:00 PDT'; }
+class helloworld {
+	int32 count;
+	int32 step;
+	timestamp next;
+	intrinsic create(object parent) {
+		count = 10;
+		step = 1;
+		next = 0;
+		return SUCCESS;
+	};
+	intrinsic init(object parent) {
+		if (count<=0) gl_throw("count %d must be positive");
+		return SUCCESS;
+	};
+	intrinsic sync(timestamp t0, timestamp t1) {
+		if (next==0 || t1 == next)
+		{
+			gl_debug("%s %d", my->name, count--);
+			if (count<=0) 
+				my->out_svc = t1;
+			next = t1 + step;
+			return count>0 ? next : TS_NEVER;
+		}
+		else
+			return next;
+	};
+}
+object helloworld {
+	name slow;
+	count 100;
+	step 10;
+}
+object helloworld {
+	name fast;
+	count 300;
+	step 3;
+}

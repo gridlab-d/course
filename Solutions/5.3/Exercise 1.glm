@@ -1,0 +1,23 @@
+clock {
+	timezone PST+8PDT;
+	starttime '2005-01-01 0:00:00 PST';
+}
+
+module commercial;
+module tape;
+object office {
+	floor_area 3500 sf;
+	floor_height 8 ft;
+	interior_mass 500 Btu/degF;
+	interior_ua 100 Btu/degF/h;
+	exterior_ua 100 Btu/degF/h;
+	hvac.cooling.capacity -36000 Btu/h;
+	object recorder {
+		property air_temperature;
+		file "plot:temp.plt";
+		output SCREEN;
+		interval 3600;
+		limit 100;
+	};
+}
+
