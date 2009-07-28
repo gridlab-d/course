@@ -5,10 +5,12 @@ clock {
 	starttime '2001-01-01 00:00:00 PST';
 }
 object house {
+	
 	object recorder {
 		property air_temperature;
+		
+		output JPG;
 		file plot:house.jpg;
-		output SCREEN;
 		interval 300;
 		limit 100;
 	};
