@@ -3,19 +3,19 @@
 <gridlabd>
 	<version.major>2</version.major>
 	<version.minor>0</version.minor>
-	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe H:\Solutions\2.6\house.glm"</command_line>
+	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe --debug --warn C:\GridLab-D_Chitra course\Version1\2.6\test.glm -o gridlabd.xml"</command_line>
 	<environment>batch</environment>
 	<quiet>0</quiet>
-	<warn>1</warn>
+	<warn>0</warn>
 	<debugger>0</debugger>
 	<gdb>0</gdb>
-	<debug>0</debug>
+	<debug>1</debug>
 	<test>0</test>
 	<verbose>0</verbose>
 	<iteration_limit>100</iteration_limit>
-	<workdir>H:\Solutions\2.6</workdir>
+	<workdir>"C:\GridLab-D_Chitra course\Version1\2.6"</workdir>
 	<dumpfile>gridlabd.xml</dumpfile>
-	<savefile>""</savefile>
+	<savefile>gridlabd.xml</savefile>
 	<dumpall>0</dumpall>
 	<runchecks>0</runchecks>
 	<threadcount>1</threadcount>
@@ -23,8 +23,8 @@
 	<pauseatexit>0</pauseatexit>
 	<testoutputfile>test.txt</testoutputfile>
 	<xml_encoding>8</xml_encoding>
-	<clock>2001-01-01 00:00:00 PST</clock>
-	<starttime>2009-04-16 15:53:08 PDT</starttime>
+	<clock>2001-01-01 08:35:00 PST</clock>
+	<starttime>2009-07-28 11:28:10 PDT</starttime>
 	<stoptime>NEVER</stoptime>
 	<double_format>%+lg</double_format>
 	<complex_format>%+lg%+lg%c</complex_format>
@@ -32,7 +32,7 @@
 	<object_scan>%[^:]:%d</object_scan>
 	<object_tree_balance>FALSE</object_tree_balance>
 	<kmlfile>""</kmlfile>
-	<modelname>H:\Solutions\2.6\house.glm</modelname>
+	<modelname>"C:\GridLab-D_Chitra course\Version1\2.6\test.glm"</modelname>
 	<execdir>"C:\Program Files\GridLAB-D\bin"</execdir>
 	<strictnames>TRUE</strictnames>
 	<website>http://www.gridlabd.org/</website>
@@ -45,6 +45,8 @@
 	<force_compile>0</force_compile>
 	<nolocks>0</nolocks>
 	<skipsafe>0</skipsafe>
+	<dateformat>ISO</dateformat>
+	<minimum_timestep>1</minimum_timestep>
 	<timezone>PST8PDT</timezone>
 	<sync-order>
 		<pass>
@@ -86,35 +88,44 @@
 				<id>0</id>
 				<rank>1</rank>
 				<out_svc>NEVER</out_svc>
-				<clock>2001-01-01 00:00:00 PST</clock>
+				<clock>2001-01-01 08:35:00 PST</clock>
 				<name>(house:0)</name>
-				<floor_area>+2416.08 sf</floor_area>
-				<gross_wall_area>+6291.67 sf</gross_wall_area>
+				<floor_area>+2400.16 sf</floor_area>
+				<gross_wall_area>+6270.91 sf</gross_wall_area>
 				<ceiling_height>+8 ft</ceiling_height>
 				<aspect_ratio>+1</aspect_ratio>
-				<envelope_UA>+442.228 Btu/degF</envelope_UA>
+				<envelope_UA>+420.117 Btu/degF</envelope_UA>
 				<window_wall_ratio>+0.15</window_wall_ratio>
 				<glazing_shgc>+0.65</glazing_shgc>
-				<airchange_per_hour>+5.84595</airchange_per_hour>
+				<airchange_per_hour>+5.57037</airchange_per_hour>
 				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
 				<thermostat_deadband>+2 degF</thermostat_deadband>
-				<heating_setpoint>+71.3319 degF</heating_setpoint>
-				<cooling_setpoint>+76.1735 degF</cooling_setpoint>
-				<design_heating_capacity>+21.9005 Btu</design_heating_capacity>
-				<design_cooling_capacity>+23.9921 Btu</design_cooling_capacity>
+				<heating_setpoint>+70.394 degF</heating_setpoint>
+				<cooling_setpoint>+90 degF</cooling_setpoint>
+				<design_heating_capacity>+22.2089 Btu</design_heating_capacity>
+				<design_cooling_capacity>+19.1589 Btu</design_cooling_capacity>
 				<heating_COP>+3</heating_COP>
 				<cooling_COP>+3</cooling_COP>
-				<COP_coeff>+1.06263</COP_coeff>
-				<air_temperature>+73.7223 degF</air_temperature>
-				<mass_heat_coeff>+2134.83</mass_heat_coeff>
+				<COP_coeff>+1.02233</COP_coeff>
+				<air_temperature>+71.1297 degF</air_temperature>
+				<outside_temp>+74 degF</outside_temp>
+				<mass_temperature>+71.2711 degF</mass_temperature>
+				<mass_heat_coeff>+1460.81</mass_heat_coeff>
+				<outside_temp_b>+74</outside_temp_b>
 				<heat_mode>ELECTRIC</heat_mode>
-				<total_load>+0+0j kW</total_load>
+				<hc_mode>OFF</hc_mode>
+				<total_load>+0+5.2371e-322j kW</total_load>
 				<enduse_load>+0+0j kW</enduse_load>
 				<power>+0+0j kW</power>
 				<current>+0+0j A</current>
 				<admittance>+0+0j 1/Ohm</admittance>
+				<energy>+0.148995+0i kWh</energy>
 			</house>
 		</house_list>
+		<house_e_list>
+		</house_e_list>
 		<waterheater_list>
 		</waterheater_list>
 		<lights_list>
@@ -153,16 +164,17 @@
 				<rank>0</rank>
 				<out_svc>NEVER</out_svc>
 				<parent>house:0</parent>
+				<clock>2001-01-01 08:30:00 PST</clock>
 				<name>(recorder:1)</name>
-				<property>(undefined)</property>
+				<property>air_temperature</property>
 				<trigger>""</trigger>
 				<file>plot:house.jpg</file>
 				<interval>300</interval>
 				<limit>100</limit>
 				<plotcommands>""</plotcommands>
-				<xdata>""</xdata>
-				<columns>air_temperature</columns>
-				<output>JPG</output>
+				<xdata>cooling_setpoint</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
 			</recorder>
 		</recorder_list>
 		<collector_list>
