@@ -1,5 +1,10 @@
 #include "IEEE_37bus.glm"
+module network;
 module tape;
+
+object node:781 {
+}
+
 object recorder {
 	parent node:781;
 	property voltage_A,voltage_B,voltage_C;

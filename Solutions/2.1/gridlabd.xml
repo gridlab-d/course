@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-2_0.xsl" type="text/xsl"?>
+<?xml-stylesheet href="http://gridlabd.pnl.gov/source/VS2005/gridlabd-2_0.xsl" type="text/xsl"?>
 <gridlabd>
 	<version.major>2</version.major>
 	<version.minor>0</version.minor>
-	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe \\cassie\d3g637\GridLAB-D Class\Solutions\2.1\recorder.glm"</command_line>
+	<command_line>"c:\Gridlabd\trunk\VS2005\Win32\Debug\gridlabd.exe feeder.glm"</command_line>
 	<environment>batch</environment>
 	<quiet>0</quiet>
 	<warn>1</warn>
@@ -12,19 +12,19 @@
 	<debug>0</debug>
 	<test>0</test>
 	<verbose>0</verbose>
-	<iteration_limit>100</iteration_limit>
-	<workdir>"\\cassie\d3g637\GridLAB-D Class\Solutions\2.1"</workdir>
+	<iteration_limit>20000</iteration_limit>
+	<workdir>"C:\GridLab-D_Chitra course\Version1\2.1"</workdir>
 	<dumpfile>gridlabd.xml</dumpfile>
 	<savefile>""</savefile>
 	<dumpall>0</dumpall>
 	<runchecks>0</runchecks>
 	<threadcount>1</threadcount>
-	<profiler>0</profiler>
-	<pauseatexit>0</pauseatexit>
+	<profiler>1</profiler>
+	<pauseatexit>1</pauseatexit>
 	<testoutputfile>test.txt</testoutputfile>
 	<xml_encoding>8</xml_encoding>
-	<clock>2001-01-01 00:00:00 PST</clock>
-	<starttime>2009-04-16 10:27:55 PDT</starttime>
+	<clock>2000-01-01 03:00:00 EST</clock>
+	<starttime>2009-07-28 16:08:43 EDT</starttime>
 	<stoptime>NEVER</stoptime>
 	<double_format>%+lg</double_format>
 	<complex_format>%+lg%+lg%c</complex_format>
@@ -32,11 +32,11 @@
 	<object_scan>%[^:]:%d</object_scan>
 	<object_tree_balance>FALSE</object_tree_balance>
 	<kmlfile>""</kmlfile>
-	<modelname>"\\cassie\d3g637\GridLAB-D Class\Solutions\2.1\recorder.glm"</modelname>
-	<execdir>"C:\Program Files\GridLAB-D\bin"</execdir>
+	<modelname>feeder.glm</modelname>
+	<execdir>c:\Gridlabd\trunk\VS2005\Win32\Debug</execdir>
 	<strictnames>TRUE</strictnames>
-	<website>http://www.gridlabd.org/</website>
-	<urlbase>http://www.gridlabd.org/</urlbase>
+	<website>http://gridlabd.pnl.gov/source/VS2005/</website>
+	<urlbase>http://gridlabd.pnl.gov/source/VS2005/</urlbase>
 	<randomseed>0</randomseed>
 	<include>""</include>
 	<trace>""</trace>
@@ -45,178 +45,11 @@
 	<force_compile>0</force_compile>
 	<nolocks>0</nolocks>
 	<skipsafe>0</skipsafe>
-	<timezone>PST8PDT</timezone>
+	<dateformat>ISO</dateformat>
+	<minimum_timestep>1</minimum_timestep>
+	<timezone>EST5EDT</timezone>
 	<sync-order>
-		<pass>
-			<name>pretopdown</name>
-			<rank>
-				<ordinal>2</ordinal>
-				<object>
-					<name>(house:2)</name>
-					<id>2</id>
-				</object>
-			</rank>
-			<rank>
-				<ordinal>1</ordinal>
-				<object>
-					<name>(house:0)</name>
-					<id>0</id>
-				</object>
-			</rank>
-		</pass>
-		<pass>
-			<name>bottomup</name>
-			<rank>
-				<ordinal>1</ordinal>
-				<object>
-					<name>(house:0)</name>
-					<id>0</id>
-				</object>
-				<object>
-					<name>(waterheater:3)</name>
-					<id>3</id>
-				</object>
-			</rank>
-			<rank>
-				<ordinal>2</ordinal>
-				<object>
-					<name>(house:2)</name>
-					<id>2</id>
-				</object>
-			</rank>
-		</pass>
-		<pass>
-			<name>posttopdown</name>
-			<rank>
-				<ordinal>0</ordinal>
-				<object>
-					<name>(recorder:1)</name>
-					<id>1</id>
-				</object>
-				<object>
-					<name>(recorder:4)</name>
-					<id>4</id>
-				</object>
-			</rank>
-		</pass>
 	</sync-order>
-	<residential>
-		<version.major>1</version.major>
-		<version.minor>0</version.minor>
-		<house_list>
-			<house>
-				<id>0</id>
-				<rank>1</rank>
-				<out_svc>NEVER</out_svc>
-				<clock>2001-01-01 00:00:00 PST</clock>
-				<name>(house:0)</name>
-				<floor_area>+2477.69 sf</floor_area>
-				<gross_wall_area>+6371.37 sf</gross_wall_area>
-				<ceiling_height>+8 ft</ceiling_height>
-				<aspect_ratio>+1</aspect_ratio>
-				<envelope_UA>+462.6 Btu/degF</envelope_UA>
-				<window_wall_ratio>+0.15</window_wall_ratio>
-				<glazing_shgc>+0.65</glazing_shgc>
-				<airchange_per_hour>+4.94452</airchange_per_hour>
-				<internal_gain>+0 Btu/h</internal_gain>
-				<thermostat_deadband>+2 degF</thermostat_deadband>
-				<heating_setpoint>+70.4487 degF</heating_setpoint>
-				<cooling_setpoint>+78.8678 degF</cooling_setpoint>
-				<design_heating_capacity>+22.8693 Btu</design_heating_capacity>
-				<design_cooling_capacity>+21.4006 Btu</design_cooling_capacity>
-				<heating_COP>+3</heating_COP>
-				<cooling_COP>+3</cooling_COP>
-				<COP_coeff>+0.966895</COP_coeff>
-				<air_temperature>+74.9838 degF</air_temperature>
-				<mass_heat_coeff>+1905.18</mass_heat_coeff>
-				<heat_mode>ELECTRIC</heat_mode>
-				<total_load>+0+0j kW</total_load>
-				<enduse_load>+0+0j kW</enduse_load>
-				<power>+0+0j kW</power>
-				<current>+0+0j A</current>
-				<admittance>+0+0j 1/Ohm</admittance>
-			</house>
-			<house>
-				<id>2</id>
-				<rank>2</rank>
-				<out_svc>NEVER</out_svc>
-				<clock>2001-01-01 00:00:00 PST</clock>
-				<name>(house:2)</name>
-				<floor_area>+2684.25 sf</floor_area>
-				<gross_wall_area>+6631.65 sf</gross_wall_area>
-				<ceiling_height>+8 ft</ceiling_height>
-				<aspect_ratio>+1</aspect_ratio>
-				<envelope_UA>+470.321 Btu/degF</envelope_UA>
-				<window_wall_ratio>+0.15</window_wall_ratio>
-				<glazing_shgc>+0.65</glazing_shgc>
-				<airchange_per_hour>+5.28351</airchange_per_hour>
-				<internal_gain>+0 Btu/h</internal_gain>
-				<thermostat_deadband>+2 degF</thermostat_deadband>
-				<heating_setpoint>+69.5535 degF</heating_setpoint>
-				<cooling_setpoint>+77.4426 degF</cooling_setpoint>
-				<design_heating_capacity>+20.4692 Btu</design_heating_capacity>
-				<design_cooling_capacity>+19.4429 Btu</design_cooling_capacity>
-				<heating_COP>+3</heating_COP>
-				<cooling_COP>+3</cooling_COP>
-				<COP_coeff>+0.972949</COP_coeff>
-				<air_temperature>+75.1015 degF</air_temperature>
-				<mass_heat_coeff>+1548.1</mass_heat_coeff>
-				<heat_mode>ELECTRIC</heat_mode>
-				<total_load>+0+0j kW</total_load>
-				<enduse_load>+0+0j kW</enduse_load>
-				<power>+0+0j kW</power>
-				<current>+0+0j A</current>
-				<admittance>+0+0j 1/Ohm</admittance>
-			</house>
-		</house_list>
-		<waterheater_list>
-			<waterheater>
-				<id>3</id>
-				<rank>1</rank>
-				<out_svc>NEVER</out_svc>
-				<parent>house:2</parent>
-				<clock>2001-01-01 00:00:00 PST</clock>
-				<name>(waterheater:3)</name>
-				<tank_volume>+50 gal</tank_volume>
-				<tank_UA>+2.05236 Btu/h</tank_UA>
-				<tank_diameter>+1.5 ft</tank_diameter>
-				<water_demand>+0 gpm</water_demand>
-				<heating_element_capacity>+4500 W</heating_element_capacity>
-				<inlet_water_temperature>+60 degF</inlet_water_temperature>
-				<heat_mode>ELECTRIC</heat_mode>
-				<location>GARAGE</location>
-				<tank_setpoint>+140.037 degF</tank_setpoint>
-				<thermostat_deadband>+4.66833 degF</thermostat_deadband>
-				<power>+0+0j kW</power>
-				<meter>+0 kWh</meter>
-				<temperature>+138.273 degF</temperature>
-				<enduse_load>+0+0i kW</enduse_load>
-				<height>+3.78239 ft</height>
-			</waterheater>
-		</waterheater_list>
-		<lights_list>
-		</lights_list>
-		<refrigerator_list>
-		</refrigerator_list>
-		<clotheswasher_list>
-		</clotheswasher_list>
-		<dishwasher_list>
-		</dishwasher_list>
-		<occupantload_list>
-		</occupantload_list>
-		<plugload_list>
-		</plugload_list>
-		<microwave_list>
-		</microwave_list>
-		<range_list>
-		</range_list>
-		<freezer_list>
-		</freezer_list>
-		<dryer_list>
-		</dryer_list>
-		<evcharger_list>
-		</evcharger_list>
-	</residential>
 	<tape>
 		<version.major>1</version.major>
 		<version.minor>0</version.minor>
@@ -226,32 +59,32 @@
 		</shaper_list>
 		<recorder_list>
 			<recorder>
-				<id>1</id>
+				<id>0</id>
 				<rank>0</rank>
 				<out_svc>NEVER</out_svc>
-				<parent>house:0</parent>
-				<name>(recorder:1)</name>
-				<property>air_temperature,mass_temperature</property>
+				<parent>node:84</parent>
+				<name>(recorder:0)</name>
+				<property>voltage_A,voltage_B,voltage_C</property>
 				<trigger>""</trigger>
-				<file>tair.csv</file>
-				<interval>3600</interval>
-				<limit>8760</limit>
+				<file>feeder.csv</file>
+				<interval>0</interval>
+				<limit>0</limit>
 				<plotcommands>""</plotcommands>
 				<xdata>""</xdata>
 				<columns>""</columns>
 				<output>SCREEN</output>
 			</recorder>
 			<recorder>
-				<id>4</id>
+				<id>85</id>
 				<rank>0</rank>
 				<out_svc>NEVER</out_svc>
-				<parent>waterheater:3</parent>
-				<name>(recorder:4)</name>
-				<property>power</property>
+				<parent>node:84</parent>
+				<name>(recorder:85)</name>
+				<property>voltage_A,voltage_B,voltage_C</property>
 				<trigger>""</trigger>
-				<file>power.csv</file>
-				<interval>-1</interval>
-				<limit>8760</limit>
+				<file>feeder.csv</file>
+				<interval>0</interval>
+				<limit>0</limit>
 				<plotcommands>""</plotcommands>
 				<xdata>""</xdata>
 				<columns>""</columns>
@@ -263,4 +96,2573 @@
 		<histogram_list>
 		</histogram_list>
 	</tape>
+	<powerflow>
+		<version.major>2</version.major>
+		<version.minor>0</version.minor>
+		<node_list>
+			<inherits_from>powerflow_object</inherits_from>
+			<node>
+				<id>45</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>781</name>
+				<bustype>SWING</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2892.39-30d V</voltage_A>
+				<voltage_B>+2892.39-150d V</voltage_B>
+				<voltage_C>+2815.01+90.9135d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>46</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>702</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>47</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>703</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>48</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>704</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>49</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>705</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>50</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>706</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>51</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>707</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>52</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>708</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>53</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>709</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>54</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>710</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>55</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>711</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</node>
+			<node>
+				<id>83</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>775</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+277.128-30d V</voltage_A>
+				<voltage_B>+277.128-150d V</voltage_B>
+				<voltage_C>+277.128+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+480 V</nominal_voltage>
+			</node>
+			<node>
+				<id>84</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(node:84)</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</node>
+		</node_list>
+		<link_list>
+			<inherits_from>powerflow_object</inherits_from>
+		</link_list>
+		<capacitor_list>
+			<inherits_from>node</inherits_from>
+		</capacitor_list>
+		<fuse_list>
+			<inherits_from>link</inherits_from>
+		</fuse_list>
+		<meter_list>
+			<inherits_from>node</inherits_from>
+		</meter_list>
+		<line_list>
+			<inherits_from>link</inherits_from>
+		</line_list>
+		<line_spacing_list>
+			<line_spacing>
+				<id>5</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(line_spacing:5)</name>
+				<distance_AB>+0.5 ft</distance_AB>
+				<distance_BC>+0.5 ft</distance_BC>
+				<distance_AC>+1 ft</distance_AC>
+				<distance_AN>+0 ft</distance_AN>
+				<distance_BN>+0 ft</distance_BN>
+				<distance_CN>+0 ft</distance_CN>
+			</line_spacing>
+		</line_spacing_list>
+		<overhead_line_list>
+			<inherits_from>line</inherits_from>
+		</overhead_line_list>
+		<underground_line_list>
+			<inherits_from>line</inherits_from>
+			<underground_line>
+				<id>10</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>801</parent>
+				<name>701-702</name>
+				<configuration>line_configuration:7</configuration>
+				<length>+960 ft</length>
+				<status>CLOSED</status>
+				<from>801</from>
+				<to>702</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>11</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>702</parent>
+				<name>702-705</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+400 ft</length>
+				<status>CLOSED</status>
+				<from>702</from>
+				<to>705</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>12</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>702</parent>
+				<name>702-713</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+360 ft</length>
+				<status>CLOSED</status>
+				<from>702</from>
+				<to>813</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>13</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>702</parent>
+				<name>702-703</name>
+				<configuration>line_configuration:7</configuration>
+				<length>+1320 ft</length>
+				<status>CLOSED</status>
+				<from>702</from>
+				<to>703</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>14</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>703</parent>
+				<name>703-727</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+240 ft</length>
+				<status>CLOSED</status>
+				<from>703</from>
+				<to>827</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>15</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>703</parent>
+				<name>703-730</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+600 ft</length>
+				<status>CLOSED</status>
+				<from>703</from>
+				<to>830</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>16</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>704</parent>
+				<name>704-714</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+80 ft</length>
+				<status>CLOSED</status>
+				<from>704</from>
+				<to>814</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>17</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>704</parent>
+				<name>704-720</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+800 ft</length>
+				<status>CLOSED</status>
+				<from>704</from>
+				<to>820</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>18</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>705</parent>
+				<name>705-742</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+320 ft</length>
+				<status>CLOSED</status>
+				<from>705</from>
+				<to>842</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>19</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>705</parent>
+				<name>705-712</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+240 ft</length>
+				<status>CLOSED</status>
+				<from>705</from>
+				<to>812</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>20</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>706</parent>
+				<name>706-725</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+280 ft</length>
+				<status>CLOSED</status>
+				<from>706</from>
+				<to>825</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>21</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>707</parent>
+				<name>707-724</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+760 ft</length>
+				<status>CLOSED</status>
+				<from>707</from>
+				<to>824</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>22</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>707</parent>
+				<name>707-722</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+120 ft</length>
+				<status>CLOSED</status>
+				<from>707</from>
+				<to>822</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>23</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>708</parent>
+				<name>708-733</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+320 ft</length>
+				<status>CLOSED</status>
+				<from>708</from>
+				<to>833</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>24</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>708</parent>
+				<name>708-732</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+320 ft</length>
+				<status>CLOSED</status>
+				<from>708</from>
+				<to>832</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>25</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>709</parent>
+				<name>709-731</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+600 ft</length>
+				<status>CLOSED</status>
+				<from>709</from>
+				<to>831</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>26</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>709</parent>
+				<name>709-708</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+320 ft</length>
+				<status>CLOSED</status>
+				<from>709</from>
+				<to>708</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>27</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>710</parent>
+				<name>710-735</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+200 ft</length>
+				<status>CLOSED</status>
+				<from>710</from>
+				<to>835</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>28</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>710</parent>
+				<name>710-736</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+1280 ft</length>
+				<status>CLOSED</status>
+				<from>710</from>
+				<to>836</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>29</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>711</parent>
+				<name>711-741</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+400 ft</length>
+				<status>CLOSED</status>
+				<from>711</from>
+				<to>841</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>30</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>711</parent>
+				<name>711-740</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+200 ft</length>
+				<status>CLOSED</status>
+				<from>711</from>
+				<to>840</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>31</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>813</parent>
+				<name>713-704</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+520 ft</length>
+				<status>CLOSED</status>
+				<from>813</from>
+				<to>704</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>32</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>814</parent>
+				<name>714-718</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+520 ft</length>
+				<status>CLOSED</status>
+				<from>814</from>
+				<to>818</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>33</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>820</parent>
+				<name>720-707</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+920 ft</length>
+				<status>CLOSED</status>
+				<from>820</from>
+				<to>707</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>34</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>820</parent>
+				<name>720-706</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+600 ft</length>
+				<status>CLOSED</status>
+				<from>820</from>
+				<to>706</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>35</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>827</parent>
+				<name>727-744</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+280 ft</length>
+				<status>CLOSED</status>
+				<from>827</from>
+				<to>844</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>36</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>830</parent>
+				<name>730-709</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+200 ft</length>
+				<status>CLOSED</status>
+				<from>830</from>
+				<to>709</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>37</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>833</parent>
+				<name>733-734</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+560 ft</length>
+				<status>CLOSED</status>
+				<from>833</from>
+				<to>834</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>38</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>834</parent>
+				<name>734-737</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+640 ft</length>
+				<status>CLOSED</status>
+				<from>834</from>
+				<to>837</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>39</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>834</parent>
+				<name>734-710</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+520 ft</length>
+				<status>CLOSED</status>
+				<from>834</from>
+				<to>710</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>40</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>837</parent>
+				<name>737-738</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+400 ft</length>
+				<status>CLOSED</status>
+				<from>837</from>
+				<to>838</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>41</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>838</parent>
+				<name>738-711</name>
+				<configuration>line_configuration:8</configuration>
+				<length>+400 ft</length>
+				<status>CLOSED</status>
+				<from>838</from>
+				<to>711</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>42</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>844</parent>
+				<name>744-728</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+200 ft</length>
+				<status>CLOSED</status>
+				<from>844</from>
+				<to>828</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>43</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>844</parent>
+				<name>744-729</name>
+				<configuration>line_configuration:9</configuration>
+				<length>+280 ft</length>
+				<status>CLOSED</status>
+				<from>844</from>
+				<to>829</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</underground_line>
+			<underground_line>
+				<id>44</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node:84</parent>
+				<name>781-701</name>
+				<configuration>line_configuration:6</configuration>
+				<length>+1850 ft</length>
+				<status>CLOSED</status>
+				<from>node:84</from>
+				<to>801</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</underground_line>
+		</underground_line_list>
+		<overhead_line_conductor_list>
+		</overhead_line_conductor_list>
+		<underground_line_conductor_list>
+			<underground_line_conductor>
+				<id>1</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(underground_line_conductor:1)</name>
+				<outer_diameter>+1.98 in</outer_diameter>
+				<conductor_gmr>+0.0368 ft</conductor_gmr>
+				<conductor_diameter>+1.15 in</conductor_diameter>
+				<conductor_resistance>+0.105 Ohm/mile</conductor_resistance>
+				<neutral_gmr>+0.00331 ft</neutral_gmr>
+				<neutral_diameter>+0.102 in</neutral_diameter>
+				<neutral_resistance>+5.903 Ohm/mile</neutral_resistance>
+				<neutral_strands>20</neutral_strands>
+				<shield_gmr>+0 ft</shield_gmr>
+				<shield_resistance>+0 Ohm/mile</shield_resistance>
+				<rating.summer.continuous>+1000 A</rating.summer.continuous>
+				<rating.summer.emergency>+2000 A</rating.summer.emergency>
+				<rating.winter.continuous>+1000 A</rating.winter.continuous>
+				<rating.winter.emergency>+2000 A</rating.winter.emergency>
+			</underground_line_conductor>
+			<underground_line_conductor>
+				<id>2</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(underground_line_conductor:2)</name>
+				<outer_diameter>+1.56 in</outer_diameter>
+				<conductor_gmr>+0.026 ft</conductor_gmr>
+				<conductor_diameter>+0.813 in</conductor_diameter>
+				<conductor_resistance>+0.206 Ohm/mile</conductor_resistance>
+				<neutral_gmr>+0.00262 ft</neutral_gmr>
+				<neutral_diameter>+0.081 in</neutral_diameter>
+				<neutral_resistance>+9.375 Ohm/mile</neutral_resistance>
+				<neutral_strands>16</neutral_strands>
+				<shield_gmr>+0 ft</shield_gmr>
+				<shield_resistance>+0 Ohm/mile</shield_resistance>
+				<rating.summer.continuous>+1000 A</rating.summer.continuous>
+				<rating.summer.emergency>+2000 A</rating.summer.emergency>
+				<rating.winter.continuous>+1000 A</rating.winter.continuous>
+				<rating.winter.emergency>+2000 A</rating.winter.emergency>
+			</underground_line_conductor>
+			<underground_line_conductor>
+				<id>3</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(underground_line_conductor:3)</name>
+				<outer_diameter>+1.1 in</outer_diameter>
+				<conductor_gmr>+0.0125 ft</conductor_gmr>
+				<conductor_diameter>+0.414 in</conductor_diameter>
+				<conductor_resistance>+0.769 Ohm/mile</conductor_resistance>
+				<neutral_gmr>+0.00208 ft</neutral_gmr>
+				<neutral_diameter>+0.064 in</neutral_diameter>
+				<neutral_resistance>+14.872 Ohm/mile</neutral_resistance>
+				<neutral_strands>7</neutral_strands>
+				<shield_gmr>+0 ft</shield_gmr>
+				<shield_resistance>+0 Ohm/mile</shield_resistance>
+				<rating.summer.continuous>+1000 A</rating.summer.continuous>
+				<rating.summer.emergency>+2000 A</rating.summer.emergency>
+				<rating.winter.continuous>+1000 A</rating.winter.continuous>
+				<rating.winter.emergency>+2000 A</rating.winter.emergency>
+			</underground_line_conductor>
+			<underground_line_conductor>
+				<id>4</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(underground_line_conductor:4)</name>
+				<outer_diameter>+0.98 in</outer_diameter>
+				<conductor_gmr>+0.00883 ft</conductor_gmr>
+				<conductor_diameter>+0.292 in</conductor_diameter>
+				<conductor_resistance>+1.54 Ohm/mile</conductor_resistance>
+				<neutral_gmr>+0.00208 ft</neutral_gmr>
+				<neutral_diameter>+0.064 in</neutral_diameter>
+				<neutral_resistance>+14.872 Ohm/mile</neutral_resistance>
+				<neutral_strands>6</neutral_strands>
+				<shield_gmr>+0 ft</shield_gmr>
+				<shield_resistance>+0 Ohm/mile</shield_resistance>
+				<rating.summer.continuous>+1000 A</rating.summer.continuous>
+				<rating.summer.emergency>+2000 A</rating.summer.emergency>
+				<rating.winter.continuous>+1000 A</rating.winter.continuous>
+				<rating.winter.emergency>+2000 A</rating.winter.emergency>
+			</underground_line_conductor>
+		</underground_line_conductor_list>
+		<line_configuration_list>
+			<line_configuration>
+				<id>6</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(line_configuration:6)</name>
+				<conductor_A>underground_line_conductor:1</conductor_A>
+				<conductor_B>underground_line_conductor:1</conductor_B>
+				<conductor_C>underground_line_conductor:1</conductor_C>
+				<spacing>line_spacing:5</spacing>
+			</line_configuration>
+			<line_configuration>
+				<id>7</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(line_configuration:7)</name>
+				<conductor_A>underground_line_conductor:2</conductor_A>
+				<conductor_B>underground_line_conductor:2</conductor_B>
+				<conductor_C>underground_line_conductor:2</conductor_C>
+				<spacing>line_spacing:5</spacing>
+			</line_configuration>
+			<line_configuration>
+				<id>8</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(line_configuration:8)</name>
+				<conductor_A>underground_line_conductor:3</conductor_A>
+				<conductor_B>underground_line_conductor:3</conductor_B>
+				<conductor_C>underground_line_conductor:3</conductor_C>
+				<spacing>line_spacing:5</spacing>
+			</line_configuration>
+			<line_configuration>
+				<id>9</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(line_configuration:9)</name>
+				<conductor_A>underground_line_conductor:4</conductor_A>
+				<conductor_B>underground_line_conductor:4</conductor_B>
+				<conductor_C>underground_line_conductor:4</conductor_C>
+				<spacing>line_spacing:5</spacing>
+			</line_configuration>
+		</line_configuration_list>
+		<relay_list>
+			<inherits_from>link</inherits_from>
+		</relay_list>
+		<transformer_configuration_list>
+			<transformer_configuration>
+				<id>81</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(transformer_configuration:81)</name>
+				<connect_type>DELTA_DELTA</connect_type>
+				<install_type>PADMOUNT</install_type>
+				<primary_voltage>+4800 V</primary_voltage>
+				<secondary_voltage>+480 V</secondary_voltage>
+				<power_rating>+500 kVA</power_rating>
+				<powerA_rating>+0 kVA</powerA_rating>
+				<powerB_rating>+0 kVA</powerB_rating>
+				<powerC_rating>+0 kVA</powerC_rating>
+				<resistance>+0.09 pu</resistance>
+				<reactance>+1.81 pu</reactance>
+				<impedance>+0.09+1.81j pu</impedance>
+				<shunt_resistance>+1e+009 pu</shunt_resistance>
+				<shunt_reactance>+1e+009 pu</shunt_reactance>
+				<shunt_impedance>+1e+009+1e+009j pu</shunt_impedance>
+			</transformer_configuration>
+		</transformer_configuration_list>
+		<transformer_list>
+			<inherits_from>link</inherits_from>
+			<transformer>
+				<id>82</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(transformer:82)</name>
+				<configuration>transformer_configuration:81</configuration>
+				<status>CLOSED</status>
+				<from>709</from>
+				<to>775</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<phases>ABC</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+		</transformer_list>
+		<load_list>
+			<inherits_from>node</inherits_from>
+			<load>
+				<id>56</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>801</name>
+				<load_class>U</load_class>
+				<constant_power_A>+140000+70000j VA</constant_power_A>
+				<constant_power_B>+140000+70000j VA</constant_power_B>
+				<constant_power_C>+350000+175000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>57</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>812</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+85000+40000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>58</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>813</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+85000+40000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>59</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>814</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+3.54167-1.66667j A</constant_current_A>
+				<constant_current_B>-3.99172-2.74719j A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>60</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>818</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+221.915+104.431j Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>61</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>820</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+85000+40000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>62</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>822</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>-27.2129-17.9674j A</constant_current_B>
+				<constant_current_C>-0.38328+4.83053j A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>63</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>824</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+438.857+219.429j Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>64</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>825</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+42000+21000j VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>65</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>827</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+42000+21000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>66</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>828</name>
+				<load_class>U</load_class>
+				<constant_power_A>+42000+21000j VA</constant_power_A>
+				<constant_power_B>+42000+21000j VA</constant_power_B>
+				<constant_power_C>+42000+21000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>67</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>829</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+8.75-4.375j A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>68</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>830</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+221.915+104.431j Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>69</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>831</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+221.915+104.431j Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>70</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>832</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+42000+21000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>71</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>833</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+17.7083-8.33333j A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>72</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>834</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+42000+21000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>73</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>835</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+85000+40000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>74</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>836</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+438.857+219.429j Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>75</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>837</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+29.1667-14.5833j A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>76</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>838</name>
+				<load_class>U</load_class>
+				<constant_power_A>+126000+62000j VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>77</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>840</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+85000+40000j VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>78</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>841</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>-0.586139+9.76522j A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>79</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>842</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+2304+1152j Ohm</constant_impedance_A>
+				<constant_impedance_B>+221.915+104.431j Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+			<load>
+				<id>80</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>844</name>
+				<load_class>U</load_class>
+				<constant_power_A>+42000+21000j VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+2771.28-30d V</voltage_A>
+				<voltage_B>+2771.28-150d V</voltage_B>
+				<voltage_C>+2771.28+90d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<phases>ABCD</phases>
+				<nominal_voltage>+4800 V</nominal_voltage>
+			</load>
+		</load_list>
+		<regulator_configuration_list>
+		</regulator_configuration_list>
+		<regulator_list>
+			<inherits_from>link</inherits_from>
+		</regulator_list>
+		<triplex_node_list>
+			<inherits_from>powerflow_object</inherits_from>
+		</triplex_node_list>
+		<triplex_meter_list>
+			<inherits_from>triplex_node</inherits_from>
+		</triplex_meter_list>
+		<triplex_line_list>
+			<inherits_from>line</inherits_from>
+		</triplex_line_list>
+		<triplex_line_configuration_list>
+		</triplex_line_configuration_list>
+		<triplex_line_conductor_list>
+		</triplex_line_conductor_list>
+		<switch_list>
+			<inherits_from>link</inherits_from>
+		</switch_list>
+		<substation_list>
+			<inherits_from>node</inherits_from>
+		</substation_list>
+		<pqload_list>
+			<inherits_from>load</inherits_from>
+		</pqload_list>
+	</powerflow>
+	<network>
+		<version.major>0</version.major>
+		<version.minor>0</version.minor>
+		<node_list>
+		</node_list>
+		<link_list>
+		</link_list>
+		<capbank_list>
+		</capbank_list>
+		<fuse_list>
+		</fuse_list>
+		<relay_list>
+		</relay_list>
+		<regulator_list>
+		</regulator_list>
+		<transformer_list>
+		</transformer_list>
+		<meter_list>
+		</meter_list>
+		<generator_list>
+		</generator_list>
+	</network>
 </gridlabd>
