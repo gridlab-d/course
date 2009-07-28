@@ -1,0 +1,20 @@
+module residential;
+module tape;
+clock {
+	timezone "PST+8PDT";
+	starttime '2001-01-01 00:00:00 PST';
+}
+object house:1{
+	cooling_setpoint 90 degF;
+
+	object recorder {
+		parent house:1;
+		property air_temperature;
+		//columns cooling_setpoint,heating_setpoint;
+		//xdata cooling_setpoint;
+		output SCREEN;
+		file plot:house.jpg;
+		interval 300;
+		limit 100;
+	};
+}

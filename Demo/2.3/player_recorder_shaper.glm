@@ -1,0 +1,42 @@
+module residential;
+module tape;
+
+clock {
+	timezone PST+8PDT;
+	timestamp '2001-01-01 0:00:00';
+	stoptime '2001-07-01 00:00:00 PST';
+}
+
+module residential;
+module tape;
+
+object house:1 {
+	cooling_setpoint 90 degF;
+}
+
+object house:2{
+	cooling_setpoint 75 degF;
+}
+
+object shaper{
+	group class=house;
+	property heating_setpoint;
+	magnitude 200;
+	file exercise_2_3_theat.shape;
+}
+object recorder{
+	parent house:1;
+	 property air_temperature;
+	 file theat_shaper.csv;
+	 interval 3600;  //records every 1 hour
+	 limit 48; //4 days
+}
+
+object recorder{
+	parent house:2;
+	 property heating_setpoint;
+	 file theat_shaper_2.csv;
+	 interval 3600;  //records every 1 hour
+	 limit 48; //4 days
+}
+

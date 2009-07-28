@@ -1,0 +1,27 @@
+clock {
+	timezone PST+8PDT;
+	starttime '2005-01-01 0:00:00 PST';
+}
+
+module residential;
+module tape;
+object house:1{
+	cooling_setpoint 75degF;
+}
+object house:2{
+	cooling_setpoint 80degF;
+}
+	
+object histogram{
+	name histogram_test;
+	filename hist_test_3.csv;
+	//accumulated setpoints
+	bins ..50,..60,..70,..80,..90,..100;
+	count 24;
+	countrate 3600;
+	samplerate 3600;
+	group class=house;
+	property cooling_setpoint;
+
+
+}

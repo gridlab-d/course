@@ -1,0 +1,22 @@
+module residential;
+module tape;
+
+clock {
+	timezone PST+8PDT;
+	timestamp '2001-01-01 0:00:00';
+}
+
+module residential;
+module tape;
+
+object house:1 {
+	heating_setpoint 40 degF;
+	cooling_setpoint 90 degF;
+	
+}
+object player {
+	parent house:1;
+	property cooling_setpoint;
+	file theat.csv;
+	loop 28;
+}

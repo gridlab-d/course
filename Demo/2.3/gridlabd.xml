@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-2_0.xsl" type="text/xsl"?>
+<gridlabd>
+	<version.major>2</version.major>
+	<version.minor>0</version.minor>
+	<command_line>"C:\Program Files\GridLAB-D\bin\gridlabd.exe --debug --warn C:\GridLab-D_Chitra course\Version1\Demo\2.3\player_recorder_shaper.glm -o gridlabd.xml"</command_line>
+	<environment>batch</environment>
+	<quiet>0</quiet>
+	<warn>0</warn>
+	<debugger>0</debugger>
+	<gdb>0</gdb>
+	<debug>1</debug>
+	<test>0</test>
+	<verbose>0</verbose>
+	<iteration_limit>100</iteration_limit>
+	<workdir>"C:\GridLab-D_Chitra course\Version1\Demo\2.3"</workdir>
+	<dumpfile>gridlabd.xml</dumpfile>
+	<savefile>gridlabd.xml</savefile>
+	<dumpall>0</dumpall>
+	<runchecks>0</runchecks>
+	<threadcount>1</threadcount>
+	<profiler>0</profiler>
+	<pauseatexit>0</pauseatexit>
+	<testoutputfile>test.txt</testoutputfile>
+	<xml_encoding>8</xml_encoding>
+	<clock>2001-01-03 03:00:00 PST</clock>
+	<starttime>2009-07-28 10:48:08 PDT</starttime>
+	<stoptime>2001-07-01 01:00:00 PDT</stoptime>
+	<double_format>%+lg</double_format>
+	<complex_format>%+lg%+lg%c</complex_format>
+	<object_format>%s:%d</object_format>
+	<object_scan>%[^:]:%d</object_scan>
+	<object_tree_balance>FALSE</object_tree_balance>
+	<kmlfile>""</kmlfile>
+	<modelname>"C:\GridLab-D_Chitra course\Version1\Demo\2.3\player_recorder_shaper.glm"</modelname>
+	<execdir>"C:\Program Files\GridLAB-D\bin"</execdir>
+	<strictnames>TRUE</strictnames>
+	<website>http://www.gridlabd.org/</website>
+	<urlbase>http://www.gridlabd.org/</urlbase>
+	<randomseed>0</randomseed>
+	<include>""</include>
+	<trace>""</trace>
+	<gdb_window>0</gdb_window>
+	<tmp>c:/temp</tmp>
+	<force_compile>0</force_compile>
+	<nolocks>0</nolocks>
+	<skipsafe>0</skipsafe>
+	<dateformat>ISO</dateformat>
+	<minimum_timestep>1</minimum_timestep>
+	<timezone>PST8PDT</timezone>
+	<sync-order>
+		<pass>
+			<name>pretopdown</name>
+			<rank>
+				<ordinal>1</ordinal>
+				<object>
+					<name>(house:0)</name>
+					<id>0</id>
+				</object>
+				<object>
+					<name>(house:1)</name>
+					<id>1</id>
+				</object>
+			</rank>
+		</pass>
+		<pass>
+			<name>bottomup</name>
+			<rank>
+				<ordinal>0</ordinal>
+				<object>
+					<name>(shaper:2)</name>
+					<id>2</id>
+				</object>
+			</rank>
+			<rank>
+				<ordinal>1</ordinal>
+				<object>
+					<name>(house:0)</name>
+					<id>0</id>
+				</object>
+				<object>
+					<name>(house:1)</name>
+					<id>1</id>
+				</object>
+			</rank>
+		</pass>
+		<pass>
+			<name>posttopdown</name>
+			<rank>
+				<ordinal>0</ordinal>
+				<object>
+					<name>(recorder:3)</name>
+					<id>3</id>
+				</object>
+				<object>
+					<name>(recorder:4)</name>
+					<id>4</id>
+				</object>
+			</rank>
+		</pass>
+	</sync-order>
+	<residential>
+		<version.major>1</version.major>
+		<version.minor>0</version.minor>
+		<house_list>
+			<house>
+				<id>0</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2001-01-03 03:00:00 PST</clock>
+				<name>(house:0)</name>
+				<floor_area>+2361.48 sf</floor_area>
+				<gross_wall_area>+6220.17 sf</gross_wall_area>
+				<ceiling_height>+8 ft</ceiling_height>
+				<aspect_ratio>+1</aspect_ratio>
+				<envelope_UA>+472.225 Btu/degF</envelope_UA>
+				<window_wall_ratio>+0.15</window_wall_ratio>
+				<glazing_shgc>+0.65</glazing_shgc>
+				<airchange_per_hour>+5.73346</airchange_per_hour>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<thermostat_deadband>+2 degF</thermostat_deadband>
+				<heating_setpoint>+15.3846 degF</heating_setpoint>
+				<cooling_setpoint>+90 degF</cooling_setpoint>
+				<design_heating_capacity>+21.2928 Btu</design_heating_capacity>
+				<design_cooling_capacity>+20.1072 Btu</design_cooling_capacity>
+				<heating_COP>+3</heating_COP>
+				<cooling_COP>+3</cooling_COP>
+				<COP_coeff>+0.938074</COP_coeff>
+				<air_temperature>+65.0395 degF</air_temperature>
+				<outside_temp>+74 degF</outside_temp>
+				<mass_temperature>+69.0314 degF</mass_temperature>
+				<mass_heat_coeff>+1250.68</mass_heat_coeff>
+				<outside_temp_b>+74</outside_temp_b>
+				<heat_mode>ELECTRIC</heat_mode>
+				<hc_mode>OFF</hc_mode>
+				<total_load>+0+5.2371e-322j kW</total_load>
+				<enduse_load>+0+0j kW</enduse_load>
+				<power>+0+0j kW</power>
+				<current>+0+0j A</current>
+				<admittance>+0+0j 1/Ohm</admittance>
+				<energy>+0+0i kWh</energy>
+			</house>
+			<house>
+				<id>1</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2001-01-03 03:00:00 PST</clock>
+				<name>(house:1)</name>
+				<floor_area>+2735.47 sf</floor_area>
+				<gross_wall_area>+6694.62 sf</gross_wall_area>
+				<ceiling_height>+8 ft</ceiling_height>
+				<aspect_ratio>+1</aspect_ratio>
+				<envelope_UA>+506.607 Btu/degF</envelope_UA>
+				<window_wall_ratio>+0.15</window_wall_ratio>
+				<glazing_shgc>+0.65</glazing_shgc>
+				<airchange_per_hour>+5.12067</airchange_per_hour>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<thermostat_deadband>+2 degF</thermostat_deadband>
+				<heating_setpoint>+15.3846 degF</heating_setpoint>
+				<cooling_setpoint>+75 degF</cooling_setpoint>
+				<design_heating_capacity>+18.7202 Btu</design_heating_capacity>
+				<design_cooling_capacity>+19.0631 Btu</design_cooling_capacity>
+				<heating_COP>+3</heating_COP>
+				<cooling_COP>+3</cooling_COP>
+				<COP_coeff>+0.995966</COP_coeff>
+				<air_temperature>+64.0971 degF</air_temperature>
+				<outside_temp>+74 degF</outside_temp>
+				<mass_temperature>+66.4063 degF</mass_temperature>
+				<mass_heat_coeff>+2104.11</mass_heat_coeff>
+				<outside_temp_b>+74</outside_temp_b>
+				<heat_mode>ELECTRIC</heat_mode>
+				<hc_mode>OFF</hc_mode>
+				<total_load>+0+5.2371e-322j kW</total_load>
+				<enduse_load>+0+0j kW</enduse_load>
+				<power>+0+0j kW</power>
+				<current>+0+0j A</current>
+				<admittance>+0+0j 1/Ohm</admittance>
+				<energy>+0+0i kWh</energy>
+			</house>
+		</house_list>
+		<house_e_list>
+		</house_e_list>
+		<waterheater_list>
+		</waterheater_list>
+		<lights_list>
+		</lights_list>
+		<refrigerator_list>
+		</refrigerator_list>
+		<clotheswasher_list>
+		</clotheswasher_list>
+		<dishwasher_list>
+		</dishwasher_list>
+		<occupantload_list>
+		</occupantload_list>
+		<plugload_list>
+		</plugload_list>
+		<microwave_list>
+		</microwave_list>
+		<range_list>
+		</range_list>
+		<freezer_list>
+		</freezer_list>
+		<dryer_list>
+		</dryer_list>
+		<evcharger_list>
+		</evcharger_list>
+	</residential>
+	<tape>
+		<version.major>1</version.major>
+		<version.minor>0</version.minor>
+		<player_list>
+		</player_list>
+		<shaper_list>
+			<shaper>
+				<id>2</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2001-01-03 03:00:00 PST</clock>
+				<name>(shaper:2)</name>
+				<file>exercise_2_3_theat.shape</file>
+				<filetype>txt</filetype>
+				<group>class=house</group>
+				<property>heating_setpoint</property>
+				<magnitude>+200</magnitude>
+				<events>+0</events>
+			</shaper>
+		</shaper_list>
+		<recorder_list>
+			<recorder>
+				<id>3</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>house:0</parent>
+				<clock>2001-01-03 02:00:00 PST</clock>
+				<name>(recorder:3)</name>
+				<property>air_temperature</property>
+				<trigger>""</trigger>
+				<file>theat_shaper.csv</file>
+				<interval>3600</interval>
+				<limit>48</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+			</recorder>
+			<recorder>
+				<id>4</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>house:1</parent>
+				<clock>2001-01-03 02:00:00 PST</clock>
+				<name>(recorder:4)</name>
+				<property>heating_setpoint</property>
+				<trigger>""</trigger>
+				<file>theat_shaper_2.csv</file>
+				<interval>3600</interval>
+				<limit>48</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+			</recorder>
+		</recorder_list>
+		<collector_list>
+		</collector_list>
+		<histogram_list>
+		</histogram_list>
+	</tape>
+</gridlabd>
