@@ -1,6 +1,7 @@
 clock {
 	timezone PST+8PDT;
 	starttime '2005-01-01 00:00:00 PST';
+	stoptime '2005-02-01 00:00:00 PST';
 }
 
 module residential;
@@ -8,10 +9,16 @@ object house:..100 {
 	object waterheater { };
 }
 module tape;
+object shaper{
+	group id=1;
+	property water_demand;
+	file water_demand.shape;
+	}
+
 object collector {
 	file waterheater.csv;
 	group "class=waterheater";
-	property "sum(power.mag)";
+	property "sum(water_demand)";
 	interval 3600;
 	limit 768;
 }
