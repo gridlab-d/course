@@ -1,0 +1,35 @@
+// s1_1.glm
+// 
+// Problem:
+//
+// Build a single house model with only a waterheater 
+// and run it for one day in January with an outdoor 
+// air temperature of 50F.
+//
+// Plot the result power consumption on screen.
+//
+
+module residential { 
+	implicit_enduses WATERHEATER; 
+	default_outdoor_temperature 50;	
+}
+module tape; 
+
+clock {
+	timezone PST+8PDT;
+	starttime '2009-01-01 0:00:00 PST';
+	stoptime '2009-01-02 0:00:00 PST';
+}
+
+object house {
+	name MyHouse;
+	floor_area 2000 sf;
+}
+
+object recorder {
+	parent MyHouse;
+	property panel.power;
+	interval -1;
+	file plot:output.plt;
+	output SCREEN;
+}

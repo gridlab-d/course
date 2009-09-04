@@ -1,0 +1,36 @@
+// $Id$
+// 
+// Problem:
+//
+// Model 10 houses with lights and plugs
+// that are between 1500 and 2500 sf
+// and run them for the first week of August
+// in Phoenix AZ
+//
+// Collect the hourly total power consumption in a CSV file.
+//
+
+module residential { 
+	implicit_enduses LIGHTS|PLUGS; 
+}
+module tape; 
+
+clock {
+	timezone PST+8PDT;
+	starttime '2009-08-01 0:00:00 PST';
+	stoptime '2009-08-08 0:00:00 PST';
+}
+
+#include "AZ-Phoenix.glm"
+
+object house:..100 {
+	system_type AIRCONDITIONING|FORCEDAIR;
+	floor_area random.triangle(1500,2500);
+}
+
+object collector {
+	group "class=house";
+	property "sum(panel.power.real),sum(panel.power.imag)";
+	interval -1;
+	file output.csv;
+}
