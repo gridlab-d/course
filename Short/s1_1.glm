@@ -22,14 +22,12 @@ clock {
 }
 
 object house {
-	name MyHouse;
 	floor_area 2000 sf;
+	object recorder {
+		property panel.power;
+		interval -1;
+		file plot:output.plt;
+		output SCREEN;
+	};
 }
 
-object recorder {
-	parent MyHouse;
-	property panel.power;
-	interval -1;
-	file plot:output.plt;
-	output SCREEN;
-}

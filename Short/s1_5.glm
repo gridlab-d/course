@@ -1,0 +1,33 @@
+// $Id$
+// 
+// Problem:
+//
+// Create a 1000 sf house in Portland OR 
+// with baseboard electric heating, no AC, 
+// and light, plugs, and waterheater enduses.
+//
+// Plot the cumulative energy use each day of the year.
+//
+
+module residential {
+	implicit_enduses LIGHT|PLUGS|WATERHEATER;
+}
+module tape; 
+
+clock {
+	timezone PST+8PDT;
+	starttime '2009-01-01 0:00:00 PST';
+	stoptime '2010-01-01 0:00:00 PST';
+}
+
+#include "OR-Portland.glm"
+
+object house {
+	floor_area 1000;
+	object recorder {
+		property "panel.energy";
+		interval 86400;
+		file plot:output.plt;
+		output SCREEN;
+	};
+}

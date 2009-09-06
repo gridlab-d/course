@@ -5,12 +5,13 @@
 // Model 10 houses with lights and plugs
 // that are between 1500 and 2500 sf
 // and run them for the last week of January 
-// in Portland OR
+// in Portland OR.  Setup the thermostat so
+// that heating is on a 66/70 setback schedule
+// between 8am and 6pm.
 //
-// Collect the hourly total power consumption in a CSV file.
+// Collect the mean and standard deviation of
+// the thermostat setpoints in a CSV file.
 //
-
-#print ${GLPATH}
 
 module residential { 
 	implicit_enduses LIGHTS|PLUGS; 
@@ -25,14 +26,20 @@ clock {
 
 #include "OR-Portland.glm"
 
+schedule thermostat_setback {
+	* 8-18 * * * 66
+	* 19-7 * * * 70
+}
+
 object house:..10 {
 	system_type AIRCONDITIONING|FORCEDAIR;
 	floor_area random.triangle(1500,2500);
+	heating_setpoint thermostat_setback;
 }
 
 object collector {
 	group "class=house";
-	property "sum(panel.power.mag)";
+	property "mean(heating_setpoint),std(heating_setpoint)";
 	interval 3600;
 	file output.csv;
 }
