@@ -10,8 +10,6 @@
 // Collect the hourly total power consumption in a CSV file.
 //
 
-#print ${GLPATH}
-
 module residential { 
 	implicit_enduses LIGHTS|PLUGS; 
 }

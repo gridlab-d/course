@@ -7,7 +7,7 @@
 // and run them for the first week of August
 // in Phoenix AZ
 //
-// Collect the hourly total power consumption in a CSV file.
+// Sample the hourly total power consumption in a CSV file.
 //
 
 module residential { 
@@ -23,7 +23,7 @@ clock {
 
 #include "AZ-Phoenix.glm"
 
-object house:..100 {
+object house:..10 {
 	system_type AIRCONDITIONING|FORCEDAIR;
 	floor_area random.triangle(1500,2500);
 }
