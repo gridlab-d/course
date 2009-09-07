@@ -1,0 +1,75 @@
+// $Id$
+// 
+// Problem:
+//
+//
+// Alter S1_6 so that it uses a waterheater controller
+// that responds to time-of-use (TOU) prices that are
+// scheduled follows:
+// 	Peak price is 12.5 cents/kWh
+//	Offpeak price is 3.5 cents/kWh
+//	Winter (Nov-Mar) peak is everyday 3am to 9am
+//	Summer (Apr-Oct) peak is weekdays 3pm to 9pm
+//
+// Record the cumulative energy consumption in a CSV file.
+
+#set randomseed=10
+#set complex_format=%g,%g
+#set dateformat=US
+
+module residential {
+	implicit_enduses LIGHT|PLUGS;
+}
+module tape; 
+
+clock {
+	timezone PST+8PDT;
+	starttime '2009-01-01 0:00:00 PST';
+	stoptime '2010-01-01 0:00:00 PST';
+}
+
+schedule tou_price {
+	winter {
+		* 3-8 * 11-3 * 0.035
+		* 9-2 * 11-3 * 0.125
+	}
+	summer {
+		* * * 4-10 6-0 0.035
+		* 21-14 * 4-10 1-5 0.125
+		* 15-20 * 4-10 1-5 0.125
+	}
+}
+
+#include "OR-Portland.glm"
+
+class controller {
+	double price;
+	double curtail_price;
+	public double *pTset;
+	intrinsic init(object parent) {
+		pTset = (double*)gl_get_addr(parent,"tank_setpoint");
+		return pTset!=NULL;
+	};
+	intrinsic presync(timestamp t0, timestamp t1) {
+		if (price<curtail_price)
+			*pTset = 70;
+		else 
+			*pTset = 120;
+		return TS_NEVER;
+	};
+}
+
+object house {
+	floor_area 1000;
+	object waterheater {
+		object controller {
+			price tou_price;
+			curtail_price 0.10;
+		};
+		object recorder {
+			property "energy";
+			interval 86400;
+			file output.csv;
+		};
+	};
+}
