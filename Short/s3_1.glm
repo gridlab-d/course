@@ -1,0 +1,72 @@
+// $Id$
+//	Copyright (C) 2008 Battelle Memorial Institute
+//
+// Market test
+// generates 10000 bids, one each 5 minutes and clear a market once per hour
+
+module market;
+module tape;
+
+clock {
+	timezone "CST+6CDT";
+	timestamp '2000-01-01 0:00:00';
+}
+
+object auction {
+	name Market;
+	type DOUBLE;
+	unit "MWh";
+	period 3600;
+	latency 86400;
+	object recorder {
+		file "output.csv";
+		property "next.Q,next.P";
+		interval -1;
+		limit 100;
+	};
+};
+
+class bidder {
+	int16 count;
+	object market;
+	enumeration {BUYER=0, SELLER=1} role;
+	int32 lastbid_id;
+	int64 lastmkt_id;
+	public int64 *thismkt_id;
+	function auction::submit_bid;
+	intrinsic init (object parent)
+	{
+		lastbid_id = -1;
+		lastmkt_id = -1;
+		if (market==NULL)
+			throw "market is not defined";
+		thismkt_id = (int64*)gl_get_addr(market,"market_id");
+		if (thismkt_id==NULL)
+			throw "market does not define market_id";
+		return SUCCESS;
+	};
+	intrinsic sync (TIMESTAMP t0, TIMESTAMP t1)
+	{
+		double quantity = gl_random_lognormal(3,1);
+		double price = gl_random_lognormal(2,1);
+		lastbid_id = (int32)submit_bid(market,my,role==BUYER?-quantity:quantity,price,*thismkt_id!=lastmkt_id?-1:lastbid_id);
+		count--;
+		lastmkt_id = *thismkt_id;
+		if (count>0)
+			return t1+300;
+		else
+			return TS_NEVER;
+	};
+}
+
+object bidder:..10 {
+	count 10000;
+	market Market;
+	role BUYER;
+}
+
+object bidder:..10 {
+	count 10000;
+	market Market;
+	role SELLER;
+}
