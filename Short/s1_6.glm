@@ -7,8 +7,8 @@
 // and light, plugs, and waterheater enduses.
 //
 // Compare the cumulative energy use with the 
-// waterheater thermostat to 110F with nighttime 
-// shutdown setback to 70F versus a constant 130F.
+// waterheater thermostat to 120F with nighttime 
+// shutdown setback to 70F versus a constant 120F.
 //
 
 #set randomseed=10
@@ -34,7 +34,7 @@ schedule thermostat_setback {
 object house {
 	floor_area 1000;
 	object waterheater {
-		tank_setpoint 120;
+		tank_setpoint thermostat_setback;
 	};
 	object recorder {
 		property "panel.energy";

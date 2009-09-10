@@ -21,16 +21,23 @@ clock {
 	stoptime '2009-02-01 0:00:00 PST';
 }
 
+schedule setback {
+	* 8-17 * * * 66
+	* 18-7 * * * 70
+}
+
 #include "OR-Portland.glm"
 
 object house:..10 {
 	system_type AIRCONDITIONING|FORCEDAIR;
 	floor_area random.triangle(1500,2500);
+	heating_setpoint setback;
 }
 
 object collector {
 	group "class=house";
-	property "sum(panel.power.mag)";
+	property "mean(heating_setpoint),std(heating_setpoint)";
 	interval 3600;
+	limit 1000;
 	file output.csv;
 }

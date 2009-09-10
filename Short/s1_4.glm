@@ -35,12 +35,12 @@ object house:..10 {
 	system_type AIRCONDITIONING|FORCEDAIR|TWOSPEED;
 	floor_area random.triangle(1500,2500);
 	heating_setpoint 64 + occupied * 6;
-	cooling_setpoint 84 + occupied * 6;
+	cooling_setpoint 84 - occupied * 6;
 }
 
 object collector {
 	group "class=house";
-	property "sum(panel.power.mag)";
+	property "sum(panel.energy.real)";
 	interval 3600;
 	file output.csv;
 }

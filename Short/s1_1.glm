@@ -11,7 +11,7 @@
 
 module residential { 
 	implicit_enduses WATERHEATER; 
-	default_outdoor_temperature 50;	
+	default_outdoor_temperature 50F;	
 }
 module tape; 
 

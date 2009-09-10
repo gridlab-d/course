@@ -30,12 +30,12 @@ clock {
 
 schedule tou_price {
 	winter {
-		* 3-8 * 11-3 * 0.035
-		* 9-2 * 11-3 * 0.125
+		* 3-8 * 11-3 * 0.125
+		* 9-2 * 11-3 * 0.035
 	}
 	summer {
 		* * * 4-10 6-0 0.035
-		* 21-14 * 4-10 1-5 0.125
+		* 21-14 * 4-10 1-5 0.035
 		* 15-20 * 4-10 1-5 0.125
 	}
 }
@@ -51,7 +51,7 @@ class controller {
 		return pTset!=NULL;
 	};
 	intrinsic presync(timestamp t0, timestamp t1) {
-		if (price<curtail_price)
+		if (price>curtail_price)
 			*pTset = 70;
 		else 
 			*pTset = 120;
@@ -62,6 +62,7 @@ class controller {
 object house {
 	floor_area 1000;
 	object waterheater {
+		tank_setpoint 120;
 		object controller {
 			price tou_price;
 			curtail_price 0.10;
