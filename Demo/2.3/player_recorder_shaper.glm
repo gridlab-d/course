@@ -1,42 +1,36 @@
+//demo player_recorder_shaper.glm
+//reads exercise_2_3_theat.shaper
+//writes to theat_shape.csv  
 module residential;
 module tape;
 
 clock {
 	timezone PST+8PDT;
 	timestamp '2001-01-01 0:00:00';
-	stoptime '2001-07-01 00:00:00 PST';
+	stoptime '2001-01-07 00:00:00 PST'; //stops after one week
 }
-
-module residential;
-module tape;
-
-object house:1 {
-	cooling_setpoint 90 degF;
-}
-
-object house:2{
-	cooling_setpoint 75 degF;
-}
-
 object shaper{
 	group class=house;
 	property heating_setpoint;
-	magnitude 200;
+	magnitude 385;
 	file exercise_2_3_theat.shape;
 }
-object recorder{
-	parent house:1;
-	 property air_temperature;
-	 file theat_shaper.csv;
-	 interval 3600;  //records every 1 hour
-	 limit 48; //4 days
+object house:1 {
+	cooling_setpoint 90 degF;
+	object recorder{
+		property air_temperature;
+		file theat_shaper.csv;
+		interval 3600;  //records every 1 hour
+		limit 48; //4 days
+	};
 }
-
-object recorder{
-	parent house:2;
-	 property heating_setpoint;
-	 file theat_shaper_2.csv;
-	 interval 3600;  //records every 1 hour
-	 limit 48; //4 days
+object house:2 {
+	cooling_setpoint 75 degF;
+	object recorder{
+		parent house:2;
+	 	property heating_setpoint;
+	 	file theat_shaper_2.csv;
+		interval 3600;  //records every 1 hour
+		limit 48; //4 days
+	};
 }
-
