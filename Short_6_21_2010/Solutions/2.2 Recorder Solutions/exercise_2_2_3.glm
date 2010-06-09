@@ -1,0 +1,9 @@
+#include "IEEE_37bus.glm"
+module tape;
+
+object multi_recorder {
+	property node702:voltage_A,node702:voltage_B,node702:voltage_C,node709:voltage_A,node709:voltage_B,node709:voltage_C,load813:voltage_A,load813:voltage_B,load813:voltage_C;
+	interval 0;
+	limit 2;
+	file "exercise_2_2_3.csv";
+}

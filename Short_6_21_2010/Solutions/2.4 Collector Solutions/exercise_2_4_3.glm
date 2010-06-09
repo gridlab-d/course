@@ -1,0 +1,11 @@
+// Exercise 2.4.3
+
+#include "IEEE_37bus.glm"
+
+module tape;
+
+object collector {
+	file exercise_2_4_3.csv;
+	group "class=node";
+	property "min(voltage_A.mag),min(voltage_B.mag),min(voltage_C.mag),max(voltage_A.mag),max(voltage_B.mag),max(voltage_C.mag)";
+}

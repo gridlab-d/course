@@ -1,0 +1,38 @@
+//Exercise 2.3.1
+
+module tape;
+module residential{
+	implicit_enduses NONE;
+}
+
+clock {
+	timezone PST+8PDT;
+	starttime '2001-01-01 00:00:00';
+	stoptime '2001-01-02 00:00:00';
+}
+
+schedule plug_shape {
+ 	* 0-2 * * * 0.250;
+ 	* 3-5 * * * 0.500;
+ 	* 6-8 * * * 0.750;
+ 	* 9-17 * * * 0.500;
+ 	* 18-20 * * * 0.750;
+	* 21-23	* * * 0.500;
+}
+
+object house{
+	object plugload{
+		shape "type: analog; schedule: plug_shape; power: 1kW";
+		object recorder{
+			property power,demand,energy;
+			interval 3600;
+			limit 24;
+			file exercise_2_3_1.csv;
+		};
+		
+		power_factor 1.0;
+		power_fraction 1.0;
+		current_fraction 0.0;
+		impedance_fraction 0.0;
+	};
+};
