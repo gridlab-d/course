@@ -4,6 +4,7 @@
 #setenv path=c:/mingw/bin
 #setenv INCLUDE=c:/mingw/include
 #set include=c:\documents and settings\fish334\desktop\gridlab-d
+#set suppress_repeat_messages=0
 
 module tape;
 module market;
