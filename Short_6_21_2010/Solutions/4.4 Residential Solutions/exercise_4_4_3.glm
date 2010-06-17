@@ -1,4 +1,4 @@
-// Exercise 5.2.2
+// Exercise 4.4.3
 
 module tape;
 module residential {
@@ -70,15 +70,15 @@ object triplex_meter {
 		window_wall_ratio 0.07;
 		heating_COP 1.00;
 		object ZIPload {
-            base_power power_magnitude*1;
-            power_fraction 0.200000;
-            impedance_fraction 0.700000;
-            current_fraction 0.100000;
-            power_pf 0.910;
-            current_pf 0.927;
-            impedance_pf 0.986;
-            heat_fraction 0.88;
-        };
+            		base_power power_magnitude*1;
+            		power_fraction 0.200000;
+           	 	impedance_fraction 0.700000;
+            		current_fraction 0.100000;
+            		power_pf 0.910;
+            		current_pf 0.927;
+            		impedance_pf 0.986;
+            		heat_fraction 0.88;
+        	};
 		object recorder {
 			property total_load;
 			file "exercise_5_2_3.csv";

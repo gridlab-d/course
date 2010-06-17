@@ -1,4 +1,4 @@
-// Exercise 5.2.2
+// Exercise 4.4.2
 
 module tape;
 module residential;
@@ -35,7 +35,7 @@ object triplex_meter {
 		heating_COP 1.00;
 		object recorder {
 			property air_temperature;
-			file "exercise_5_2_2.csv";
+			file "exercise_4_4_2.csv";
 			interval 3600;
 			limit 168;
 		};
