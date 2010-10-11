@@ -30,16 +30,15 @@ object house:..10 {
 		power_factor 1;
 		impedance_fraction 1;
 		power_fraction 0;
-		current_fraction 0
+		current_fraction 0;
 	};
 
 }
 
 object collector {
 	file theat_collector.csv;
-	group class=lights;
-	property sum(energy.real),avg(energy.real);  //no space...needs real since it is set up
-	//complex
+	group "class=lights";
+	property sum(energy.real),avg(energy.real);  //no space...needs real since it is set as a omplex
 	interval 3600;
-	limit 768;
+	limit 744;
 }

@@ -20,7 +20,7 @@ object house {
 	object plugload {
 		shape "type: pulsed; schedule: light_load_prob; energy: 12.75 kWh; count: 6; duration: 10800 s";
 		object recorder {
-			file exerces_2_3_2.csv;
+			file exercise_2_3_2.csv;
 			property power,demand,energy;
 			interval 3600;
 			limit 86400;
