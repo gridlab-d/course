@@ -1,0 +1,18 @@
+#include "IEEE_37bus.glm"
+module tape;
+
+object recorder {
+	parent load701;
+	property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
+	interval 0;
+	limit 50;
+	file "exercise_2_2_4_node701.csv";
+}
+
+object recorder {
+	parent node775;
+	property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
+	interval 0;
+	limit 50;
+	file "exercise_2_2_4_node775.csv";
+}
