@@ -30,9 +30,9 @@ schedule waterheater_demand {
 }
 
 schedule state_probability {
-	* 19-4 * * * 0;
+	* 19-4 * * * 0.001;
 	* 5-6 * * * 1;
-	* 7-17 * * * 0;
+	* 7-17 * * * 0.001;
 	* 18 * * * 0.5;
 }
 
