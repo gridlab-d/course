@@ -19,19 +19,12 @@ object climate{
 	name MyClimate;
 	tmyfile weather.csv;
 	reader CsvReader;
-	object recorder {
-		file climate_out.csv;
-		interval 3600;
-		limit 120;
-		property temperature,humidity;
-	};
 };
 
-object house {
-     object recorder {
-          	file house_out.csv;
-          	interval 3600;
-          	limit 24;
-          	property outdoor_temperature,outdoor_rh;
-     };
+object recorder {
+	parent MyClimate;
+	property temperature,humidity;
+	interval 3600;
+	limit 24;
+	file "exercise_3_1_3.csv";
 }
