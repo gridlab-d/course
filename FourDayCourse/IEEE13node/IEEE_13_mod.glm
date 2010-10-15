@@ -1,0 +1,556 @@
+// $Id: IEEE13-Feb27.glm 1182 2009-2-27 d3x289 $
+//	Copyright (C) 2009 Battelle Memorial Institute
+
+clock {
+	timestamp '2000-01-01 0:00:00';
+	timezone EST+5EDT;
+}
+
+#set relax_naming_rules=1;
+#set profiler=1
+
+module powerflow {
+	solver_method NR;
+};
+
+object overhead_line_conductor:6010 {
+	geometric_mean_radius 0.031300;
+	resistance 0.185900;
+}
+
+object overhead_line_conductor:6020 {
+	geometric_mean_radius 0.00814;
+	resistance 0.592000;
+}
+
+object overhead_line_conductor:6030 {
+	geometric_mean_radius 0.004460;
+	resistance 1.120000;
+}
+
+object underground_line_conductor:6060 { 
+	 outer_diameter 1.290000;
+	 conductor_gmr 0.017100;
+	 conductor_diameter 0.567000;
+	 conductor_resistance 0.410000;
+	 neutral_gmr 0.0020800; 
+	 neutral_resistance 14.87200;  
+	 neutral_diameter 0.0640837;
+	 neutral_strands 13.000000;
+	 shield_gmr 0.000000;
+	 shield_resistance 0.000000;
+}
+
+object underground_line_conductor:6070 { 
+	 outer_diameter 1.060000;
+	 conductor_gmr 0.011100;
+	 conductor_diameter 0.368000;
+	 conductor_resistance 0.970000;
+	 neutral_gmr 0.011100;
+	 neutral_resistance 0.970000;
+	 neutral_diameter 0.0640837;
+	 neutral_strands 6.000000;
+	 shield_gmr 0.000000;
+	 shield_resistance 0.000000;
+}
+
+// Overhead line configurations
+object line_spacing:500601 {
+	distance_AB 2.5;
+	distance_AC 4.5;
+	distance_BC 7.0;
+	distance_BN 5.656854;
+	distance_AN 4.272002;
+	distance_CN 5.0;
+}
+
+object line_spacing:500602 {
+	distance_AC 2.5;
+	distance_AB 4.5;
+	distance_BC 7.0;
+	distance_CN 5.656854;
+	distance_AN 4.272002;
+	distance_BN 5.0;
+}
+
+object line_spacing:505603 {
+	distance_AC 0.0;
+	distance_AB 0.0;
+	distance_BC 7.0;
+	distance_AN 0.0;
+	distance_CN 5.656854;
+	distance_BN 5.0;
+}
+
+object line_spacing:505604 {
+	distance_AC 7.0;
+	distance_AB 0.0;
+	distance_BC 0.0;
+	distance_AN 5.656854;
+	distance_CN 5.0;
+	distance_BN 0.0;
+}
+
+object line_spacing:510 {
+	distance_AC 0.0;
+	distance_AB 0.0;
+	distance_BC 0.0;
+	distance_AN 0.0;
+	distance_CN 5.0;
+	distance_BN 0.0;
+}
+
+object line_configuration:601 {
+	conductor_A overhead_line_conductor:6010;
+	conductor_B overhead_line_conductor:6010;
+	conductor_C overhead_line_conductor:6010;
+	conductor_N overhead_line_conductor:6020;
+	spacing line_spacing:500601;
+}
+
+object line_configuration:602 {
+	conductor_A overhead_line_conductor:6020;
+	conductor_B overhead_line_conductor:6020;
+	conductor_C overhead_line_conductor:6020;
+	conductor_N overhead_line_conductor:6020;
+	spacing line_spacing:500602;
+}
+
+object line_configuration:603 {
+	conductor_B overhead_line_conductor:6030;
+	conductor_C overhead_line_conductor:6030;
+	conductor_N overhead_line_conductor:6030;
+	spacing line_spacing:505603;
+}
+
+object line_configuration:604 {
+	conductor_A overhead_line_conductor:6030;
+	conductor_C overhead_line_conductor:6030;
+	conductor_N overhead_line_conductor:6030;
+	spacing line_spacing:505604;
+}
+
+object line_configuration:605 {
+	conductor_C overhead_line_conductor:6030;
+	conductor_N overhead_line_conductor:6030;
+	spacing line_spacing:510;
+}
+
+//Underground line configuration
+object line_spacing:515 {
+	 distance_AB 0.500000;
+	 distance_BC 0.500000;
+	 distance_AC 1.000000;
+	 distance_AN 0.000000;
+	 distance_BN 0.000000;
+	 distance_CN 0.000000;
+}
+
+object line_spacing:520 {
+	 distance_AB 0.000000;
+	 distance_BC 0.000000;
+	 distance_AC 0.000000;
+	 distance_AN 0.083333;
+	 distance_BN 0.000000;
+	 distance_CN 0.000000;
+}
+
+object line_configuration:606 {
+	 conductor_A underground_line_conductor:6060;
+	 conductor_B underground_line_conductor:6060;
+	 conductor_C underground_line_conductor:6060;
+	 spacing line_spacing:515;
+}
+
+object line_configuration:607 {
+	 conductor_A underground_line_conductor:6070;
+	 conductor_N underground_line_conductor:6070;
+	 spacing line_spacing:520;
+}
+
+// Define line objects
+object overhead_line:632645 {
+     phases BCN;
+     name 632-645;
+     from 632;
+     to 645;
+     length 500;
+     configuration line_configuration:603;
+}
+
+object overhead_line:645646 {
+     phases BCN;
+     name 645-646;
+     from 645;
+     to 646;
+     length 300;
+     configuration line_configuration:603;
+}
+
+object overhead_line:630632 {
+     phases ABCN;
+     name 630-632;
+     from 630;
+     to 632;
+     length 2000;
+     configuration line_configuration:601;
+}
+
+//Split line for distributed load
+object overhead_line:6326321 {
+     phases ABCN;
+     name 632-6321;
+     from 632;
+     to 6321;
+     length 500;
+     configuration line_configuration:601;
+}
+
+object overhead_line:6321671 {
+     phases ABCN;
+     name 6321-671;
+     from 6321;
+     to 671;
+     length 1500;
+     configuration line_configuration:601;
+}
+//End split line
+
+object overhead_line:671680 {
+     phases ABCN;
+     name 671-680;
+     from 671;
+     to 680;
+     length 1000;
+     configuration line_configuration:601;
+}
+
+object overhead_line:671684 {
+     phases ACN;
+     name 671-684;
+     from 671;
+     to 684;
+     length 300;
+     configuration line_configuration:604;
+}
+
+ object overhead_line:684611 {
+      phases CN;
+      name 684-611;
+      from 684;
+      to 611;
+      length 300;
+      configuration line_configuration:605;
+}
+
+object underground_line:684652 {
+      phases AN;
+      name 684-652;
+      from 684;
+      to 652;
+      length 800;
+      configuration line_configuration:607;
+}
+
+object underground_line:692675 {
+     phases ABC;
+     name 692-675;
+     from 692;
+     to 675;
+     length 2500;
+     configuration line_configuration:606;
+}
+
+object overhead_line:632633 {
+     phases ABCN;
+     name 632-633;
+     from 632;
+     to 633;
+     length 500;
+     configuration line_configuration:602;
+}
+
+// Create node objects
+object node {
+     name 633;
+     phases ABCN;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     nominal_voltage 2401.7771;
+}
+
+object node {
+     name 630;
+     phases ABCN;
+     voltage_A 2401.7771+0j;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     nominal_voltage 2401.7771;
+}
+ 
+object node {
+     name 632;
+     phases ABCN;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     nominal_voltage 2401.7771;
+}
+
+object node {
+	  bustype SWING;
+      name 650;
+      phases ABCN;
+      voltage_A 2401.7771;
+      voltage_B -1200.8886-2080.000j;
+      voltage_C -1200.8886+2080.000j;
+      nominal_voltage 2401.7771;
+} 
+ 
+object node {
+       name 680;
+       phases ABCN;
+       voltage_A 2401.7771;
+       voltage_B -1200.8886-2080.000j;
+       voltage_C -1200.8886+2080.000j;
+       nominal_voltage 2401.7771;
+}
+ 
+ 
+object node {
+      name 684;
+      phases ACN;
+      voltage_A 2401.7771;
+      voltage_B -1200.8886-2080.000j;
+      voltage_C -1200.8886+2080.000j;
+      nominal_voltage 2401.7771;
+} 
+ 
+ 
+ 
+// Create load objects 
+
+object node {
+     name 634;
+     phases ABCN;
+     voltage_A 480.000+0j;
+     voltage_B -240.000-415.6922j;
+     voltage_C -240.000+415.6922j;
+     nominal_voltage 480.000;
+}
+ 
+object load {
+     name 645;
+     phases BCN;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_B 170000+125000j;
+     nominal_voltage 2401.7771;
+}
+ 
+object load {
+     name 646;
+	 phases BC;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_B 150000+115000j;
+     nominal_voltage 2401.7771;
+}
+ 
+ 
+object load {
+     name 652;
+     phases AN;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_A 325000+250000j;
+     nominal_voltage 2401.7771;
+}
+ 
+object load {
+     name 671;
+	 phases ABC;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_A 325000+520000j;
+     constant_power_B 425000+360000j;
+     constant_power_C 455000+480000j;
+     nominal_voltage 2401.7771;
+}
+ 
+object load {
+     name 675;
+     phases ABC;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_A 565000+470000j;
+     constant_power_B 770000+820000j;
+     constant_power_C 450000+547200j;
+     nominal_voltage 2401.7771;
+}
+
+
+ 
+object load {
+     name 692;
+	 phases ABC;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_A 385000+350000j;
+     constant_power_B 58000+80000j;
+     constant_power_C 24000+35200j;
+     nominal_voltage 2401.7771;
+}
+ 
+object load {
+     name 611;
+     phases CN;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_C 49000+38200j;
+     nominal_voltage 2401.7771;
+}
+
+
+ 
+// distributed load between node 632 and 671
+// 2/3 of load 1/4 of length
+object load {
+     name 6711;
+     parent 671;
+     phases ABC;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_A 5666.6667+4333.3333j;
+     constant_power_B 25000+22666.6667j;
+     constant_power_C 36000+28666.6667j;
+     nominal_voltage 2401.7771;
+}
+
+object load {
+     name 6321;
+     phases ABCN;
+     voltage_A 2401.7771;
+     voltage_B -1200.8886-2080.000j;
+     voltage_C -1200.8886+2080.000j;
+     constant_power_A 11333.333+6666.6667j;
+     constant_power_B 44000+35333.3333j;
+     constant_power_C 78000+55333.3333j;
+     nominal_voltage 2401.7771;
+}
+ 
+
+ 
+// Switch
+object switch:671692 {
+     phases ABCN;
+     name 671-692;
+     from 671;
+     to 692;
+     status CLOSED;
+}
+ 
+// Transformer
+object transformer_configuration:400 {
+	connect_type WYE_WYE;
+  	install_type PADMOUNT;
+  	power_rating 500;
+  	primary_voltage 4160;
+  	secondary_voltage 480;
+  	resistance 0.011;
+  	reactance 0.02;
+}
+  
+object transformer:633634 {
+  	phases ABCN;
+  	name 633-634;
+  	from 633;
+  	to 634;
+  	configuration transformer_configuration:400;
+}
+  
+ 
+// Regulator
+object regulator_configuration:6506321 {
+	connect_type 1;
+	band_center 2401;
+	band_width 40;
+	time_delay 30.0;
+	raise_taps 16;
+	lower_taps 16;
+	current_transducer_ratio 700;
+	power_transducer_ratio 20;
+	compensator_r_setting_A 3.0;
+	compensator_r_setting_B 3.0;
+	compensator_r_setting_C 3.0;
+	compensator_x_setting_A 9.0;
+	compensator_x_setting_B 9.0;
+	compensator_x_setting_C 9.0;
+	CT_phase ABC;
+	PT_phase ABC;
+	regulation 0.10;
+	Control OUTPUT_VOLTAGE;
+	Type A;
+	tap_pos_A 1;
+	tap_pos_B 1;
+	tap_pos_C 1;
+}
+  
+object regulator:650630 {
+     name Reg1;
+	 phases ABC;
+	 from 650;
+	 to 630;
+	 configuration regulator_configuration:6506321;
+}
+
+object capacitor {
+	phases ABCN;
+	name CAP1;
+	pt_phase ABCN;
+	parent 675;
+	phases_connected ABCN;
+	control VOLT;
+	voltage_set_high 2700.0;
+	voltage_set_low 2250.0;
+	capacitor_A 0.10 MVAr;
+	capacitor_B 0.10 MVAr;
+	capacitor_C 0.10 MVAr;
+	control_level INDIVIDUAL;
+    time_delay 300.0;	
+	dwell_time 0.0;
+	switchA CLOSED;				
+	switchB CLOSED;
+	switchC CLOSED;
+	nominal_voltage 2401.7771;
+}
+object capacitor {
+	phases ABCN;
+	name CAP2;
+	pt_phase ABCN;
+	parent 675;
+	phases_connected ABCN;
+	control VOLT;
+	voltage_set_high 2600.0;
+	voltage_set_low 2150.0;
+	capacitor_A 0.05 MVAr;
+    capacitor_B 0.05 MVAr;
+	capacitor_C 0.05 MVAr;
+	control_level INDIVIDUAL;
+	time_delay 300.0;	
+	dwell_time 0.0;
+	switchA CLOSED;				
+	switchB CLOSED;
+	switchC CLOSED;
+	nominal_voltage 2401.7771;
+}
+
