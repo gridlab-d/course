@@ -350,6 +350,17 @@ object triplex_meter {
        name tm_A1;
        phases AS;
        nominal_voltage 120;
+       groupid House_Meter;
+       bill_mode UNIFORM;
+       price 0.100000;
+       bill_day 1;
+       monthly_fee 10.000000;
+	   object recorder {
+	        file billing_5_1_3.csv;
+			property monthly_energy,monthly_bill;
+			interval 60;
+			limit 1000000;
+		};
 }
 
 
