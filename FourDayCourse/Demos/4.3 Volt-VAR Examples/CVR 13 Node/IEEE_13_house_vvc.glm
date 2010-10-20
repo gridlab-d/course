@@ -537,10 +537,10 @@ object capacitor {
       phases_connected ABCN;     
       control VOLT;     
       voltage_set_high 2350.0;     
-      voltage_set_low 2340.0;     
-      capacitor_A 1.10 MVAr;    
-      capacitor_B 1.10 MVAr;    
-      capacitor_C 1.10 MVAr;    
+      voltage_set_low 2200.0;     
+      capacitor_A 0.10 MVAr;    
+      capacitor_B 0.10 MVAr;    
+      capacitor_C 0.10 MVAr;    
       control_level INDIVIDUAL;     
       time_delay 300.0;     
       dwell_time 0.0;     
