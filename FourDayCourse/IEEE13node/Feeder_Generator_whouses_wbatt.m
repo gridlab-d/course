@@ -1,12 +1,12 @@
 clear;
 clc;
 
-extraction_file = 'C:\Documents and Settings\d3x289\My Documents\NEDemo\IEEE13node\IEEE_13_mod.glm';
+extraction_file = 'C:\Documents and Settings\d3x289\My Documents\GLD_May2010\course\FourDayCourse\IEEE13node\IEEE_13_mod.glm';
 swing_node = '650';
 nom_volt = 4160; % phase-to-phase
 
 %% Batteries? - FINISHED
-use_batt = 1; %1 = add a battery at every center tap, 2 = add at substation, 0 = none
+use_batt = 0; %1 = add a battery at every center tap, 2 = add at substation, 0 = none
               % also creates the correct file name
               % Define the size of the battery - distributed will divide by the number of batts created
 if (use_batt == 2 || use_batt == 1)
@@ -18,16 +18,16 @@ efficiency = 0.86;   %percent
 parasitic_draw = 10; %Watts
 
 %% Markets? - FINISHED
-use_market = 1; % 0 = NONE, 1 = TRUE
+use_market = 0; % 0 = NONE, 1 = TRUE
 % MARKET T/F; market name, period, mean, stdev,slider setting (range: 0.001 - 1; NOTE: do not use zero)
 market_info = {'MARKET';'Market_1';300;'current_price_mean_24h';'current_price_stdev_24h';0.5};
 
 %% VVC? - FINISHED
-use_vvc = 1; % 0 = NONE, 1 = TRUE
+use_vvc = 0; % 0 = NONE, 1 = TRUE
 output_volt = 2401;  % voltage to regulate to - 2401::120
 
 %% Customer Billing? - FINISHED
-use_billing = 1; %0 = NONE, 1 = FLAT, 2 = TIERED, 3 = RTP (gets price from auction)
+use_billing = 0; %0 = NONE, 1 = FLAT, 2 = TIERED, 3 = RTP (gets price from auction)
 
 monthly_fee = 10; % $ - applies to all cases
 flat_price = 0.1; % $ / kWh - also first tier price
@@ -44,7 +44,7 @@ ifrac = 0.3;
 pfrac = 1-zfrac-ifrac;
 
 % Determines how many houses to populate (bigger avg_house = less houses)
-avg_house = 100000;
+avg_house = 10000;
 
 use_wh = 1; % waterheaters 1 = yes, 0 = no
 
@@ -54,8 +54,8 @@ perc_pump = 0.7;
 perc_res = 1 - perc_pump - perc_gas;
       
 % simulation start and end times -> please use format: yyyy-mm-dd HH:MM:SS
-start_date = '2000-01-01 00:00:00';
-end_date = '2000-01-02 00:00:00';
+start_date = '2000-08-01 00:00:00';
+end_date = '2000-08-02 00:00:00';
 
 % How often do you want to measure?
 meas_interval = 60;  %applies to everything
@@ -64,9 +64,9 @@ meas2 = meas*24*60*60;  %seconds between start and end dates
 meas_limit = ceil(meas2/meas_interval);
 
 % Other recorders / collectors to use
-measure_losses = 0; % 1 = yes, 0 = no
-dump_bills = 1; % 1 = yes, 0 = no
-dump_voltage = 1; % 1 = yes, 0 = no
+measure_losses = 1; % 1 = yes, 0 = no
+dump_bills = 0; % 1 = yes, 0 = no
+dump_voltage = 0; % 1 = yes, 0 = no
 
 %% NO MODIFICATIONS AFTER HERE
 if (use_batt == 0)
@@ -1442,70 +1442,71 @@ if (use_billing ~= 0)
     fprintf(write_file,'}\n\n');
 end
 
+if (use_vvc ~= 0)
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent Reg1;\n');
+    fprintf(write_file,'     file reg1_output.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property tap_A,tap_B,tap_C,power_in_A.real,power_in_A.imag,power_in_B.real,power_in_B.imag,power_in_C.real,power_in_C.imag,power_in.real,power_in.imag;\n');
+    fprintf(write_file,'};\n');
 
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent Reg1;\n');
-fprintf(write_file,'     file reg1_output.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property tap_A,tap_B,tap_C,power_in_A.real,power_in_A.imag,power_in_B.real,power_in_B.imag,power_in_C.real,power_in_C.imag,power_in.real,power_in.imag;\n');
-fprintf(write_file,'};\n');
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent 630;\n');
+    fprintf(write_file,'     file Voltage_630.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
+    fprintf(write_file,'};\n');
 
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent 630;\n');
-fprintf(write_file,'     file Voltage_630.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
-fprintf(write_file,'};\n');
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent 671;\n');
+    fprintf(write_file,'     file Voltage_671.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
+    fprintf(write_file,'};\n');
 
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent 671;\n');
-fprintf(write_file,'     file Voltage_671.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
-fprintf(write_file,'};\n');
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent 675;\n');
+    fprintf(write_file,'     file Voltage_675.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
+    fprintf(write_file,'};\n');
 
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent 675;\n');
-fprintf(write_file,'     file Voltage_675.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
-fprintf(write_file,'};\n');
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent 652;\n');
+    fprintf(write_file,'     file Voltage_652.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
+    fprintf(write_file,'};\n');
 
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent 652;\n');
-fprintf(write_file,'     file Voltage_652.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
-fprintf(write_file,'};\n');
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent 680;\n');
+    fprintf(write_file,'     file Voltage_680.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
+    fprintf(write_file,'};\n');
 
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent 680;\n');
-fprintf(write_file,'     file Voltage_680.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;\n');
-fprintf(write_file,'};\n');
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent CAP1;\n');
+    fprintf(write_file,'     file capacitor1_output.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property switchA,switchB,switchC;\n');
+    fprintf(write_file,'};\n');
 
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent CAP1;\n');
-fprintf(write_file,'     file capacitor1_output.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property switchA,switchB,switchC;\n');
-fprintf(write_file,'};\n');
-
-fprintf(write_file,'object recorder {\n');
-fprintf(write_file,'     parent CAP2;\n');
-fprintf(write_file,'     file capacitor2_output.csv;\n');
-fprintf(write_file,'     interval %d;\n',meas_interval);
-fprintf(write_file,'     limit %d;\n',meas_limit);
-fprintf(write_file,'     property switchA,switchB,switchC;\n');
-fprintf(write_file,'};\n');
+    fprintf(write_file,'object recorder {\n');
+    fprintf(write_file,'     parent CAP2;\n');
+    fprintf(write_file,'     file capacitor2_output.csv;\n');
+    fprintf(write_file,'     interval %d;\n',meas_interval);
+    fprintf(write_file,'     limit %d;\n',meas_limit);
+    fprintf(write_file,'     property switchA,switchB,switchC;\n');
+    fprintf(write_file,'};\n');
+end
 
 if (dump_bills ~= 0)
     fprintf(write_file,'object billdump {\n');
