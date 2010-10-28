@@ -20,7 +20,7 @@ module residential {
      implicit_enduses NONE;
 };
 module powerflow {
-     solver_method FBS;
+     solver_method NR;
      NR_iteration_limit 50;
 };
 
@@ -254,7 +254,7 @@ object transformer_configuration {
 //Volt-Var object 
 object volt_var_control {
         name CVVC; 
-        control_method STANDBY;// STANDBY;
+        control_method ACTIVE;// STANDBY;
         capacitor_delay 60.0; 
         regulator_delay 60.0; 
         desired_pf 0.99; 
@@ -536,17 +536,17 @@ object capacitor {
       parent 675;     
       phases_connected ABCN;     
       control VOLT;     
-      voltage_set_high 2350.0;     
-      voltage_set_low 2200.0;     
-      capacitor_A 0.10 MVAr;    
-      capacitor_B 0.10 MVAr;    
-      capacitor_C 0.10 MVAr;    
+      voltage_set_high 2400.0;     
+      voltage_set_low 2340.0;     
+      capacitor_A 0.05 MVAr;    
+      capacitor_B 0.05 MVAr;    
+      capacitor_C 0.05 MVAr;    
       control_level INDIVIDUAL;     
-      time_delay 300.0;     
+      time_delay 0.0;     
       dwell_time 0.0;     
-      switchA CLOSED;     
-      switchB CLOSED;     
-      switchC CLOSED;     
+      switchA OPEN;     
+      switchB OPEN;     
+      switchC OPEN;     
       nominal_voltage 2401.7771;     
 }       
 object capacitor {     
@@ -556,17 +556,17 @@ object capacitor {
       parent 675;     
       phases_connected ABCN;     
       control VOLT;     
-      voltage_set_high 2300.0;     
-      voltage_set_low 2150.0;     
+      voltage_set_high 2400.0;     
+      voltage_set_low 2320.0;     
       capacitor_A 0.05 MVAr;    
       capacitor_B 0.05 MVAr;    
       capacitor_C 0.05 MVAr;    
       control_level INDIVIDUAL;     
-      time_delay 300.0;     
+      time_delay 00.0;     
       dwell_time 0.0;     
-      switchA CLOSED;     
-      switchB CLOSED;     
-      switchC CLOSED;     
+      switchA OPEN;     
+      switchB OPEN;     
+      switchC OPEN;     
       nominal_voltage 2401.7771;     
 }       
 object triplex_line_configuration {

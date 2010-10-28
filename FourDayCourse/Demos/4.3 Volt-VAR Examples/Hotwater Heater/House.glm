@@ -24,10 +24,10 @@ module powerflow{
 schedule waterdemand {
      * 0-5 * * * 0;
      0-16 6 * * * 0;
-     17-30 6 * * * 1.65;
-     31-59 6 * * * 1.2;
-     0-11 7 * * * 1.1;
-     12-59 7 * * * 1.0;
+     17-30 6 * * * 0.65;
+     31-59 6 * * * 0.2;
+     0-11 7 * * * 0.1;
+     12-59 7 * * * 0.4;
      * 8-16 * * * 0;
      * 17 * * * .1;
      0-7 18 * * * 0.5;
@@ -165,7 +165,10 @@ object regulator_configuration:1209 {
 	time_delay 0;
 	raise_taps 16;
 	lower_taps 16;
-	Control OUTPUT_VOLTAGE;
+	Control MANUAL;
+	tap_pos_A 16;
+	tap_pos_B 16;
+	tap_pos_C 16;
 	regulation 0.1;
 	Type A;
 }
