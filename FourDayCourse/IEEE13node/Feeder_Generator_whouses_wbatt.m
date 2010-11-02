@@ -1062,6 +1062,7 @@ if (phase_S_houses ~= 0)
                 fprintf(write_file,'          cooling_setpoint cooling%d*1;\n',cooling_set);
                 fprintf(write_file,'          object passive_controller {\n');
                 fprintf(write_file,'               base_setpoint cooling%d*1;\n',cooling_set);
+				fprintf(write_file,'               schedule_skew %.0f;\n',skew_value);
                 fprintf(write_file,'               control_mode RAMP;\n');
                 fprintf(write_file,'               sensitivity 1;\n');  
                 fprintf(write_file,'               expectation_obj %s;\n',market_info{2});
@@ -1095,11 +1096,12 @@ if (phase_S_houses ~= 0)
                     fprintf(write_file,'          heating_setpoint heating%d*1;\n',heating_set);
                     fprintf(write_file,'          object passive_controller {\n');
                     fprintf(write_file,'               base_setpoint heating%d*1;\n',heating_set);
+					fprintf(write_file,'               schedule_skew %.0f;\n',skew_value);
                     fprintf(write_file,'               control_mode RAMP;\n');
                     fprintf(write_file,'               sensitivity 1;\n');  
                     fprintf(write_file,'               expectation_obj %s;\n',market_info{2});
                     fprintf(write_file,'               expectation_prop avg24;\n');
-                    fprintf(write_file,'               setpoint_prop cooling_setpoint;\n');
+                    fprintf(write_file,'               setpoint_prop heating_setpoint;\n');
                     fprintf(write_file,'               state_prop override;\n');
                     fprintf(write_file,'               observation_obj %s;\n',market_info{2});
                     fprintf(write_file,'               observation_prop next.P;\n');
@@ -1366,6 +1368,7 @@ if (no_loads ~= 0)
 
                         fprintf(write_file,'          cooling_setpoint cooling%d*1;\n',cooling_set);
                         fprintf(write_file,'          object passive_controller {\n');
+						fprintf(write_file,'               schedule_skew %.0f;\n',skew_value);
                         fprintf(write_file,'               base_setpoint cooling%d*1;\n',cooling_set);
                         fprintf(write_file,'               control_mode RAMP;\n');
                         fprintf(write_file,'               sensitivity 1;\n');  
@@ -1399,12 +1402,13 @@ if (no_loads ~= 0)
 
                             fprintf(write_file,'          heating_setpoint heating%d*1;\n',heating_set);
                             fprintf(write_file,'          object passive_controller {\n');
+							fprintf(write_file,'               schedule_skew %.0f;\n',skew_value);
                             fprintf(write_file,'               base_setpoint heating%d*1;\n',heating_set);
                             fprintf(write_file,'               control_mode RAMP;\n');
                             fprintf(write_file,'               sensitivity 1;\n');  
                             fprintf(write_file,'               expectation_obj %s;\n',market_info{2});
                             fprintf(write_file,'               expectation_prop avg24;\n');
-                            fprintf(write_file,'               setpoint_prop cooling_setpoint;\n');
+                            fprintf(write_file,'               setpoint_prop heating_setpoint;\n');
                             fprintf(write_file,'               state_prop override;\n');
                             fprintf(write_file,'               observation_obj %s;\n',market_info{2});
                             fprintf(write_file,'               observation_prop next.P;\n');
