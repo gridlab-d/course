@@ -186,7 +186,7 @@ object triplex_line {
        phases AS;
        from tn_1;
        to tm_1;
-       length 16.77;
+       length 100;
        configuration trip_line_config;
 }
 
@@ -195,7 +195,7 @@ object triplex_line {
        phases BS;
        from tn_2;
        to tm_2;
-       length 16.77;
+       length 100;
        configuration trip_line_config;
 }
 
@@ -313,7 +313,7 @@ object recorder {
      file V_tm_1.csv;
      interval 60;
      limit 1000000;
-     property voltage_1,voltage_2,voltage_12;
+     property voltage_1.real,voltage_1.imag,voltage_2.real,voltage_2.imag,voltage_12.real,voltage_12.imag;
 };
 
 object recorder {
@@ -321,5 +321,5 @@ object recorder {
      file V_tm_2.csv;
      interval 60;
      limit 1000000;
-     property voltage_1,voltage_2,voltage_12;
+     property voltage_1.real,voltage_1.imag,voltage_2.real,voltage_2.imag,voltage_12.real,voltage_12.imag;
 };
