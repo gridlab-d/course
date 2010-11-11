@@ -33770,6 +33770,38 @@ object house {
           limit 10000;
           property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
      };
+	 
+	      object recorder {
+          parent 634;
+          file Voltage_634.csv;
+          interval 60;
+          limit 10000;
+          property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
+     };
+	 
+	      object recorder {
+          parent 646;
+          file Voltage_646.csv;
+          interval 60;
+          limit 10000;
+          property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
+     };
+	 
+	      object recorder {
+          parent 611;
+          file Voltage_611.csv;
+          interval 60;
+          limit 10000;
+          property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
+     };
+	 
+	      object recorder {
+          parent 675;
+          file Voltage_675.csv;
+          interval 60;
+          limit 10000;
+          property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
+     };
      object recorder {
           parent CAP1;
           file capacitor1_output.csv;
