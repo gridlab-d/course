@@ -9,7 +9,6 @@ clock {
 
 #include "light_schedule.glm";
 #include "water_and_setpoint_schedule.glm";
-#include "battery_schedule.glm";
 #define stylesheet=http://gridlab-d.svn.sourceforge.net/viewvc/gridlab-d/trunk/core/gridlabd-2_0
 #set minimum_timestep=60;
 #set profiler=1;
@@ -33787,7 +33786,39 @@ object meter:2 {
       nominal_voltage 2401.7771; 
 } 
 
+object battery {
+	 parent meter1;
+	 name battery_1;
+     generator_mode CONSTANT_PQ;
+     V_Max 2650;
+     I_Max 500;
+     P_Max 25000;
+     E_Max 100000;
+     base_efficiency 0.86;
+     parasitic_power_draw 10 W;
+     power_type DC;
+     generator_status OFFLINE;
+     Energy 100000;
+	 scheduled_power battery_schedule*13158;
+	 power_factor 1.0;
+}
 
+object battery {
+	 parent meter2;
+	 name battery_2;
+     generator_mode CONSTANT_PQ;
+     V_Max 2650;
+     I_Max 500;
+     P_Max 25000;
+     E_Max 100000;
+     base_efficiency 0.86;
+     parasitic_power_draw 10 W;
+     power_type DC;
+     generator_status OFFLINE;
+     Energy 100000;
+	 scheduled_power battery_schedule*13158;
+	 power_factor 1.0;
+}
 
 
 object recorder {
