@@ -2,8 +2,8 @@
 
 clock {
      timezone PST+8PDT;
-     starttime '2000-01-07 00:00:00';
-     stoptime '2001-01-014 00:00:00';
+     starttime '2000-01-08 00:00:00';
+     stoptime '2000-01-15 00:00:00';
 }
 
 #include "HVAC_schedule.glm";
@@ -291,6 +291,87 @@ object house {
 
 }
 
+object house {
+     parent tm_2;
+     name house2;
+     //schedule_skew -810; 
+     air_temperature 57; 
+     floor_area 1838;
+     cooling_setpoint cooling7*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 5;
+     motor_model BASIC;
+     motor_efficiency GOOD;
+     air_temperature 70;
+     mass_temperature 70;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.1;
+     auxiliary_strategy LOCKOUT;
+     auxiliary_system_type ELECTRIC;
+     aux_heat_temperature_lockout 2.270706e+001;
+     cooling_system_type ELECTRIC;
+     cooling_COP 3.2;
+     object waterheater {
+          tank_volume 50;
+          heating_element_capacity 4.8 kW;
+          tank_setpoint 136.8;
+          temperature 135;
+          thermostat_deadband 2.9;
+          location INSIDE;
+          tank_UA 2.4;
+          schedule_skew -810; 
+          demand water14*1;
+     };
+
+       // Plug load (convenience loads)
+       object ZIPload {
+              groupid plugload;
+              base_power plug1*2.477490;
+              power_fraction 0.100000;
+              impedance_fraction 0.800000;
+              current_fraction 0.100000;
+              power_pf 0.950000;
+              current_pf 0.950000;
+              impedance_pf 0.950000;
+       };
+
+       // Lights (INCANDESCENT)
+       object ZIPload {
+              groupid lights;
+              base_power lights1*1.616013;
+              power_fraction 0.003200;
+              impedance_fraction 0.571100;
+              current_fraction 0.425700;
+              power_pf 1.000000;
+              current_pf -1.000000;
+              impedance_pf 1.000000;
+       };
+
+       // Television (LCD)
+       object ZIPload {
+              groupid TV;
+              base_power television5*0.200598;
+              power_fraction 0.998700;
+              impedance_fraction -0.038300;
+              current_fraction 0.039600;
+              power_pf -1.000000;
+              current_pf -0.540000;
+              impedance_pf 0.610000;
+       };
+
+       // Fan load
+       object ZIPload {
+              groupid fan;
+              base_power fan1*0.106899;
+              power_fraction 0.013500;
+              impedance_fraction 0.733200;
+              current_fraction 0.253400;
+              power_pf -1.000000;
+              current_pf 0.950000;
+              impedance_pf 0.970000;
+       };
+
+}
 
 object recorder {
 	 parent Market_1;
