@@ -30,7 +30,7 @@ object stubauction {
      name Market_1;
      period 300;
      object player {
-          file ExamplePrices2.player;
+          file Price.player;
           loop 150;
           property next.P;
      };
