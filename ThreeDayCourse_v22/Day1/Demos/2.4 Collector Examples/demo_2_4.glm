@@ -1,0 +1,44 @@
+// demo_2_4.glm has a collector object monitoring the sum and average of the real part of all light objects in ten houses
+
+module residential{
+	implicit_enduses NONE;
+}
+module tape;
+
+clock {
+	timezone PST+8PDT;
+	timestamp '2001-01-01 0:00:00';
+	stoptime '2001-07-01 00:00:00 PST';
+}
+
+module residential;
+module tape;
+
+schedule light_demand {
+	* 1-3 * * * 0;
+	* 4-6 * * * 0.15;
+	* 7-19 * * * 0;
+	* 20-0 * * * .85;
+}
+
+object house:..10 {
+	cooling_setpoint 90 degF;
+	object lights {
+		shape "type: analog; schedule: light_demand;power: 1.1 kW";
+		type INCANDESCENT;
+		placement INDOOR;
+		power_factor 1;
+		impedance_fraction 1;
+		power_fraction 0;
+		current_fraction 0;
+	};
+
+}
+
+object collector {
+	file theat_collector.csv;
+	group "class=lights";
+	property sum(energy.real),avg(energy.real);  //no space...needs real since it is set as a omplex
+	interval 3600;
+	limit 744;
+}

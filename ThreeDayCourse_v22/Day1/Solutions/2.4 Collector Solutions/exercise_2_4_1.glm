@@ -1,0 +1,40 @@
+module residential {
+	implicit_enduses NONE;
+}
+module tape;
+
+clock {
+	timezone PST+8PDT;
+	starttime '2005-01-01 00:00:00';
+	stoptime '2005-02-01 00:00:00';  //one month
+}
+
+schedule waterheater_demand_sched {
+	* 0-4 * * * 0;
+	* 5-8 * * * 1.1;
+	* 9-11 * * * 0;
+	* 12-13 * * * 1.1;
+	* 14-16 * * * 0;
+	* 17-19 * * * 1.1;
+	* 20-23 * * * 0;
+}
+
+
+object house:..100 {
+	object waterheater {
+		impedance_fraction 1.0;
+		water_demand waterheater_demand_sched*1;
+		heating_element_capacity 4500 W;
+		power_factor 0.0;
+		power_fraction 0.0;
+		current_fraction 0.0;
+	};
+}
+
+object collector {
+	file exercise_2_4_1.csv;
+	group "class=waterheater";
+	property "sum(actual_load)";
+	interval 3600;
+	limit 768;
+}

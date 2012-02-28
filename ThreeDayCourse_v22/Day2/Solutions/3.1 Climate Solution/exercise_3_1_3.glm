@@ -1,0 +1,30 @@
+clock {
+	timestamp '2001-01-01 0:00:00';
+	stoptime '2001-01-02 0:00:00';
+	timezone PST+8PDT;
+}
+
+module tape;
+module climate;
+module residential {
+	implicit_enduses NONE;
+};
+
+object csv_reader{
+	name CsvReader;
+	filename weather.csv;
+};
+
+object climate{
+	name MyClimate;
+	tmyfile weather.csv;
+	reader CsvReader;
+};
+
+object recorder {
+	parent MyClimate;
+	property temperature,humidity;
+	interval 3600;
+	limit 24;
+	file "exercise_3_1_3.csv";
+}
