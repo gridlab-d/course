@@ -1,7 +1,8 @@
 clear all
 clc
 format long g
-read_dir=['C:\PNNL Work\Current Projects\AEP-Demo\Training Course\Battery 3\'];
+%% Change this path to the appropriate folder
+read_dir=['C:\GridLAB-D\Training Course\Day3\Solutions\ES&PHEV\Exercise 3\'];
 
 file=['reg1.csv'];
 read_file = [read_dir,file];

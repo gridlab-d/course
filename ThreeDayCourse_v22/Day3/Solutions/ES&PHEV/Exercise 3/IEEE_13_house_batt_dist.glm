@@ -33767,39 +33767,39 @@ object house {
 
 
 object battery {
-	 parent 633;
-	 name battery_1;
-     generator_mode POWER_DRIVEN;
-     V_Max 3050;
-     I_Max 250;
-     P_Max 500000;
-     E_Max 2000000;
-	 power_set_high 2000000;
-	 power_set_low 1000000;
-     base_efficiency 0.95;
-     parasitic_power_draw 100 W;
-     power_type DC;
-     generator_status ONLINE;
-     Energy 2000000;
-	 power_factor 1.0;
+	parent 633;
+	name battery_1;
+	generator_mode POWER_DRIVEN;
+	V_Max 3050;
+	I_Max 250;
+	P_Max 500000;
+	E_Max 2000000;
+	power_set_high 2000000;
+	power_set_low 1000000;
+	base_efficiency 0.95;
+	parasitic_power_draw 100 W;
+	power_type DC;
+	generator_status ONLINE;
+	Energy 2000000;
+	power_factor 1.0;
 }
 
 object battery {
-	 parent 671;
-	 name battery_2;
-     generator_mode POWER_DRIVEN;
-     V_Max 3050;
-     I_Max 250;
-     P_Max 500000;
-     E_Max 2000000;
-	 power_set_high 2000000;
-	 power_set_low 1000000;
-     base_efficiency 0.95;
-     parasitic_power_draw 100 W;
-     power_type DC;
-     generator_status ONLINE;
-     Energy 2000000;
-	 power_factor 1.0;
+	parent 671;
+	name battery_2;
+	generator_mode POWER_DRIVEN;
+	V_Max 3050;
+	I_Max 250;
+	P_Max 500000;
+	E_Max 2000000;
+	power_set_high 2000000;
+	power_set_low 1000000;
+	base_efficiency 0.95;
+	parasitic_power_draw 100 W;
+	power_type DC;
+	generator_status ONLINE;
+	Energy 2000000;
+	power_factor 1.0;
 }
 
 
