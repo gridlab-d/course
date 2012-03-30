@@ -9,6 +9,7 @@ module powerflow {
 	solver_method NR;
 }
 #define stylesheet=http://gridlab-d.svn.sourceforge.net/viewvc/gridlab-d/trunk/core/gridlabd-2_0
+
 object overhead_line_conductor {
 	name overhead_line_conductor100;
 	geometric_mean_radius 0.0244;
@@ -64,6 +65,7 @@ object node {
 }
 
 object overhead_line {
+	name ovl_12;
 	phases "ABCN";
 	from node1;
 	to node2;
@@ -97,7 +99,8 @@ object node {
 	nominal_voltage 2400;
 }
 
-object overhead_line:34 {
+object overhead_line {
+	name ovl_34;
 	phases "ABCN";
 	from node3;
 	to load4;
