@@ -1,0 +1,4105 @@
+//Input feeder information for IEEE 13 node with different cases.
+//Started on 10/21/09. This version created 15-Nov-2010 15:49:06.
+
+clock {
+     timezone MST+7MDT;
+     starttime '2009-07-01 00:00:00';
+     stoptime '2009-07-03 00:00:00';
+}
+
+#include "light_schedule.glm";
+#include "water_and_setpoint_schedule.glm";
+#include "thermal_storage_schedule_R3_mod.glm";
+#define stylesheet=http://gridlab-d.svn.sourceforge.net/viewvc/gridlab-d/trunk/core/gridlabd-2_0
+#set minimum_timestep=60;
+#set profiler=1;
+#set randomseed=25673;
+
+module tape;
+module climate;
+module residential {
+     implicit_enduses NONE;
+};
+module powerflow {
+     solver_method NR;
+     NR_iteration_limit 50;
+};
+
+class player {
+     double value;
+};
+
+object climate {
+     name "AZ-Phoenix";
+     tmyfile "AZ-Phoenix.tmy2";
+     interpolate QUADRATIC;
+};
+
+//Configurations
+
+object overhead_line_conductor {     
+      name overhead_line_conductor_6010;     
+      geometric_mean_radius 0.031300;     
+      resistance 0.185900;     
+}       
+
+object overhead_line_conductor {     
+      name overhead_line_conductor_6020;     
+      geometric_mean_radius 0.00814;     
+      resistance 0.592000;     
+}       
+
+object overhead_line_conductor {     
+      name overhead_line_conductor_6030;     
+      geometric_mean_radius 0.004460;     
+      resistance 1.120000;     
+}       
+
+object underground_line_conductor {     
+      name underground_line_conductor_6060;     
+      outer_diameter 1.290000;     
+      conductor_gmr 0.017100;     
+      conductor_diameter 0.567000;     
+      conductor_resistance 0.410000;     
+      neutral_gmr 0.0020800;     
+      neutral_resistance 14.87200;     
+      neutral_diameter 0.0640837;     
+      neutral_strands 13.000000;     
+      shield_gmr 0.000000;     
+      shield_resistance 0.000000;     
+}       
+
+object underground_line_conductor {     
+      name underground_line_conductor_6070;     
+      outer_diameter 1.060000;     
+      conductor_gmr 0.011100;     
+      conductor_diameter 0.368000;     
+      conductor_resistance 0.970000;     
+      neutral_gmr 0.011100;     
+      neutral_resistance 0.970000;     
+      neutral_diameter 0.0640837;     
+      neutral_strands 6.000000;     
+      shield_gmr 0.000000;     
+      shield_resistance 0.000000;     
+}       
+
+object line_spacing {     
+      name line_spacing_500601;     
+      distance_AB 2.5;     
+      distance_AC 4.5;     
+      distance_BC 7.0;     
+      distance_BN 5.656854;     
+      distance_AN 4.272002;     
+      distance_CN 5.0;     
+}       
+
+object line_spacing {     
+      name line_spacing_500602;     
+      distance_AC 2.5;     
+      distance_AB 4.5;     
+      distance_BC 7.0;     
+      distance_CN 5.656854;     
+      distance_AN 4.272002;     
+      distance_BN 5.0;     
+}       
+
+object line_spacing {     
+      name line_spacing_505603;     
+      distance_AC 0.0;     
+      distance_AB 0.0;     
+      distance_BC 7.0;     
+      distance_AN 0.0;     
+      distance_CN 5.656854;     
+      distance_BN 5.0;     
+}       
+
+object line_spacing {     
+      name line_spacing_505604;     
+      distance_AC 7.0;     
+      distance_AB 0.0;     
+      distance_BC 0.0;     
+      distance_AN 5.656854;     
+      distance_CN 5.0;     
+      distance_BN 0.0;     
+}       
+
+object line_spacing {     
+      name line_spacing_510;     
+      distance_AC 0.0;     
+      distance_AB 0.0;     
+      distance_BC 0.0;     
+      distance_AN 0.0;     
+      distance_CN 5.0;     
+      distance_BN 0.0;     
+}       
+
+object line_configuration {     
+      name line_configuration_601;     
+      conductor_A overhead_line_conductor_6010;     
+      conductor_B overhead_line_conductor_6010;     
+      conductor_C overhead_line_conductor_6010;     
+      conductor_N overhead_line_conductor_6020;     
+      spacing line_spacing_500601;     
+}       
+
+object line_configuration {     
+      name line_configuration_602;     
+      conductor_A overhead_line_conductor_6020;     
+      conductor_B overhead_line_conductor_6020;     
+      conductor_C overhead_line_conductor_6020;     
+      conductor_N overhead_line_conductor_6020;     
+      spacing line_spacing_500602;     
+}       
+
+object line_configuration {     
+      name line_configuration_603;     
+      conductor_B overhead_line_conductor_6030;     
+      conductor_C overhead_line_conductor_6030;     
+      conductor_N overhead_line_conductor_6030;     
+      spacing line_spacing_505603;     
+}       
+
+object line_configuration {     
+      name line_configuration_604;     
+      conductor_A overhead_line_conductor_6030;     
+      conductor_C overhead_line_conductor_6030;     
+      conductor_N overhead_line_conductor_6030;     
+      spacing line_spacing_505604;     
+}       
+
+object line_configuration {     
+      name line_configuration_605;     
+      conductor_C overhead_line_conductor_6030;     
+      conductor_N overhead_line_conductor_6030;     
+      spacing line_spacing_510;     
+}       
+
+object line_spacing {     
+      name line_spacing_515;     
+      distance_AB 0.500000;     
+      distance_BC 0.500000;     
+      distance_AC 1.000000;     
+      distance_AN 0.000000;     
+      distance_BN 0.000000;     
+      distance_CN 0.000000;     
+}       
+
+object line_spacing {     
+      name line_spacing_520;     
+      distance_AB 0.000000;     
+      distance_BC 0.000000;     
+      distance_AC 0.000000;     
+      distance_AN 0.083333;     
+      distance_BN 0.000000;     
+      distance_CN 0.000000;     
+}       
+
+object line_configuration {     
+      name line_configuration_606;     
+      conductor_A underground_line_conductor_6060;     
+      conductor_B underground_line_conductor_6060;     
+      conductor_C underground_line_conductor_6060;     
+      spacing line_spacing_515;     
+}       
+
+object line_configuration {     
+      name line_configuration_607;     
+      conductor_A underground_line_conductor_6070;     
+      conductor_N underground_line_conductor_6070;     
+      spacing line_spacing_520;     
+}       
+
+object transformer_configuration {     
+      name transformer_configuration_400;     
+      connect_type WYE_WYE;     
+      install_type PADMOUNT;     
+      power_rating 500;     
+      primary_voltage 4160;     
+      secondary_voltage 480;     
+      resistance 0.011;     
+      reactance 0.02;     
+}       
+
+object regulator_configuration {     
+      name regulator_configuration_6506321;     
+      connect_type 1;     
+      band_center 2401;     
+      band_width 40;     
+      time_delay 30.0;     
+      raise_taps 16;     
+      lower_taps 16;     
+      current_transducer_ratio 700;     
+      power_transducer_ratio 20;     
+      compensator_r_setting_A 3.0;     
+      compensator_r_setting_B 3.0;     
+      compensator_r_setting_C 3.0;     
+      compensator_x_setting_A 9.0;     
+      compensator_x_setting_B 9.0;     
+      compensator_x_setting_C 9.0;     
+      CT_phase ABC;     
+      PT_phase ABC;     
+      regulation 0.10;     
+      Control OUTPUT_VOLTAGE;     
+      Type A;     
+      tap_pos_A 1;     
+      tap_pos_B 1;     
+      tap_pos_C 1;     
+}
+
+object transformer_configuration {
+     name trans_config_to_feeder;
+     connect_type WYE_WYE;
+     install_type PADMOUNT;
+     primary_voltage 33000;
+     secondary_voltage 2401.777;
+     power_rating 5 MVA;
+     impedance 0.00033+0.0022j;
+}
+
+object node {
+     name network_node;
+     bustype SWING;
+     nominal_voltage 33000;
+     phases ABCN;
+}
+
+object transformer {
+     name substation_transformer;
+     object recorder {
+          file IEEE_13_house_with_TES_mod_sched_transformer_power.csv;
+          interval 60;
+          limit 38880;
+          property power_in.real,power_in.imag;
+     };
+     groupid Distribution_Trans;
+     from network_node;
+     to node650;
+     phases ABCN;
+     configuration trans_config_to_feeder;
+};       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases BCN;     
+      name node632-645;     
+      from node632;     
+      to node645;     
+      length 500;     
+      configuration line_configuration_603;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases BCN;     
+      name node645-646;     
+      from node645;     
+      to node646;     
+      length 300;     
+      configuration line_configuration_603;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases ABCN;     
+      name node630-632;     
+      from node630;     
+      to node632;     
+      length 2000;     
+      configuration line_configuration_601;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases ABCN;     
+      name node632-6321;     
+      from node632;     
+      to node6321;     
+      length 500;     
+      configuration line_configuration_601;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases ABCN;     
+      name node6321-671;     
+      from node6321;     
+      to node671;     
+      length 1500;     
+      configuration line_configuration_601;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases ABCN;     
+      name node671-680;     
+      from node671;     
+      to node680;     
+      length 1000;     
+      configuration line_configuration_601;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases ACN;     
+      name node671-684;     
+      from node671;     
+      to node684;     
+      length 300;     
+      configuration line_configuration_604;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases CN;     
+      name node684-611;     
+      from node684;     
+      to node611;     
+      length 300;     
+      configuration line_configuration_605;     
+}       
+object underground_line {     
+      groupid Distribution_Line;
+      phases AN;     
+      name node684-652;     
+      from node684;     
+      to node652;     
+      length 800;     
+      configuration line_configuration_607;     
+}       
+object underground_line {     
+      groupid Distribution_Line;
+      phases ABC;     
+      name node692-675;     
+      from node692;     
+      to node675;     
+      length 2500;     
+      configuration line_configuration_606;     
+}       
+object overhead_line {     
+      groupid Distribution_Line;
+      phases ABCN;     
+      name node632-633;     
+      from node632;     
+      to node633;     
+      length 500;     
+      configuration line_configuration_602;     
+}       
+object node {     
+      name node633;     
+      phases ABCN;     
+      voltage_A 2401.7771;     
+      voltage_B -1200.8886-2080.000j;     
+      voltage_C -1200.8886+2080.000j;     
+      nominal_voltage 2401.7771;     
+}       
+object node {     
+      name node630;     
+      phases ABCN;     
+      voltage_A 2401.7771+0j;     
+      voltage_B -1200.8886-2080.000j;     
+      voltage_C -1200.8886+2080.000j;     
+      nominal_voltage 2401.7771;     
+}       
+object node {     
+      name node632;     
+      phases ABCN;     
+      voltage_A 2401.7771;     
+      voltage_B -1200.8886-2080.000j;     
+      voltage_C -1200.8886+2080.000j;     
+      nominal_voltage 2401.7771;     
+}       
+object node {     
+      name node650;     
+      phases ABCN;     
+      voltage_A 2401.7771;     
+      voltage_B -1200.8886-2080.000j;     
+      voltage_C -1200.8886+2080.000j;     
+      nominal_voltage 2401.7771;     
+}       
+object node {     
+      name node680;     
+      phases ABCN;     
+      voltage_A 2401.7771;     
+      voltage_B -1200.8886-2080.000j;     
+      voltage_C -1200.8886+2080.000j;     
+      nominal_voltage 2401.7771;     
+}       
+object node {     
+      name node684;     
+      phases ACN;     
+      voltage_A 2401.7771;     
+      voltage_B -1200.8886-2080.000j;     
+      voltage_C -1200.8886+2080.000j;     
+      nominal_voltage 2401.7771;     
+}       
+object node {     
+      name node634;     
+      phases ABCN;     
+      voltage_A 480.000+0j;     
+      voltage_B -240.000-415.6922j;     
+      voltage_C -240.000+415.6922j;     
+      nominal_voltage 480.000;     
+}       
+
+object node {
+      name node645;     
+      phases BCN;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node646;     
+      phases BC;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node652;     
+      phases AN;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node671;     
+      phases ABC;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node675;     
+      phases ABC;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node692;     
+      phases ABC;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node611;     
+      phases CN;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node6711;     
+      parent node671;     
+      phases ABC;     
+      nominal_voltage 2401.7771;     
+}
+
+
+object node {
+      name node6321;     
+      phases ABCN;     
+      nominal_voltage 2401.7771;     
+}
+
+object switch {     
+      phases ABCN;     
+      name node671-692;     
+      from node671;     
+      to node692;     
+      status CLOSED;     
+}       
+object transformer {     
+      groupid Distribution_Trans;
+      phases ABCN;     
+      name node633-634;     
+      from node633;     
+      to node634;     
+      configuration transformer_configuration_400;     
+}       
+object regulator {     
+      name Reg1;     
+      phases ABC;     
+      from node650;     
+      to node630;     
+      sense_node node680;     
+      configuration regulator_configuration_6506321;     
+}       
+object capacitor {     
+      phases ABCN;     
+      name CAP1;     
+      pt_phase ABC;     
+      parent node675;     
+      phases_connected ABCN;     
+      control VAR;     
+      VAr_set_high 0.15 MVA;    
+      VAr_set_low 0.05 MVA;    
+      remote_sense Reg1;     
+      capacitor_A 0.10 MVAr;    
+      capacitor_B 0.10 MVAr;    
+      capacitor_C 0.10 MVAr;    
+      control_level INDIVIDUAL;     
+      time_delay 300.0;     
+      dwell_time 0.0;     
+      switchA CLOSED;     
+      switchB CLOSED;     
+      switchC CLOSED;     
+      nominal_voltage 2401.7771;     
+}       
+object capacitor {     
+      phases ABCN;     
+      name CAP2;     
+      pt_phase ABC;     
+      parent node675;     
+      phases_connected ABCN;     
+      control VAR;     
+      VAr_set_high 0.07 MVA;    
+      VAr_set_low 0.02 MVA;    
+      remote_sense Reg1;     
+      capacitor_A 0.05 MVAr;    
+      capacitor_B 0.05 MVAr;    
+      capacitor_C 0.05 MVAr;    
+      control_level INDIVIDUAL;     
+      time_delay 300.0;     
+      dwell_time 0.0;     
+      switchA CLOSED;     
+      switchB CLOSED;     
+      switchC CLOSED;     
+      nominal_voltage 2401.7771;     
+}       
+object triplex_line_configuration {
+      name trip_line_config;
+      conductor_1 object triplex_line_conductor {
+            resistance 0.97;
+            geometric_mean_radius 0.01111;
+            };
+      conductor_2 object triplex_line_conductor {
+            resistance 0.97;
+            geometric_mean_radius 0.01111;
+            };
+      conductor_N object triplex_line_conductor {
+            resistance 0.97;
+            geometric_mean_radius 0.01111;
+            };
+      insulation_thickness 0.08;
+      diameter 0.368;
+}
+object transformer {
+       name CTTF_B_node645;
+       phases BS;
+       from node645;
+       to tn_B_node645;
+       configuration object transformer_configuration {
+            connect_type SINGLE_PHASE_CENTER_TAPPED;
+            install_type POLETOP;
+            shunt_impedance 10000+10000j;
+            primary_voltage 2401.777;
+            secondary_voltage 120;
+            powerB_rating 110 kVA;
+            impedance 0.00033+0.0022j;
+       };
+       groupid Distribution_Trans;
+}
+
+object triplex_meter {
+       name tn_B_node645;
+       phases BS;
+       groupid Triplex_Meter_Grp;
+       nominal_voltage 120;
+}
+
+object triplex_line {
+       name tl_B_1_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_1_node645;
+       length 16.35;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_1_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_1_node645;
+     name house1B_tm_B_1_node645;
+     floor_area 1716;
+     schedule_skew 722;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling3*1;
+     heating_setpoint heating7*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.5;
+     object ZIPload {
+           base_power LIGHTS*0.91;
+           schedule_skew 722;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_2_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_2_node645;
+       length 18.54;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_2_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_2_node645;
+     name house2B_tm_B_2_node645;
+     floor_area 1992;
+     schedule_skew 1004;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.0;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling7*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.8;
+     object ZIPload {
+           base_power LIGHTS*0.96;
+           schedule_skew 1004;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1004;
+          tank_volume 50;
+          heating_element_capacity 4.9 kW;
+          tank_setpoint 133.8;
+          temperature 135;
+          thermostat_deadband 3.0;
+          location INSIDE;
+          tank_UA 3.7;
+          demand water5*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_3_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_3_node645;
+       length 14.47;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_3_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_3_node645;
+     name house3B_tm_B_3_node645;
+     floor_area 1719;
+     schedule_skew -1703;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.2;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating7*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 4.0;
+     object ZIPload {
+           base_power LIGHTS*1.10;
+           schedule_skew -1703;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -1703;
+          tank_volume 50;
+          heating_element_capacity 4.7 kW;
+          tank_setpoint 126.0;
+          temperature 135;
+          thermostat_deadband 4.2;
+          location INSIDE;
+          tank_UA 3.3;
+          demand water9*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_4_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_4_node645;
+       length 17.09;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_4_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_4_node645;
+     name house4B_tm_B_4_node645;
+     floor_area 2109;
+     schedule_skew 1472;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.8;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating3*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.5;
+     object ZIPload {
+           base_power LIGHTS*1.15;
+           schedule_skew 1472;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1472;
+          tank_volume 50;
+          heating_element_capacity 4.5 kW;
+          tank_setpoint 136.3;
+          temperature 135;
+          thermostat_deadband 2.4;
+          location INSIDE;
+          tank_UA 3.4;
+          demand water2*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_5_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_5_node645;
+       length 17.07;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_5_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_5_node645;
+     name house5B_tm_B_5_node645;
+     floor_area 1732;
+     schedule_skew 2338;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.2;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling8*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.2;
+     object ZIPload {
+           base_power LIGHTS*0.96;
+           schedule_skew 2338;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 2338;
+          tank_volume 50;
+          heating_element_capacity 4.6 kW;
+          tank_setpoint 129.9;
+          temperature 135;
+          thermostat_deadband 4.3;
+          location INSIDE;
+          tank_UA 2.0;
+          demand water18*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_6_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_6_node645;
+       length 19.96;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_6_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_6_node645;
+     name house6B_tm_B_6_node645;
+     floor_area 2280;
+     schedule_skew 391;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.3;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.5;
+     object ZIPload {
+           base_power LIGHTS*0.98;
+           schedule_skew 391;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 391;
+          tank_volume 50;
+          heating_element_capacity 4.4 kW;
+          tank_setpoint 129.5;
+          temperature 135;
+          thermostat_deadband 3.5;
+          location INSIDE;
+          tank_UA 2.2;
+          demand water2*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_7_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_7_node645;
+       length 12.26;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_7_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_7_node645;
+     name house7B_tm_B_7_node645;
+     floor_area 2051;
+     schedule_skew -218;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.2;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling6*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.5;
+     object ZIPload {
+           base_power LIGHTS*0.94;
+           schedule_skew -218;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -218;
+          tank_volume 50;
+          heating_element_capacity 4.4 kW;
+          tank_setpoint 140.9;
+          temperature 135;
+          thermostat_deadband 2.7;
+          location INSIDE;
+          tank_UA 2.3;
+          demand water8*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_8_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_8_node645;
+       length 13.18;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_8_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_8_node645;
+     name house8B_tm_B_8_node645;
+     floor_area 1804;
+     schedule_skew 815;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.8;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.8;
+     object ZIPload {
+           base_power LIGHTS*0.78;
+           schedule_skew 815;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 815;
+          tank_volume 50;
+          heating_element_capacity 4.6 kW;
+          tank_setpoint 129.8;
+          temperature 135;
+          thermostat_deadband 4.8;
+          location INSIDE;
+          tank_UA 4.0;
+          demand water18*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_9_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_9_node645;
+       length 11.27;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_9_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_9_node645;
+     name house9B_tm_B_9_node645;
+     floor_area 1734;
+     schedule_skew -1191;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.1;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.6;
+     object ZIPload {
+           base_power LIGHTS*0.64;
+           schedule_skew -1191;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -1191;
+          tank_volume 50;
+          heating_element_capacity 4.7 kW;
+          tank_setpoint 124.8;
+          temperature 135;
+          thermostat_deadband 2.1;
+          location INSIDE;
+          tank_UA 3.8;
+          demand water9*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_10_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_10_node645;
+       length 13.24;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_10_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_10_node645;
+     name house10B_tm_B_10_node645;
+     floor_area 2177;
+     schedule_skew -1629;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.5;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating2*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.9;
+     object ZIPload {
+           base_power LIGHTS*1.00;
+           schedule_skew -1629;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -1629;
+          tank_volume 50;
+          heating_element_capacity 4.9 kW;
+          tank_setpoint 126.1;
+          temperature 135;
+          thermostat_deadband 6.0;
+          location INSIDE;
+          tank_UA 3.1;
+          demand water17*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_11_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_11_node645;
+       length 17.55;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_11_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_11_node645;
+     name house11B_tm_B_11_node645;
+     floor_area 2705;
+     schedule_skew 267;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.5;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.3;
+     object ZIPload {
+           base_power LIGHTS*1.30;
+           schedule_skew 267;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 267;
+          tank_volume 50;
+          heating_element_capacity 4.4 kW;
+          tank_setpoint 134.0;
+          temperature 135;
+          thermostat_deadband 3.8;
+          location INSIDE;
+          tank_UA 3.8;
+          demand water15*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_12_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_12_node645;
+       length 17.36;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_12_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_12_node645;
+     name house12B_tm_B_12_node645;
+     floor_area 1935;
+     schedule_skew -490;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling8*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.8;
+     object ZIPload {
+           base_power LIGHTS*1.00;
+           schedule_skew -490;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_13_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_13_node645;
+       length 19.88;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_13_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_13_node645;
+     name house13B_tm_B_13_node645;
+     floor_area 2386;
+     schedule_skew 1442;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.7;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling7*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 2;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.3;
+     object ZIPload {
+           base_power LIGHTS*0.77;
+           schedule_skew 1442;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1442;
+          tank_volume 50;
+          heating_element_capacity 4.4 kW;
+          tank_setpoint 129.3;
+          temperature 135;
+          thermostat_deadband 5.7;
+          location INSIDE;
+          tank_UA 3.1;
+          demand water12*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_14_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_14_node645;
+       length 13.58;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_14_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_14_node645;
+     name house14B_tm_B_14_node645;
+     floor_area 2333;
+     schedule_skew 334;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating3*1;
+     thermal_integrity_level 2;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.6;
+     object ZIPload {
+           base_power LIGHTS*0.99;
+           schedule_skew 334;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_15_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_15_node645;
+       length 11.24;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_15_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_15_node645;
+     name house15B_tm_B_15_node645;
+     floor_area 2006;
+     schedule_skew -2899;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.4;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating5*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.8;
+     object ZIPload {
+           base_power LIGHTS*1.45;
+           schedule_skew -2899;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -2899;
+          tank_volume 50;
+          heating_element_capacity 4.3 kW;
+          tank_setpoint 133.4;
+          temperature 135;
+          thermostat_deadband 5.8;
+          location INSIDE;
+          tank_UA 2.6;
+          demand water13*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_16_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_16_node645;
+       length 18.97;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_16_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_16_node645;
+     name house16B_tm_B_16_node645;
+     floor_area 2048;
+     schedule_skew 27;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating5*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.8;
+     object ZIPload {
+           base_power LIGHTS*1.11;
+           schedule_skew 27;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_17_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_17_node645;
+       length 13.17;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_17_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_17_node645;
+     name house17B_tm_B_17_node645;
+     floor_area 2055;
+     schedule_skew -3393;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.9;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.1;
+     object ZIPload {
+           base_power LIGHTS*1.17;
+           schedule_skew -3393;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -3393;
+          tank_volume 50;
+          heating_element_capacity 4.9 kW;
+          tank_setpoint 142.0;
+          temperature 135;
+          thermostat_deadband 2.6;
+          location INSIDE;
+          tank_UA 2.8;
+          demand water7*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_18_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_18_node645;
+       length 13.89;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_18_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_18_node645;
+     name house18B_tm_B_18_node645;
+     floor_area 2397;
+     schedule_skew -2173;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.5;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling3*1;
+     heating_setpoint heating5*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.3;
+     object ZIPload {
+           base_power LIGHTS*1.62;
+           schedule_skew -2173;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -2173;
+          tank_volume 50;
+          heating_element_capacity 4.5 kW;
+          tank_setpoint 129.9;
+          temperature 135;
+          thermostat_deadband 4.9;
+          location INSIDE;
+          tank_UA 3.0;
+          demand water8*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_19_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_19_node645;
+       length 11.53;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_19_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_19_node645;
+     name house19B_tm_B_19_node645;
+     floor_area 1707;
+     schedule_skew 1965;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.1;
+     object ZIPload {
+           base_power LIGHTS*0.96;
+           schedule_skew 1965;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_20_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_20_node645;
+       length 18.76;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_20_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_20_node645;
+     name house20B_tm_B_20_node645;
+     floor_area 2334;
+     schedule_skew 1161;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.2;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling6*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.7;
+     object ZIPload {
+           base_power LIGHTS*0.89;
+           schedule_skew 1161;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1161;
+          tank_volume 50;
+          heating_element_capacity 4.2 kW;
+          tank_setpoint 136.7;
+          temperature 135;
+          thermostat_deadband 3.1;
+          location INSIDE;
+          tank_UA 3.2;
+          demand water4*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_21_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_21_node645;
+       length 16.99;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_21_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_21_node645;
+     name house21B_tm_B_21_node645;
+     floor_area 2495;
+     schedule_skew 1820;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.3;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling8*1;
+     heating_setpoint heating2*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.5;
+     object ZIPload {
+           base_power LIGHTS*1.68;
+           schedule_skew 1820;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1820;
+          tank_volume 50;
+          heating_element_capacity 3.9 kW;
+          tank_setpoint 131.6;
+          temperature 135;
+          thermostat_deadband 5.5;
+          location INSIDE;
+          tank_UA 2.6;
+          demand water14*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_22_node645;
+       phases BS;
+       from tn_B_node645;
+       to tm_B_22_node645;
+       length 17.45;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_22_node645;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_22_node645;
+     name house22B_tm_B_22_node645;
+     floor_area 1975;
+     schedule_skew 254;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.0;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling6*1;
+     heating_setpoint heating3*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.5;
+     object ZIPload {
+           base_power LIGHTS*1.05;
+           schedule_skew 254;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 254;
+          tank_volume 50;
+          heating_element_capacity 4.6 kW;
+          tank_setpoint 131.4;
+          temperature 135;
+          thermostat_deadband 3.2;
+          location INSIDE;
+          tank_UA 3.5;
+          demand water19*1;
+     };
+
+}
+
+object transformer {
+       name CTTF_B_node646;
+       phases BS;
+       from node646;
+       to tn_B_node646;
+       configuration object transformer_configuration {
+            connect_type SINGLE_PHASE_CENTER_TAPPED;
+            install_type POLETOP;
+            shunt_impedance 10000+10000j;
+            primary_voltage 2401.777;
+            secondary_voltage 120;
+            powerB_rating 95 kVA;
+            impedance 0.00033+0.0022j;
+       };
+       groupid Distribution_Trans;
+}
+
+object triplex_meter {
+       name tn_B_node646;
+       phases BS;
+       groupid Triplex_Meter_Grp;
+       nominal_voltage 120;
+}
+
+object triplex_line {
+       name tl_B_1_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_1_node646;
+       length 17.14;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_1_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_1_node646;
+     name house1B_tm_B_1_node646;
+     floor_area 2106;
+     schedule_skew -754;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.7;
+     object ZIPload {
+           base_power LIGHTS*1.12;
+           schedule_skew -754;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_2_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_2_node646;
+       length 19.09;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_2_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_2_node646;
+     name house2B_tm_B_2_node646;
+     floor_area 2240;
+     schedule_skew -2279;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.7;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.8;
+     object ZIPload {
+           base_power LIGHTS*0.79;
+           schedule_skew -2279;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -2279;
+          tank_volume 50;
+          heating_element_capacity 4.4 kW;
+          tank_setpoint 131.8;
+          temperature 135;
+          thermostat_deadband 2.9;
+          location INSIDE;
+          tank_UA 3.6;
+          demand water4*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_3_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_3_node646;
+       length 10.95;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_3_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_3_node646;
+     name house3B_tm_B_3_node646;
+     floor_area 1900;
+     schedule_skew 180;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.8;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.9;
+     object ZIPload {
+           base_power LIGHTS*0.95;
+           schedule_skew 180;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 180;
+          tank_volume 50;
+          heating_element_capacity 4.9 kW;
+          tank_setpoint 138.3;
+          temperature 135;
+          thermostat_deadband 3.9;
+          location INSIDE;
+          tank_UA 3.3;
+          demand water14*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_4_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_4_node646;
+       length 14.24;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_4_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_4_node646;
+     name house4B_tm_B_4_node646;
+     floor_area 1855;
+     schedule_skew 1478;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.5;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.2;
+     object ZIPload {
+           base_power LIGHTS*0.87;
+           schedule_skew 1478;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1478;
+          tank_volume 50;
+          heating_element_capacity 4.7 kW;
+          tank_setpoint 126.1;
+          temperature 135;
+          thermostat_deadband 4.8;
+          location INSIDE;
+          tank_UA 3.0;
+          demand water12*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_5_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_5_node646;
+       length 19.57;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_5_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_5_node646;
+     name house5B_tm_B_5_node646;
+     floor_area 2058;
+     schedule_skew -2454;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling3*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.6;
+     object ZIPload {
+           base_power LIGHTS*1.09;
+           schedule_skew -2454;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_6_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_6_node646;
+       length 18.61;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_6_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_6_node646;
+     name house6B_tm_B_6_node646;
+     floor_area 2201;
+     schedule_skew 863;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling3*1;
+     heating_setpoint heating7*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.5;
+     object ZIPload {
+           base_power LIGHTS*1.26;
+           schedule_skew 863;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_7_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_7_node646;
+       length 11.47;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_7_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_7_node646;
+     name house7B_tm_B_7_node646;
+     floor_area 1003;
+     schedule_skew -683;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating2*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.7;
+     object ZIPload {
+           base_power LIGHTS*0.48;
+           schedule_skew -683;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_8_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_8_node646;
+       length 13.85;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_8_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_8_node646;
+     name house8B_tm_B_8_node646;
+     floor_area 1366;
+     schedule_skew -3337;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.2;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.0;
+     object ZIPload {
+           base_power LIGHTS*0.78;
+           schedule_skew -3337;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -3337;
+          tank_volume 50;
+          heating_element_capacity 4.6 kW;
+          tank_setpoint 133.4;
+          temperature 135;
+          thermostat_deadband 4.8;
+          location INSIDE;
+          tank_UA 2.2;
+          demand water2*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_9_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_9_node646;
+       length 15.71;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_9_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_9_node646;
+     name house9B_tm_B_9_node646;
+     floor_area 2105;
+     schedule_skew 50;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.2;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.8;
+     object ZIPload {
+           base_power LIGHTS*1.25;
+           schedule_skew 50;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 50;
+          tank_volume 50;
+          heating_element_capacity 4.8 kW;
+          tank_setpoint 132.2;
+          temperature 135;
+          thermostat_deadband 2.6;
+          location INSIDE;
+          tank_UA 3.9;
+          demand water14*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_10_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_10_node646;
+       length 10.50;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_10_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_10_node646;
+     name house10B_tm_B_10_node646;
+     floor_area 2089;
+     schedule_skew -331;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.3;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.7;
+     object ZIPload {
+           base_power LIGHTS*1.41;
+           schedule_skew -331;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -331;
+          tank_volume 50;
+          heating_element_capacity 4.6 kW;
+          tank_setpoint 131.3;
+          temperature 135;
+          thermostat_deadband 5.6;
+          location INSIDE;
+          tank_UA 2.3;
+          demand water2*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_11_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_11_node646;
+       length 13.73;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_11_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_11_node646;
+     name house11B_tm_B_11_node646;
+     floor_area 1837;
+     schedule_skew 733;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling7*1;
+     heating_setpoint heating7*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.6;
+     object ZIPload {
+           base_power LIGHTS*0.72;
+           schedule_skew 733;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_12_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_12_node646;
+       length 19.98;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_12_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_12_node646;
+     name house12B_tm_B_12_node646;
+     floor_area 1624;
+     schedule_skew -35;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.6;
+     object ZIPload {
+           base_power LIGHTS*0.96;
+           schedule_skew -35;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_13_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_13_node646;
+       length 13.10;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_13_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_13_node646;
+     name house13B_tm_B_13_node646;
+     floor_area 2452;
+     schedule_skew -1467;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.6;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 4.0;
+     object ZIPload {
+           base_power LIGHTS*1.19;
+           schedule_skew -1467;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -1467;
+          tank_volume 50;
+          heating_element_capacity 4.8 kW;
+          tank_setpoint 127.2;
+          temperature 135;
+          thermostat_deadband 4.6;
+          location INSIDE;
+          tank_UA 2.7;
+          demand water3*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_14_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_14_node646;
+       length 10.64;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_14_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_14_node646;
+     name house14B_tm_B_14_node646;
+     floor_area 2299;
+     schedule_skew 1181;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating2*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.9;
+     object ZIPload {
+           base_power LIGHTS*0.94;
+           schedule_skew 1181;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_15_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_15_node646;
+       length 18.51;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_15_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_15_node646;
+     name house15B_tm_B_15_node646;
+     floor_area 1644;
+     schedule_skew 1699;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating5*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 4.0;
+     object ZIPload {
+           base_power LIGHTS*1.10;
+           schedule_skew 1699;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_B_16_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_16_node646;
+       length 18.09;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_16_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_16_node646;
+     name house16B_tm_B_16_node646;
+     floor_area 1696;
+     schedule_skew -810;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.3;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating3*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.9;
+     object ZIPload {
+           base_power LIGHTS*0.74;
+           schedule_skew -810;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -810;
+          tank_volume 50;
+          heating_element_capacity 4.5 kW;
+          tank_setpoint 137.1;
+          temperature 135;
+          thermostat_deadband 3.8;
+          location INSIDE;
+          tank_UA 2.2;
+          demand water18*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_17_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_17_node646;
+       length 17.13;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_17_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_17_node646;
+     name house17B_tm_B_17_node646;
+     floor_area 1887;
+     schedule_skew 387;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.4;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling6*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.3;
+     object ZIPload {
+           base_power LIGHTS*0.95;
+           schedule_skew 387;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 387;
+          tank_volume 50;
+          heating_element_capacity 4.3 kW;
+          tank_setpoint 136.1;
+          temperature 135;
+          thermostat_deadband 3.6;
+          location INSIDE;
+          tank_UA 3.4;
+          demand water18*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_18_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_18_node646;
+       length 17.46;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_18_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_18_node646;
+     name house18B_tm_B_18_node646;
+     floor_area 1580;
+     schedule_skew 344;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.1;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling3*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.4;
+     object ZIPload {
+           base_power LIGHTS*1.14;
+           schedule_skew 344;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 344;
+          tank_volume 50;
+          heating_element_capacity 4.7 kW;
+          tank_setpoint 132.0;
+          temperature 135;
+          thermostat_deadband 3.1;
+          location INSIDE;
+          tank_UA 3.6;
+          demand water8*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_B_19_node646;
+       phases BS;
+       from tn_B_node646;
+       to tm_B_19_node646;
+       length 13.10;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_B_19_node646;
+       phases BS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_B_19_node646;
+     name house19B_tm_B_19_node646;
+     floor_area 2208;
+     schedule_skew 450;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.5;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling8*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.7;
+     object ZIPload {
+           base_power LIGHTS*1.34;
+           schedule_skew 450;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 450;
+          tank_volume 50;
+          heating_element_capacity 4.5 kW;
+          tank_setpoint 135.3;
+          temperature 135;
+          thermostat_deadband 3.9;
+          location INSIDE;
+          tank_UA 2.8;
+          demand water14*1;
+     };
+
+}
+
+object transformer {
+       name CTTF_A_node652;
+       phases AS;
+       from node652;
+       to tn_A_node652;
+       configuration object transformer_configuration {
+            connect_type SINGLE_PHASE_CENTER_TAPPED;
+            install_type POLETOP;
+            shunt_impedance 10000+10000j;
+            primary_voltage 2401.777;
+            secondary_voltage 120;
+            powerA_rating 210 kVA;
+            impedance 0.00033+0.0022j;
+       };
+       groupid Distribution_Trans;
+}
+
+object triplex_meter {
+       name tn_A_node652;
+       phases AS;
+       groupid Triplex_Meter_Grp;
+       nominal_voltage 120;
+}
+
+object triplex_line {
+       name tl_A_1_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_1_node652;
+       length 10.99;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_1_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_1_node652;
+     name house1A_tm_A_1_node652;
+     floor_area 1978;
+     schedule_skew 2263;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.1;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling8*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.0;
+     object ZIPload {
+           base_power LIGHTS*1.17;
+           schedule_skew 2263;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 2263;
+          tank_volume 50;
+          heating_element_capacity 4.8 kW;
+          tank_setpoint 132.8;
+          temperature 135;
+          thermostat_deadband 2.4;
+          location INSIDE;
+          tank_UA 2.8;
+          demand water18*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_2_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_2_node652;
+       length 13.11;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_2_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_2_node652;
+     name house2A_tm_A_2_node652;
+     floor_area 1892;
+     schedule_skew 2715;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating1*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.8;
+     object ZIPload {
+           base_power LIGHTS*0.66;
+           schedule_skew 2715;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_A_3_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_3_node652;
+       length 12.31;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_3_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_3_node652;
+     name house3A_tm_A_3_node652;
+     floor_area 2292;
+     schedule_skew -3336;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.1;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating7*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.5;
+     object ZIPload {
+           base_power LIGHTS*1.19;
+           schedule_skew -3336;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -3336;
+          tank_volume 50;
+          heating_element_capacity 4.7 kW;
+          tank_setpoint 139.2;
+          temperature 135;
+          thermostat_deadband 2.9;
+          location INSIDE;
+          tank_UA 2.4;
+          demand water18*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_4_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_4_node652;
+       length 10.47;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_4_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_4_node652;
+     name house4A_tm_A_4_node652;
+     floor_area 2456;
+     schedule_skew -1437;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.1;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.3;
+     object ZIPload {
+           base_power LIGHTS*1.76;
+           schedule_skew -1437;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -1437;
+          tank_volume 50;
+          heating_element_capacity 4.2 kW;
+          tank_setpoint 129.2;
+          temperature 135;
+          thermostat_deadband 5.3;
+          location INSIDE;
+          tank_UA 3.0;
+          demand water5*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_5_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_5_node652;
+       length 12.54;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_5_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_5_node652;
+     name house5A_tm_A_5_node652;
+     floor_area 2552;
+     schedule_skew -2756;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.1;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling1*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.5;
+     object ZIPload {
+           base_power LIGHTS*1.41;
+           schedule_skew -2756;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -2756;
+          tank_volume 50;
+          heating_element_capacity 4.5 kW;
+          tank_setpoint 130.5;
+          temperature 135;
+          thermostat_deadband 2.4;
+          location INSIDE;
+          tank_UA 2.8;
+          demand water5*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_6_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_6_node652;
+       length 14.75;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_6_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_6_node652;
+     name house6A_tm_A_6_node652;
+     floor_area 1697;
+     schedule_skew 1673;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.3;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating7*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.8;
+     object ZIPload {
+           base_power LIGHTS*0.85;
+           schedule_skew 1673;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1673;
+          tank_volume 50;
+          heating_element_capacity 4.3 kW;
+          tank_setpoint 132.4;
+          temperature 135;
+          thermostat_deadband 2.7;
+          location INSIDE;
+          tank_UA 2.9;
+          demand water15*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_7_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_7_node652;
+       length 19.16;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_7_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_7_node652;
+     name house7A_tm_A_7_node652;
+     floor_area 2274;
+     schedule_skew 1690;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.9;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling7*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.8;
+     object ZIPload {
+           base_power LIGHTS*1.11;
+           schedule_skew 1690;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1690;
+          tank_volume 50;
+          heating_element_capacity 4.3 kW;
+          tank_setpoint 137.1;
+          temperature 135;
+          thermostat_deadband 2.4;
+          location INSIDE;
+          tank_UA 2.4;
+          demand water5*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_8_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_8_node652;
+       length 15.17;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_8_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_8_node652;
+     name house8A_tm_A_8_node652;
+     floor_area 2255;
+     schedule_skew -687;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling6*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.6;
+     object ZIPload {
+           base_power LIGHTS*1.41;
+           schedule_skew -687;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_A_9_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_9_node652;
+       length 16.42;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_9_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_9_node652;
+     name house9A_tm_A_9_node652;
+     floor_area 1257;
+     schedule_skew 2103;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.2;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling3*1;
+     heating_setpoint heating5*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.6;
+     object ZIPload {
+           base_power LIGHTS*0.94;
+           schedule_skew 2103;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 2103;
+          tank_volume 50;
+          heating_element_capacity 4.6 kW;
+          tank_setpoint 133.0;
+          temperature 135;
+          thermostat_deadband 2.7;
+          location INSIDE;
+          tank_UA 2.1;
+          demand water13*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_10_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_10_node652;
+       length 16.40;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_10_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_10_node652;
+     name house10A_tm_A_10_node652;
+     floor_area 2293;
+     schedule_skew 409;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.8;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling6*1;
+     heating_setpoint heating3*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.6;
+     object ZIPload {
+           base_power LIGHTS*1.03;
+           schedule_skew 409;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 409;
+          tank_volume 50;
+          heating_element_capacity 4.5 kW;
+          tank_setpoint 129.5;
+          temperature 135;
+          thermostat_deadband 4.6;
+          location INSIDE;
+          tank_UA 3.8;
+          demand water19*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_11_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_11_node652;
+       length 13.77;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_11_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_11_node652;
+     name house11A_tm_A_11_node652;
+     floor_area 2386;
+     schedule_skew 851;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.5;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating7*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.7;
+     object ZIPload {
+           base_power LIGHTS*1.62;
+           schedule_skew 851;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 851;
+          tank_volume 50;
+          heating_element_capacity 4.6 kW;
+          tank_setpoint 131.7;
+          temperature 135;
+          thermostat_deadband 3.9;
+          location INSIDE;
+          tank_UA 2.6;
+          demand water6*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_12_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_12_node652;
+       length 10.71;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_12_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_12_node652;
+     name house12A_tm_A_12_node652;
+     floor_area 1623;
+     schedule_skew -3521;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.4;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating6*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.0;
+     object ZIPload {
+           base_power LIGHTS*1.02;
+           schedule_skew -3521;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -3521;
+          tank_volume 50;
+          heating_element_capacity 4.4 kW;
+          tank_setpoint 127.6;
+          temperature 135;
+          thermostat_deadband 5.4;
+          location INSIDE;
+          tank_UA 3.0;
+          demand water9*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_13_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_13_node652;
+       length 17.53;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_13_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_13_node652;
+     name house13A_tm_A_13_node652;
+     floor_area 1514;
+     schedule_skew -718;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.0;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 2.9;
+     object ZIPload {
+           base_power LIGHTS*0.95;
+           schedule_skew -718;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -718;
+          tank_volume 50;
+          heating_element_capacity 4.3 kW;
+          tank_setpoint 131.8;
+          temperature 135;
+          thermostat_deadband 2.1;
+          location INSIDE;
+          tank_UA 3.6;
+          demand water7*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_14_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_14_node652;
+       length 10.41;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_14_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_14_node652;
+     name house14A_tm_A_14_node652;
+     floor_area 2205;
+     schedule_skew 1167;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.6;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling8*1;
+     heating_setpoint heating4*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.3;
+     object ZIPload {
+           base_power LIGHTS*1.31;
+           schedule_skew 1167;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1167;
+          tank_volume 50;
+          heating_element_capacity 4.5 kW;
+          tank_setpoint 130.1;
+          temperature 135;
+          thermostat_deadband 5.4;
+          location INSIDE;
+          tank_UA 3.7;
+          demand water6*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_15_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_15_node652;
+       length 12.33;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_15_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_15_node652;
+     name house15A_tm_A_15_node652;
+     floor_area 2118;
+     schedule_skew -1428;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling5*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.5;
+     object ZIPload {
+           base_power LIGHTS*0.99;
+           schedule_skew -1428;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_A_16_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_16_node652;
+       length 12.90;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_16_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_16_node652;
+     name house16A_tm_A_16_node652;
+     floor_area 2067;
+     schedule_skew 1100;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.4;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling2*1;
+     heating_setpoint heating2*1;
+     thermal_integrity_level 5;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.2;
+     object ZIPload {
+           base_power LIGHTS*0.99;
+           schedule_skew 1100;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 1100;
+          tank_volume 50;
+          heating_element_capacity 4.1 kW;
+          tank_setpoint 132.6;
+          temperature 135;
+          thermostat_deadband 5.1;
+          location INSIDE;
+          tank_UA 3.8;
+          demand water16*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_17_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_17_node652;
+       length 14.64;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_17_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_17_node652;
+     name house17A_tm_A_17_node652;
+     floor_area 1805;
+     schedule_skew -729;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating3*1;
+     thermal_integrity_level 3;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.9;
+     object ZIPload {
+           base_power LIGHTS*0.77;
+           schedule_skew -729;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object triplex_line {
+       name tl_A_18_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_18_node652;
+       length 14.72;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_18_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_18_node652;
+     name house18A_tm_A_18_node652;
+     floor_area 1803;
+     schedule_skew -430;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.5;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling7*1;
+     heating_setpoint heating5*1;
+     thermal_integrity_level 6;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.7;
+     object ZIPload {
+           base_power LIGHTS*1.06;
+           schedule_skew -430;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -430;
+          tank_volume 50;
+          heating_element_capacity 4.7 kW;
+          tank_setpoint 131.7;
+          temperature 135;
+          thermostat_deadband 2.3;
+          location INSIDE;
+          tank_UA 3.4;
+          demand water18*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_19_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_19_node652;
+       length 15.77;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_19_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_19_node652;
+     name house19A_tm_A_19_node652;
+     floor_area 1790;
+     schedule_skew -1956;
+     heating_system_type HEAT_PUMP;
+     heating_COP 2.6;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating8*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.6;
+     object ZIPload {
+           base_power LIGHTS*1.10;
+           schedule_skew -1956;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew -1956;
+          tank_volume 50;
+          heating_element_capacity 4.3 kW;
+          tank_setpoint 129.9;
+          temperature 135;
+          thermostat_deadband 5.7;
+          location INSIDE;
+          tank_UA 3.9;
+          demand water9*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_20_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_20_node652;
+       length 18.48;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_20_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_20_node652;
+     name house20A_tm_A_20_node652;
+     floor_area 1847;
+     schedule_skew 804;
+     heating_system_type HEAT_PUMP;
+     heating_COP 3.4;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling4*1;
+     heating_setpoint heating2*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.0;
+     object ZIPload {
+           base_power LIGHTS*1.00;
+           schedule_skew 804;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+     object waterheater {
+          schedule_skew 804;
+          tank_volume 50;
+          heating_element_capacity 5.1 kW;
+          tank_setpoint 121.3;
+          temperature 135;
+          thermostat_deadband 2.5;
+          location INSIDE;
+          tank_UA 2.5;
+          demand water6*1;
+     };
+
+}
+
+object triplex_line {
+       name tl_A_21_node652;
+       phases AS;
+       from tn_A_node652;
+       to tm_A_21_node652;
+       length 13.90;
+       configuration trip_line_config;
+       groupid Triplex_Line;
+}
+
+object triplex_meter {
+       name tm_A_21_node652;
+       phases AS;
+       nominal_voltage 120;
+       groupid House_Meter;
+}
+
+object house {
+     parent tm_A_21_node652;
+     name house21A_tm_A_21_node652;
+     floor_area 2474;
+     schedule_skew -219;
+     heating_system_type GAS;
+     cooling_system_type ELECTRIC;
+     cooling_setpoint cooling7*1;
+     heating_setpoint heating3*1;
+     thermal_integrity_level 4;
+     air_temperature 70;
+     mass_temperature 70;
+     cooling_COP 3.2;
+     object ZIPload {
+           base_power LIGHTS*1.37;
+           schedule_skew -219;
+           heatgain_fraction 0.9;
+           power_pf 1.000;
+           current_pf 1.000;
+           impedance_pf 1.000;
+           impedance_fraction 0.300000;
+           current_fraction 0.300000;
+           power_fraction 0.400000;
+     };
+}
+
+object thermal_storage {
+	name tes_house3B_tm_B_3_node645;
+	parent house3B_tm_B_3_node645;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 498; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house6B_tm_B_6_node645;
+	parent house6B_tm_B_6_node645;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 2063; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house7B_tm_B_7_node645;
+	parent house7B_tm_B_7_node645;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 3616; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house11B_tm_B_11_node645;
+	parent house11B_tm_B_11_node645;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 4170; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house16B_tm_B_16_node645;
+	parent house16B_tm_B_16_node645;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 832; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house22B_tm_B_22_node645;
+	parent house22B_tm_B_22_node645;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -2477; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house8B_tm_B_8_node646;
+	parent house8B_tm_B_8_node646;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -2391; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house10B_tm_B_10_node646;
+	parent house10B_tm_B_10_node646;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -1514; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house11B_tm_B_11_node646;
+	parent house11B_tm_B_11_node646;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 3210; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house12B_tm_B_12_node646;
+	parent house12B_tm_B_12_node646;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -1540; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house13B_tm_B_13_node646;
+	parent house13B_tm_B_13_node646;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 2996; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house18B_tm_B_18_node646;
+	parent house18B_tm_B_18_node646;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -1627; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house4A_tm_A_4_node652;
+	parent house4A_tm_A_4_node652;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 3927; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house10A_tm_A_10_node652;
+	parent house10A_tm_A_10_node652;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -765; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house13A_tm_A_13_node652;
+	parent house13A_tm_A_13_node652;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -2008; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house14A_tm_A_14_node652;
+	parent house14A_tm_A_14_node652;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew -1566; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house19A_tm_A_19_node652;
+	parent house19A_tm_A_19_node652;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 1390; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
+
+object thermal_storage {
+	name tes_house21A_tm_A_21_node652;
+	parent house21A_tm_A_21_node652;
+	SOC 100.00;
+	k 0.00;
+	discharge_schedule_type EXTERNAL;
+	recharge_schedule_type EXTERNAL;
+	schedule_skew 234; 
+	recharge_time ts_recharge_schedule_mod*1.0;
+	discharge_time ts_discharge_schedule_mod*1.0;
+}
