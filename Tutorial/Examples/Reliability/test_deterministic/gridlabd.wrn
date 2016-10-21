@@ -1,0 +1,32 @@
+WARNING  [INIT] : Maximum outage for testgendever was above global max - restricted to global max
+WARNING  [INIT] : event_gen:testgendever has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for testgendev was above global max - restricted to global max
+WARNING  [INIT] : event_gen:testgendev has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for testgendevTLL was above global max - restricted to global max
+WARNING  [INIT] : event_gen:testgendevTLL has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for testgen_fuse was above global max - restricted to global max
+WARNING  [INIT] : event_gen:testgen_fuse has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for testgen_sw was above global max - restricted to global max
+WARNING  [INIT] : event_gen:testgen_sw has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for testgendevB was above global max - restricted to global max
+WARNING  [INIT] : event_gen:testgendevB has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [2000-01-01 00:00:00 PST] : Restoration object not detected!
+WARNING  [2000-01-01 03:00:00 PST] : Phase A of fuse:node703-703b just blew!
+WARNING  [2000-01-01 03:00:00 PST] : Phase B of fuse:node703-703b just blew!
+WARNING  [2000-01-01 03:00:00 PST] : Phase C of fuse:node703-703b just blew!
+WARNING  [2000-01-01 03:00:00 PST] : Unsupported phase on node load827
+WARNING  [2000-01-01 05:02:05 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 05:02:05 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 05:02:05 PST] : Unsupported phase on node node704b
+WARNING  [2000-01-01 05:03:00 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 05:03:00 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 05:03:00 PST] : Unsupported phase on node node704b
+WARNING  [2000-01-01 05:10:11 PST] : Unsupported phase on node load827
+WARNING  [2000-01-01 05:12:15 PST] : Unsupported phase on node load827
+WARNING  [2000-01-01 05:21:00 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 05:21:00 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 05:21:00 PST] : Unsupported phase on node load838b
+WARNING  [2000-01-01 10:25:00 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 10:25:00 PST] : regulators are neglected from the fault calculation
+WARNING  [2000-01-01 10:25:00 PST] : Unsupported phase on node load838b
+WARNING  [2000-01-01 15:10:11 PST] : Unsupported phase on node load827

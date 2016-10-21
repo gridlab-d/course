@@ -1,0 +1,9 @@
+# file...... substation_data.csv
+# date...... Tue Aug  2 12:44:26 2016
+# user...... hard312
+# host...... (null)
+# target.... meter 11
+# trigger... (none)
+# interval.. 60
+# limit..... 0
+# timestamp,measured_voltage_A.real, measured_voltage_A.imag, measured_current_A.real, measured_current_A.real, measured_power_A.real, measured_power_A.imag

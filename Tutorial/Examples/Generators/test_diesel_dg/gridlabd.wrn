@@ -1,0 +1,4 @@
+WARNING  [INIT] : object name '671' does not follow strict naming rules and may not link correctly during load time
+WARNING  [INIT] : last warning message was repeated 1 times
+WARNING  [INIT] : Generator power not specified, defaulting to 12 KVA
+WARNING  [INIT] : Generator voltage not specified, defaulting to 480 V

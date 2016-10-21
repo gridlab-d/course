@@ -1,0 +1,3 @@
+WARNING  [INIT] : object name '701-702' does not follow strict naming rules and may not link correctly during load time
+WARNING  [INIT] : last warning message was repeated 72 times
+WARNING  [INIT] : Only WYE-WYE configurations are working in either Newton-Raphson or non-Manual controls

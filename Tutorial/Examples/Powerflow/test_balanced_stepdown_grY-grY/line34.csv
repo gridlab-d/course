@@ -1,0 +1,10 @@
+# file...... line34.csv
+# date...... Mon Feb 15 10:33:54 2016
+# user...... hard312
+# host...... (null)
+# target.... overhead_line 22
+# trigger... (none)
+# interval.. 1
+# limit..... 1000
+# timestamp,current_out_A,current_out_B,current_out_C,current_in_A,current_in_B,current_in_C,phases,status,from,to,power_in,power_out,power_losses,flow_direction,length,configuration
+2000-01-01 00:00:00 EST,+855.161-596.912j,-873.249-422.944j,+87.7508+1005.89j,+855.161-596.912j,-873.249-422.944j,+87.7508+1005.89j,ABCN,CLOSED,n,l,+5.84191e+06+3.5241e+06j,+5.4e+06+2.61534e+06j,+441906+908762j,CF|BF|AF,+2500,l

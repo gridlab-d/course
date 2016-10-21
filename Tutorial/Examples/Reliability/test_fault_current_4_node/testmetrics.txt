@@ -1,0 +1,18 @@
+Reliability report for test_fault_current_4_node.glm
+Number of customers = 1
+
+1366 metrics based around 1-hour base (outage-hours)
+
+Events for year starting at 2001-01-01 00:00:00
+Annual Event #,Metric Interval Event #,Starting DateTime (YYYY-MM-DD hh:mm:ss),Ending DateTime (YYYY-MM-DD hh:mm:ss),Object type,Object Name,Inducing Object,"Protective" Device,Desired Fault type,Implemented Fault Type,Number customers affected,Secondary number of customers affected
+1,1,2001-01-01 00:00:01,2001-01-01 00:00:02,overhead_line,overhead_line_34,SLG_A,transformer_23,SLG-A,SLG-A,1,0
+2,2,2001-01-01 00:00:03,2001-01-01 00:00:04,overhead_line,overhead_line_34,SLG_B,transformer_23,SLG-B,SLG-B,1,0
+3,3,2001-01-01 00:00:05,2001-01-01 00:00:06,overhead_line,overhead_line_34,SLG_C,transformer_23,SLG-C,SLG-C,1,0
+4,4,2001-01-01 00:00:07,2001-01-01 00:00:08,overhead_line,overhead_line_34,DLG_AB,transformer_23,DLG-AB,DLG-AB,1,0
+5,5,2001-01-01 00:00:09,2001-01-01 00:00:10,overhead_line,overhead_line_34,DLG_BC,transformer_23,DLG-BC,DLG-BC,1,0
+6,6,2001-01-01 00:00:11,2001-01-01 00:00:12,overhead_line,overhead_line_34,DLG_CA,transformer_23,DLG-CA,DLG-CA,1,0
+7,7,2001-01-01 00:00:13,2001-01-01 00:00:14,overhead_line,overhead_line_34,LL_AB,transformer_23,LL-AB,LL-AB,1,0
+8,8,2001-01-01 00:00:15,2001-01-01 00:00:16,overhead_line,overhead_line_34,LL_BC,transformer_23,LL-BC,LL-BC,1,0
+9,9,2001-01-01 00:00:17,2001-01-01 00:00:18,overhead_line,overhead_line_34,LL_CA,transformer_23,LL-CA,LL-CA,1,0
+10,10,2001-01-01 00:00:19,2001-01-01 00:00:20,overhead_line,overhead_line_34,TLG,transformer_23,TLG,TLG,1,0
+11,11,2001-01-01 00:00:21,2001-01-01 00:00:22,overhead_line,overhead_line_34,TLL,transformer_23,TLL,TLL,1,0

@@ -1,0 +1,63 @@
+# 
+# Matlab link control file
+#
+
+target matlab
+
+#
+# Matlab working directory
+# The workdir is automatically created if it doesn't exist
+# If omitted, the current working directory is used
+#
+
+
+#
+# Matlab window disposition (hide, show, keep)
+# Default is 'hide'
+#
+window hide
+
+#
+# Matlab output buffer size for verbose output
+# If omitted, output is not displayed when verbose is enabled
+#
+output 65536
+
+#
+# Matlab command on init
+#   ans is GLD_OK when init succeeds
+#   ans is GLD_ERROR when init fails
+#
+on_init if exist('battery_state.csv') delete('battery_state.csv'); end; ans=GLD_OK;
+
+# Matlab command on sync
+#   ans is timestamp of next needed sync event
+#   ans is TS_NEVER if no sync event needed
+#   ans is TS_ERROR if an error occurred
+#
+on_sync [b1m1_batt_power_in] = battery_controller(b1m1_batt_soc, b1m1_batt_power_out); ans=TS_NEVER; 
+
+# Matlab command on term
+#   ans is GLD_OK when term succeeds
+#   ans is GLD_ERROR when term fails
+ on_term battery_state = csvread('battery_state.csv'); battery_state(:,2) = battery_state(:,2)./3000; fig = figure; plot(battery_state(2:end,:)); legend('SOC','Normalized Battery Output'); xlabel('GridLAB-D Timestemp Number'); ylabel('SOC and Normalized Battery Power');saveas(fig ,'Battery State.png','png'); ans=GLD_OK;
+
+# Matlab root variable name for published data
+# Default is 'gridlabd'
+
+
+# Global variables to publish (readonly)
+# Default is all globals
+# Listing "global" all by itself once will cause no globals to be published
+global clock
+
+# Objects to publish (readonly)
+# Default is all objects
+# Listing "object" all by itself once will cause no objects to be published
+
+# Variables to import from matlab to gridlabd and to export from gridlabd to Matlab workspace (by name)
+# Default is none are imported or exported
+export b1m1_batt_inv.battery_soc  b1m1_batt_soc
+export b1m1_batt_inv.P_Out  b1m1_batt_power_out
+import b1m1_batt_inv.P_Out  b1m1_batt_power_in
+

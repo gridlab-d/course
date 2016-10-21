@@ -1,0 +1,8 @@
+WARNING  [INIT] : object name '645' does not follow strict naming rules and may not link correctly during load time
+WARNING  [INIT] : Inverter control mode is not specified! Using default: CONSTANT_PF
+WARNING  [INIT] : Inverter status is unknown! Using default: ONLINE
+WARNING  [INIT] : Efficiency unspecified - defaulted to 0.900000 for this inverter type
+WARNING  [INIT] : Inverter control mode is not specified! Using default: CONSTANT_PF
+WARNING  [INIT] : Inverter status is unknown! Using default: ONLINE
+WARNING  [INIT] : Efficiency unspecified - defaulted to 0.900000 for this inverter type
+WARNING  [INIT] : Inverter must have a nonzero power rating--using default value

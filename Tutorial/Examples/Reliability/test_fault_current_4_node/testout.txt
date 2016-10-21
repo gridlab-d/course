@@ -1,0 +1,55 @@
+Unsupported at timestamp 978336001 - 2001-01-01 00:00:01 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336003 - 2001-01-01 00:00:03 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336005 - 2001-01-01 00:00:05 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336007 - 2001-01-01 00:00:07 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336009 - 2001-01-01 00:00:09 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336011 - 2001-01-01 00:00:11 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336013 - 2001-01-01 00:00:13 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336015 - 2001-01-01 00:00:15 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336017 - 2001-01-01 00:00:17 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336019 - 2001-01-01 00:00:19 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+
+Unsupported at timestamp 978336021 - 2001-01-01 00:00:21 =
+
+Phases A, B, and C on node node3
+Phases A, B, and C on node load4
+

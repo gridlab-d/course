@@ -1,0 +1,9 @@
+# file...... branch_1_meter_1.csv
+# date...... Tue Aug  2 12:44:26 2016
+# user...... hard312
+# host...... (null)
+# target.... meter 18
+# trigger... (none)
+# interval.. 60
+# limit..... 0
+# timestamp,measured_voltage_A, measured_current_A, measured_power_A

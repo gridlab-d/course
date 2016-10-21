@@ -1,0 +1,10 @@
+# file...... yybsd2.csv
+# date...... Mon Feb 15 10:33:54 2016
+# user...... hard312
+# host...... (null)
+# target.... node 11
+# trigger... (none)
+# interval.. 1
+# limit..... 1000
+# timestamp,voltage_A,voltage_B,voltage_C,voltage_AB,voltage_BC,voltage_CA,current_A,current_B,current_C,power_A,power_B,power_C,shunt_A,shunt_B,shunt_C
+2000-01-01 00:00:00 EST,+7106.42-42.0676j,-3606.9-6161.63j,-3520.34+6189.71j,+10713.3+6119.56j,-86.5593-12351.3j,-10626.8+6231.77j,+0+0i,+0+0i,+0+0i,+0+0i,+0+0i,+0+0i,+0+0i,+0+0i,+0+0i

@@ -1,0 +1,10 @@
+schedule load_schedule_1 {
+	0-29 0 * * * 1 
+	30-59 0 * * * 2
+}
+
+schedule load_schedule_2 {
+	0-14 0 * * * 1 
+	15-44 0 * * * 2
+	45-59 0 * * * 0.5 
+}

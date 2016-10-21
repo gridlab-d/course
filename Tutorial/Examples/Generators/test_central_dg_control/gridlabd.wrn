@@ -1,0 +1,27 @@
+WARNING  [INIT] : v_max was not given -- using default value (battery: 65)
+WARNING  [INIT] : e_max was not given -- using default value (battery: 65)
+WARNING  [INIT] : eta_rt was not given -- using default value (battery: 65)
+WARNING  [INIT] : V_max was not given -- using default value (battery: 66)
+WARNING  [INIT] : I_max was not given -- using default value (battery: 66)
+WARNING  [INIT] : Max_P was not given -- using default value (battery: 66)
+WARNING  [INIT] : E_max was not given -- using default value (battery: 66)
+WARNING  [INIT] : v_max was not given -- using default value (battery: 68)
+WARNING  [INIT] : e_max was not given -- using default value (battery: 68)
+WARNING  [INIT] : eta_rt was not given -- using default value (battery: 68)
+WARNING  [INIT] : v_max was not given -- using default value (battery: 70)
+WARNING  [INIT] : e_max was not given -- using default value (battery: 70)
+WARNING  [INIT] : eta_rt was not given -- using default value (battery: 70)
+WARNING  [INIT] : v_max was not given -- using default value (battery: 72)
+WARNING  [INIT] : e_max was not given -- using default value (battery: 72)
+WARNING  [INIT] : eta_rt was not given -- using default value (battery: 72)
+WARNING  [INIT] : Generator control mode is not specified! Using default: SUPPLY_DRIVEN
+WARNING  [INIT] : Solar panel status is unknown! Using default: ONLINE
+WARNING  [INIT] : Solar panel type is unknown! Using default: SINGLE_CRYSTAL_SILICON
+WARNING  [INIT] : Solar object:sol5 is in player mode - be sure to specify relevant values
+WARNING  [INIT] : Generator control mode is not specified! Using default: SUPPLY_DRIVEN
+WARNING  [INIT] : Solar panel status is unknown! Using default: ONLINE
+WARNING  [INIT] : Solar panel type is unknown! Using default: SINGLE_CRYSTAL_SILICON
+WARNING  [INIT] : Solar object:sol8 is in player mode - be sure to specify relevant values
+WARNING  [2009-01-01 00:00:00 PST] : player was unable to split input string '
+'
+WARNING  [2009-12-31 23:00:00 PST] : last warning message was repeated 2 times

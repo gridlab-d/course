@@ -1,0 +1,46 @@
+WARNING  [INIT] : Maximum outage for SLG_A was above global max - restricted to global max
+WARNING  [INIT] : event_gen:SLG_A has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for SLG_B was above global max - restricted to global max
+WARNING  [INIT] : event_gen:SLG_B has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for SLG_C was above global max - restricted to global max
+WARNING  [INIT] : event_gen:SLG_C has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for DLG_AB was above global max - restricted to global max
+WARNING  [INIT] : event_gen:DLG_AB has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for DLG_BC was above global max - restricted to global max
+WARNING  [INIT] : event_gen:DLG_BC has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for DLG_CA was above global max - restricted to global max
+WARNING  [INIT] : event_gen:DLG_CA has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for LL_AB was above global max - restricted to global max
+WARNING  [INIT] : event_gen:LL_AB has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for LL_BC was above global max - restricted to global max
+WARNING  [INIT] : event_gen:LL_BC has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for LL_CA was above global max - restricted to global max
+WARNING  [INIT] : event_gen:LL_CA has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for TLG was above global max - restricted to global max
+WARNING  [INIT] : event_gen:TLG has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [INIT] : Maximum outage for TLL was above global max - restricted to global max
+WARNING  [INIT] : event_gen:TLL has the ability to generate more than 1 simultaneous fault - metrics may not be accurate
+WARNING  [2001-01-01 00:00:00 PST] : Restoration object not detected!
+WARNING  [2001-01-01 00:00:00 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:01 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:02 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:03 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:04 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:05 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:06 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:07 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:08 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:09 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:10 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:11 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:12 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:13 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:14 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:15 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:16 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:17 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:18 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:19 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:20 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!
+WARNING  [2001-01-01 00:00:21 PST] : Unsupported phase on node node3
+WARNING  [2001-01-01 00:00:22 PST] : Line:overhead_line_34 is at 123.91% of its continuous rating on phase A!

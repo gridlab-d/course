@@ -1,0 +1,10 @@
+# file...... yybsd4.csv
+# date...... Mon Feb 15 10:33:54 2016
+# user...... hard312
+# host...... (null)
+# target.... load 27
+# trigger... (none)
+# interval.. 1
+# limit..... 1000
+# timestamp,voltage_A,voltage_B,voltage_C,voltage_AB,voltage_BC,voltage_CA,current_A,current_B,current_C,power_A,power_B,power_C,shunt_A,shunt_B,shunt_C
+2000-01-01 00:00:00 EST,+1893.76-302.435j,-1277.96-1617.28j,-705.201+1850.98j,+3171.73+1314.85j,-572.764-3468.26j,-2598.96+2153.41j,+0+0j,+0+0j,+0+0j,+1.8e+06+871780j,+1.8e+06+871780j,+1.8e+06+871780j,+0+0j,+0+0j,+0+0j

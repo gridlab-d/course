@@ -1,0 +1,2 @@
+test_residentialenduse_standalone.glm(27): Object 'res-enduse-none' should generate a warning about missing schedule
+test_residentialenduse_standalone.glm(34): Object 'res-enduse-badparent' should generate a warning about its parent

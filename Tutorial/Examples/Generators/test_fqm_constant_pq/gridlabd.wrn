@@ -1,0 +1,6 @@
+WARNING  [INIT] : v_max was not given -- using default value (battery: 59)
+WARNING  [INIT] : eta_rt was not given -- using default value (battery: 59)
+WARNING  [2014-01-01 02:48:49 EST] : inverter:battery_inverter_1 - battery full - no charging allowed
+WARNING  [2014-01-01 11:08:04 EST] : last warning message was repeated 13 times
+WARNING  [2014-01-01 11:08:04 EST] : inverter:battery_inverter_1 - battery at or below the SOC reserve - no discharging allowed
+WARNING  [2014-01-02 00:00:00 EST] : last warning message was repeated 17 times

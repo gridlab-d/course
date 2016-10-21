@@ -1,0 +1,4101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-3_2.xsl" type="text/xsl"?>
+<gridlabd>
+	<version.major>3</version.major>
+	<version.minor>2</version.minor>
+	<version.patch>0</version.patch>
+	<version.build>5330</version.build>
+	<version.branch>Jojoba</version.branch>
+	<command_line>"/usr/local/bin/gridlabd.bin ../Residential Loads - Basics/residential_load_basics.glm"</command_line>
+	<environment>batch</environment>
+	<quiet>FALSE</quiet>
+	<warn>TRUE</warn>
+	<debugger>FALSE</debugger>
+	<gdb>FALSE</gdb>
+	<debug>FALSE</debug>
+	<test>FALSE</test>
+	<verbose>FALSE</verbose>
+	<iteration_limit>100</iteration_limit>
+	<workdir>"/Users/hard312/Gridlab-D/course/Tutorial/Chapter 5 - Loads/Residential Loads - Thermostats"</workdir>
+	<dumpfile>gridlabd.xml</dumpfile>
+	<savefile>""</savefile>
+	<dumpall>FALSE</dumpall>
+	<runchecks>FALSE</runchecks>
+	<threadcount>1</threadcount>
+	<profiler>FALSE</profiler>
+	<pauseatexit>FALSE</pauseatexit>
+	<testoutputfile>test.txt</testoutputfile>
+	<xml_encoding>8</xml_encoding>
+	<clock>2009-08-08 04:30:00 PDT</clock>
+	<starttime>2009-08-08 04:30:00 PDT</starttime>
+	<stoptime>2009-08-09 04:30:00 PDT</stoptime>
+	<double_format>%+lg</double_format>
+	<complex_format>%+lg%+lg%c</complex_format>
+	<object_format>%s:%d</object_format>
+	<object_scan>%[^:]:%d</object_scan>
+	<object_tree_balance>FALSE</object_tree_balance>
+	<kmlfile>""</kmlfile>
+	<modelname>"../Residential Loads - Basics/residential_load_basics.glm"</modelname>
+	<execdir>/usr/local/bin</execdir>
+	<strictnames>TRUE</strictnames>
+	<website>http://www.gridlabd.org/</website>
+	<urlbase>http://www.gridlabd.org/</urlbase>
+	<randomseed>2887477048</randomseed>
+	<include>""</include>
+	<trace>""</trace>
+	<gdb_window>FALSE</gdb_window>
+	<tmp>/Users/hard312/.gridlabd/tmp</tmp>
+	<force_compile>0</force_compile>
+	<nolocks>FALSE</nolocks>
+	<skipsafe>FALSE</skipsafe>
+	<dateformat>ISO</dateformat>
+	<init_sequence>DEFERRED</init_sequence>
+	<minimum_timestep>1</minimum_timestep>
+	<platform>MACOSX</platform>
+	<suppress_repeat_messages>TRUE</suppress_repeat_messages>
+	<maximum_synctime>60</maximum_synctime>
+	<run_realtime>FALSE</run_realtime>
+	<no_deprecate>TRUE</no_deprecate>
+	<streaming_io>FALSE</streaming_io>
+	<compileonly>FALSE</compileonly>
+	<relax_naming_rules>FALSE</relax_naming_rules>
+	<browser>safari</browser>
+	<server_portnum>6267</server_portnum>
+	<server_quit_on_close>FALSE</server_quit_on_close>
+	<autoclean>TRUE</autoclean>
+	<technology_readiness_level>UNKNOWN</technology_readiness_level>
+	<show_progress>TRUE</show_progress>
+	<checkpoint_type>NONE</checkpoint_type>
+	<checkpoint_file>""</checkpoint_file>
+	<checkpoint_seqnum>0</checkpoint_seqnum>
+	<checkpoint_interval>0</checkpoint_interval>
+	<checkpoint_keepall>FALSE</checkpoint_keepall>
+	<check_version>FALSE</check_version>
+	<random_number_generator>RNG3</random_number_generator>
+	<mainloop_state>INIT</mainloop_state>
+	<pauseat>NEVER</pauseat>
+	<infourl>http://gridlab-d.sourceforge.net/wiki/index.php?title=Special%3ASearch&go=Go&search=</infourl>
+	<hostname>localhost</hostname>
+	<hostaddr>127.0.0.1</hostaddr>
+	<autostart_gui>TRUE</autostart_gui>
+	<master>""</master>
+	<master_port>0</master_port>
+	<multirun_mode>STANDALONE</multirun_mode>
+	<multirun_conn>NONE</multirun_conn>
+	<signal_timeout>5000</signal_timeout>
+	<slave_port>6267</slave_port>
+	<slave_id>0</slave_id>
+	<return_code>0</return_code>
+	<module_compiler_flags>NONE</module_compiler_flags>
+	<init_max_defer>64</init_max_defer>
+	<mt_analysis>FALSE</mt_analysis>
+	<inline_block_size>1048576</inline_block_size>
+	<validate>TSTD|RALL</validate>
+	<sanitize>NAMES|POSITIONS</sanitize>
+	<sanitize_prefix>GLD_</sanitize_prefix>
+	<sanitize_index>.txt</sanitize_index>
+	<sanitize_offset>""</sanitize_offset>
+	<simulation_mode>INIT</simulation_mode>
+	<deltamode_timestep>10000000</deltamode_timestep>
+	<deltamode_maximumtime>3600000000000</deltamode_maximumtime>
+	<deltaclock>0</deltaclock>
+	<delta_current_clock>+0</delta_current_clock>
+	<deltamode_updateorder>""</deltamode_updateorder>
+	<deltamode_iteration_limit>10</deltamode_iteration_limit>
+	<run_powerworld>FALSE</run_powerworld>
+	<last_timestep>+0</last_timestep>
+	<timezone>PST8PDT</timezone>
+	<sync-order>
+	</sync-order>
+	<powerflow>
+		<version.major>0</version.major>
+		<version.minor>0</version.minor>
+		<node_list>
+			<inherits_from>powerflow_object</inherits_from>
+			<node>
+				<id>12</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>feeder_head</name>
+				<bustype>SWING</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+132790 V</nominal_voltage>
+			</node>
+		</node_list>
+		<link_list>
+			<inherits_from>powerflow_object</inherits_from>
+		</link_list>
+		<capacitor_list>
+			<inherits_from>node</inherits_from>
+		</capacitor_list>
+		<fuse_list>
+			<inherits_from>link</inherits_from>
+		</fuse_list>
+		<meter_list>
+			<inherits_from>node</inherits_from>
+			<meter>
+				<id>14</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>substation_meter</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+7216.88 V</nominal_voltage>
+			</meter>
+			<meter>
+				<id>16</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_1_meter_1</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+7216.88 V</nominal_voltage>
+			</meter>
+			<meter>
+				<id>23</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_1_meter_2</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+7216.88 V</nominal_voltage>
+			</meter>
+			<meter>
+				<id>30</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_1_meter_3</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+7216.88 V</nominal_voltage>
+			</meter>
+			<meter>
+				<id>35</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_2_meter_1</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+7216.88 V</nominal_voltage>
+			</meter>
+			<meter>
+				<id>40</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_2_meter_2</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+7216.88 V</nominal_voltage>
+			</meter>
+			<meter>
+				<id>47</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_2_meter_3</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_A>+0+0d V</voltage_A>
+				<voltage_B>+0+0d V</voltage_B>
+				<voltage_C>+0+0d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<current_AB>+0+0j A</current_AB>
+				<current_BC>+0+0j A</current_BC>
+				<current_CA>+0+0j A</current_CA>
+				<current_AN>+0+0j A</current_AN>
+				<current_BN>+0+0j A</current_BN>
+				<current_CN>+0+0j A</current_CN>
+				<power_AB>+0+0j VA</power_AB>
+				<power_BC>+0+0j VA</power_BC>
+				<power_CA>+0+0j VA</power_CA>
+				<power_AN>+0+0j VA</power_AN>
+				<power_BN>+0+0j VA</power_BN>
+				<power_CN>+0+0j VA</power_CN>
+				<shunt_AB>+0+0j S</shunt_AB>
+				<shunt_BC>+0+0j S</shunt_BC>
+				<shunt_CA>+0+0j S</shunt_CA>
+				<shunt_AN>+0+0j S</shunt_AN>
+				<shunt_BN>+0+0j S</shunt_BN>
+				<shunt_CN>+0+0j S</shunt_CN>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<Norton_dynamic>FALSE</Norton_dynamic>
+				<phases>ABCN</phases>
+				<nominal_voltage>+7216.88 V</nominal_voltage>
+			</meter>
+		</meter_list>
+		<line_list>
+			<inherits_from>link</inherits_from>
+		</line_list>
+		<line_spacing_list>
+			<line_spacing>
+				<id>3</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>line_spacing_1</name>
+				<distance_AB>+4.8 ft</distance_AB>
+				<distance_BC>+4.8 ft</distance_BC>
+				<distance_AC>+4.8 ft</distance_AC>
+				<distance_AN>+4.3 ft</distance_AN>
+				<distance_BN>+4.3 ft</distance_BN>
+				<distance_CN>+4.3 ft</distance_CN>
+				<distance_AE>+0 ft</distance_AE>
+				<distance_BE>+0 ft</distance_BE>
+				<distance_CE>+0 ft</distance_CE>
+				<distance_NE>+0 ft</distance_NE>
+			</line_spacing>
+			<line_spacing>
+				<id>4</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>line_spacing_2</name>
+				<distance_AB>+2 ft</distance_AB>
+				<distance_BC>+2 ft</distance_BC>
+				<distance_AC>+4 ft</distance_AC>
+				<distance_AN>+5 ft</distance_AN>
+				<distance_BN>+4 ft</distance_BN>
+				<distance_CN>+2 ft</distance_CN>
+				<distance_AE>+0 ft</distance_AE>
+				<distance_BE>+0 ft</distance_BE>
+				<distance_CE>+0 ft</distance_CE>
+				<distance_NE>+0 ft</distance_NE>
+			</line_spacing>
+		</line_spacing_list>
+		<overhead_line_list>
+			<inherits_from>line</inherits_from>
+			<overhead_line>
+				<id>15</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_1_line_1</name>
+				<configuration>line_configuration_1</configuration>
+				<length>+10000 ft</length>
+				<status>CLOSED</status>
+				<from>substation_meter</from>
+				<to>branch_1_meter_1</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>ABCN</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</overhead_line>
+			<overhead_line>
+				<id>22</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_1_line_2</name>
+				<configuration>line_configuration_1</configuration>
+				<length>+5000 ft</length>
+				<status>CLOSED</status>
+				<from>branch_1_meter_1</from>
+				<to>branch_1_meter_2</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>ABCN</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</overhead_line>
+			<overhead_line>
+				<id>29</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_1_line_3</name>
+				<configuration>line_configuration_1</configuration>
+				<length>+15000 ft</length>
+				<status>CLOSED</status>
+				<from>branch_1_meter_2</from>
+				<to>branch_1_meter_3</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>ABCN</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</overhead_line>
+			<overhead_line>
+				<id>34</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_2_line_1</name>
+				<configuration>line_configuration_1</configuration>
+				<length>+10000 ft</length>
+				<status>CLOSED</status>
+				<from>substation_meter</from>
+				<to>branch_2_meter_1</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>ABCN</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</overhead_line>
+			<overhead_line>
+				<id>39</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_2_line_2</name>
+				<configuration>line_configuration_1</configuration>
+				<length>+5000 ft</length>
+				<status>CLOSED</status>
+				<from>branch_2_meter_1</from>
+				<to>branch_2_meter_2</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>ABCN</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</overhead_line>
+			<overhead_line>
+				<id>46</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>branch_2_line_3</name>
+				<configuration>line_configuration_1</configuration>
+				<length>+15000 ft</length>
+				<status>CLOSED</status>
+				<from>branch_2_meter_2</from>
+				<to>branch_2_meter_3</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>ABCN</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</overhead_line>
+		</overhead_line_list>
+		<underground_line_list>
+			<inherits_from>line</inherits_from>
+		</underground_line_list>
+		<overhead_line_conductor_list>
+			<overhead_line_conductor>
+				<id>5</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>overhead_line_conductor_1</name>
+				<geometric_mean_radius>+0.012 ft</geometric_mean_radius>
+				<resistance>+0.1 Ohm/mile</resistance>
+				<diameter>+0 in</diameter>
+				<rating.summer.continuous>+256 A</rating.summer.continuous>
+				<rating.summer.emergency>+2000 A</rating.summer.emergency>
+				<rating.winter.continuous>+1000 A</rating.winter.continuous>
+				<rating.winter.emergency>+2000 A</rating.winter.emergency>
+			</overhead_line_conductor>
+			<overhead_line_conductor>
+				<id>7</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>overhead_line_conductor_2</name>
+				<geometric_mean_radius>+0.022 ft</geometric_mean_radius>
+				<resistance>+0.2 Ohm/mile</resistance>
+				<diameter>+0 in</diameter>
+				<rating.summer.continuous>+150 A</rating.summer.continuous>
+				<rating.summer.emergency>+2000 A</rating.summer.emergency>
+				<rating.winter.continuous>+1000 A</rating.winter.continuous>
+				<rating.winter.emergency>+2000 A</rating.winter.emergency>
+			</overhead_line_conductor>
+		</overhead_line_conductor_list>
+		<underground_line_conductor_list>
+			<underground_line_conductor>
+				<id>6</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>underground_line_conductor_1</name>
+				<outer_diameter>+2.2 in</outer_diameter>
+				<conductor_gmr>+0.04 ft</conductor_gmr>
+				<conductor_diameter>+1.25 in</conductor_diameter>
+				<conductor_resistance>+0.109 Ohm/mile</conductor_resistance>
+				<neutral_gmr>+0.005 ft</neutral_gmr>
+				<neutral_diameter>+0.19 in</neutral_diameter>
+				<neutral_resistance>+9.6 Ohm/mile</neutral_resistance>
+				<neutral_strands>20</neutral_strands>
+				<insulation_relative_permitivitty>+1 unit</insulation_relative_permitivitty>
+				<shield_gmr>+0 ft</shield_gmr>
+				<shield_resistance>+0 Ohm/mile</shield_resistance>
+				<rating.summer.continuous>+1000 A</rating.summer.continuous>
+				<rating.summer.emergency>+2000 A</rating.summer.emergency>
+				<rating.winter.continuous>+1000 A</rating.winter.continuous>
+				<rating.winter.emergency>+2000 A</rating.winter.emergency>
+			</underground_line_conductor>
+		</underground_line_conductor_list>
+		<line_configuration_list>
+			<line_configuration>
+				<id>1</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>line_configuration_1</name>
+				<conductor_A>overhead_line_conductor_1</conductor_A>
+				<conductor_B>overhead_line_conductor_1</conductor_B>
+				<conductor_C>overhead_line_conductor_1</conductor_C>
+				<conductor_N>overhead_line_conductor_1</conductor_N>
+				<spacing>line_spacing_1</spacing>
+				<z11>+0+0j Ohm/mile</z11>
+				<z12>+0+0j Ohm/mile</z12>
+				<z13>+0+0j Ohm/mile</z13>
+				<z21>+0+0j Ohm/mile</z21>
+				<z22>+0+0j Ohm/mile</z22>
+				<z23>+0+0j Ohm/mile</z23>
+				<z31>+0+0j Ohm/mile</z31>
+				<z32>+0+0j Ohm/mile</z32>
+				<z33>+0+0j Ohm/mile</z33>
+				<c11>+0 nF/mile</c11>
+				<c12>+0 nF/mile</c12>
+				<c13>+0 nF/mile</c13>
+				<c21>+0 nF/mile</c21>
+				<c22>+0 nF/mile</c22>
+				<c23>+0 nF/mile</c23>
+				<c31>+0 nF/mile</c31>
+				<c32>+0 nF/mile</c32>
+				<c33>+0 nF/mile</c33>
+			</line_configuration>
+			<line_configuration>
+				<id>2</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>line_configuration_2</name>
+				<conductor_A>underground_line_conductor_1</conductor_A>
+				<conductor_B>underground_line_conductor_1</conductor_B>
+				<conductor_C>underground_line_conductor_1</conductor_C>
+				<conductor_N>underground_line_conductor_1</conductor_N>
+				<spacing>line_spacing_2</spacing>
+				<z11>+0+0j Ohm/mile</z11>
+				<z12>+0+0j Ohm/mile</z12>
+				<z13>+0+0j Ohm/mile</z13>
+				<z21>+0+0j Ohm/mile</z21>
+				<z22>+0+0j Ohm/mile</z22>
+				<z23>+0+0j Ohm/mile</z23>
+				<z31>+0+0j Ohm/mile</z31>
+				<z32>+0+0j Ohm/mile</z32>
+				<z33>+0+0j Ohm/mile</z33>
+				<c11>+0 nF/mile</c11>
+				<c12>+0 nF/mile</c12>
+				<c13>+0 nF/mile</c13>
+				<c21>+0 nF/mile</c21>
+				<c22>+0 nF/mile</c22>
+				<c23>+0 nF/mile</c23>
+				<c31>+0 nF/mile</c31>
+				<c32>+0 nF/mile</c32>
+				<c33>+0 nF/mile</c33>
+			</line_configuration>
+		</line_configuration_list>
+		<transformer_configuration_list>
+			<transformer_configuration>
+				<id>8</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>substation_transformer_config</name>
+				<connect_type>WYE_WYE</connect_type>
+				<install_type>PADMOUNT</install_type>
+				<coolant_type>UNKNOWN</coolant_type>
+				<cooling_type>UNKNOWN</cooling_type>
+				<primary_voltage>+132790 V</primary_voltage>
+				<secondary_voltage>+7216 V</secondary_voltage>
+				<power_rating>+8400 kVA</power_rating>
+				<powerA_rating>+0 kVA</powerA_rating>
+				<powerB_rating>+0 kVA</powerB_rating>
+				<powerC_rating>+0 kVA</powerC_rating>
+				<resistance>+0.00033 pu*Ohm</resistance>
+				<reactance>+0.0022 pu*Ohm</reactance>
+				<impedance>+0.00033+0.0022j pu*Ohm</impedance>
+				<resistance1>+0 pu*Ohm</resistance1>
+				<reactance1>+0 pu*Ohm</reactance1>
+				<impedance1>+0+0j pu*Ohm</impedance1>
+				<resistance2>+0 pu*Ohm</resistance2>
+				<reactance2>+0 pu*Ohm</reactance2>
+				<impedance2>+0+0j pu*Ohm</impedance2>
+				<shunt_resistance>+1e+09 pu*Ohm</shunt_resistance>
+				<shunt_reactance>+1e+09 pu*Ohm</shunt_reactance>
+				<shunt_impedance>+1e+09+1e+09j pu*Ohm</shunt_impedance>
+				<core_coil_weight>+0 lb</core_coil_weight>
+				<tank_fittings_weight>+0 lb</tank_fittings_weight>
+				<oil_volume>+0 gal</oil_volume>
+				<rated_winding_time_constant>+0 h</rated_winding_time_constant>
+				<rated_winding_hot_spot_rise>+0 degC</rated_winding_hot_spot_rise>
+				<rated_top_oil_rise>+0 degC</rated_top_oil_rise>
+				<no_load_loss>+0 pu</no_load_loss>
+				<full_load_loss>+0 pu</full_load_loss>
+				<reactance_resistance_ratio>+4.5</reactance_resistance_ratio>
+				<installed_insulation_life>+0 h</installed_insulation_life>
+			</transformer_configuration>
+			<transformer_configuration>
+				<id>9</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>house_transformer</name>
+				<connect_type>SINGLE_PHASE_CENTER_TAPPED</connect_type>
+				<install_type>PADMOUNT</install_type>
+				<coolant_type>UNKNOWN</coolant_type>
+				<cooling_type>UNKNOWN</cooling_type>
+				<primary_voltage>+7200 V</primary_voltage>
+				<secondary_voltage>+124 V</secondary_voltage>
+				<power_rating>+250 kVA</power_rating>
+				<powerA_rating>+250 kVA</powerA_rating>
+				<powerB_rating>+0 kVA</powerB_rating>
+				<powerC_rating>+0 kVA</powerC_rating>
+				<resistance>+0.015 pu*Ohm</resistance>
+				<reactance>+0.0675 pu*Ohm</reactance>
+				<impedance>+0.015+0.0675j pu*Ohm</impedance>
+				<resistance1>+0 pu*Ohm</resistance1>
+				<reactance1>+0 pu*Ohm</reactance1>
+				<impedance1>+0+0j pu*Ohm</impedance1>
+				<resistance2>+0 pu*Ohm</resistance2>
+				<reactance2>+0 pu*Ohm</reactance2>
+				<impedance2>+0+0j pu*Ohm</impedance2>
+				<shunt_resistance>+1e+09 pu*Ohm</shunt_resistance>
+				<shunt_reactance>+1e+09 pu*Ohm</shunt_reactance>
+				<shunt_impedance>+1e+09+1e+09j pu*Ohm</shunt_impedance>
+				<core_coil_weight>+0 lb</core_coil_weight>
+				<tank_fittings_weight>+0 lb</tank_fittings_weight>
+				<oil_volume>+0 gal</oil_volume>
+				<rated_winding_time_constant>+0 h</rated_winding_time_constant>
+				<rated_winding_hot_spot_rise>+0 degC</rated_winding_hot_spot_rise>
+				<rated_top_oil_rise>+0 degC</rated_top_oil_rise>
+				<no_load_loss>+0 pu</no_load_loss>
+				<full_load_loss>+0 pu</full_load_loss>
+				<reactance_resistance_ratio>+4.5</reactance_resistance_ratio>
+				<installed_insulation_life>+0 h</installed_insulation_life>
+			</transformer_configuration>
+		</transformer_configuration_list>
+		<transformer_list>
+			<inherits_from>link</inherits_from>
+			<transformer>
+				<id>13</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>substation_transformer</name>
+				<configuration>substation_transformer_config</configuration>
+				<ambient_temperature>+0 degC</ambient_temperature>
+				<top_oil_hot_spot_temperature>+0 degC</top_oil_hot_spot_temperature>
+				<winding_hot_spot_temperature>+0 degC</winding_hot_spot_temperature>
+				<percent_loss_of_life>+0</percent_loss_of_life>
+				<aging_constant>+0</aging_constant>
+				<use_thermal_model>FALSE</use_thermal_model>
+				<transformer_replacement_count>+0</transformer_replacement_count>
+				<aging_granularity>+0 s</aging_granularity>
+				<status>CLOSED</status>
+				<from>feeder_head</from>
+				<to>substation_meter</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>ABCN</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+			<transformer>
+				<id>17</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m1_house_trans</name>
+				<configuration>house_transformer</configuration>
+				<ambient_temperature>+0 degC</ambient_temperature>
+				<top_oil_hot_spot_temperature>+0 degC</top_oil_hot_spot_temperature>
+				<winding_hot_spot_temperature>+0 degC</winding_hot_spot_temperature>
+				<percent_loss_of_life>+0</percent_loss_of_life>
+				<aging_constant>+0</aging_constant>
+				<use_thermal_model>FALSE</use_thermal_model>
+				<transformer_replacement_count>+0</transformer_replacement_count>
+				<aging_granularity>+0 s</aging_granularity>
+				<status>CLOSED</status>
+				<from>branch_1_meter_1</from>
+				<to>b1m1_house_node</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+			<transformer>
+				<id>24</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m2_house_trans</name>
+				<configuration>house_transformer</configuration>
+				<ambient_temperature>+0 degC</ambient_temperature>
+				<top_oil_hot_spot_temperature>+0 degC</top_oil_hot_spot_temperature>
+				<winding_hot_spot_temperature>+0 degC</winding_hot_spot_temperature>
+				<percent_loss_of_life>+0</percent_loss_of_life>
+				<aging_constant>+0</aging_constant>
+				<use_thermal_model>FALSE</use_thermal_model>
+				<transformer_replacement_count>+0</transformer_replacement_count>
+				<aging_granularity>+0 s</aging_granularity>
+				<status>CLOSED</status>
+				<from>branch_1_meter_2</from>
+				<to>b1m2_house_node</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+			<transformer>
+				<id>31</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m3_house_trans</name>
+				<configuration>house_transformer</configuration>
+				<ambient_temperature>+0 degC</ambient_temperature>
+				<top_oil_hot_spot_temperature>+0 degC</top_oil_hot_spot_temperature>
+				<winding_hot_spot_temperature>+0 degC</winding_hot_spot_temperature>
+				<percent_loss_of_life>+0</percent_loss_of_life>
+				<aging_constant>+0</aging_constant>
+				<use_thermal_model>FALSE</use_thermal_model>
+				<transformer_replacement_count>+0</transformer_replacement_count>
+				<aging_granularity>+0 s</aging_granularity>
+				<status>CLOSED</status>
+				<from>branch_1_meter_3</from>
+				<to>b1m3_house_meter</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+			<transformer>
+				<id>36</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b2m1_house_trans</name>
+				<configuration>house_transformer</configuration>
+				<ambient_temperature>+0 degC</ambient_temperature>
+				<top_oil_hot_spot_temperature>+0 degC</top_oil_hot_spot_temperature>
+				<winding_hot_spot_temperature>+0 degC</winding_hot_spot_temperature>
+				<percent_loss_of_life>+0</percent_loss_of_life>
+				<aging_constant>+0</aging_constant>
+				<use_thermal_model>FALSE</use_thermal_model>
+				<transformer_replacement_count>+0</transformer_replacement_count>
+				<aging_granularity>+0 s</aging_granularity>
+				<status>CLOSED</status>
+				<from>branch_2_meter_1</from>
+				<to>b2m1_house_meter</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+			<transformer>
+				<id>41</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b122_house_trans</name>
+				<configuration>house_transformer</configuration>
+				<ambient_temperature>+0 degC</ambient_temperature>
+				<top_oil_hot_spot_temperature>+0 degC</top_oil_hot_spot_temperature>
+				<winding_hot_spot_temperature>+0 degC</winding_hot_spot_temperature>
+				<percent_loss_of_life>+0</percent_loss_of_life>
+				<aging_constant>+0</aging_constant>
+				<use_thermal_model>FALSE</use_thermal_model>
+				<transformer_replacement_count>+0</transformer_replacement_count>
+				<aging_granularity>+0 s</aging_granularity>
+				<status>CLOSED</status>
+				<from>branch_2_meter_2</from>
+				<to>b2m2_house_node</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+			<transformer>
+				<id>48</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b2m3_house_trans</name>
+				<configuration>house_transformer</configuration>
+				<ambient_temperature>+0 degC</ambient_temperature>
+				<top_oil_hot_spot_temperature>+0 degC</top_oil_hot_spot_temperature>
+				<winding_hot_spot_temperature>+0 degC</winding_hot_spot_temperature>
+				<percent_loss_of_life>+0</percent_loss_of_life>
+				<aging_constant>+0</aging_constant>
+				<use_thermal_model>FALSE</use_thermal_model>
+				<transformer_replacement_count>+0</transformer_replacement_count>
+				<aging_granularity>+0 s</aging_granularity>
+				<status>CLOSED</status>
+				<from>branch_2_meter_3</from>
+				<to>b2m3_house_meter</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</transformer>
+		</transformer_list>
+		<load_list>
+			<inherits_from>node</inherits_from>
+		</load_list>
+		<regulator_configuration_list>
+		</regulator_configuration_list>
+		<regulator_list>
+			<inherits_from>link</inherits_from>
+		</regulator_list>
+		<triplex_node_list>
+			<inherits_from>powerflow_object</inherits_from>
+			<triplex_node>
+				<id>18</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m1_house_node</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_node>
+			<triplex_node>
+				<id>25</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m2_house_node</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_node>
+			<triplex_node>
+				<id>42</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b2m2_house_node</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_node>
+		</triplex_node_list>
+		<triplex_meter_list>
+			<inherits_from>triplex_node</inherits_from>
+			<triplex_meter>
+				<id>20</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m1_house_meter</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<indiv_measured_power_1>+0+0i VA</indiv_measured_power_1>
+				<indiv_measured_power_2>+0+0i VA</indiv_measured_power_2>
+				<indiv_measured_power_N>+0+0i VA</indiv_measured_power_N>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_1>+0+0d V</measured_voltage_1>
+				<measured_voltage_2>+0+0d V</measured_voltage_2>
+				<measured_voltage_N>+0+0d V</measured_voltage_N>
+				<measured_current_1>+0+0i A</measured_current_1>
+				<measured_current_2>+0+0i A</measured_current_2>
+				<measured_current_N>+0+0i A</measured_current_N>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_meter>
+			<triplex_meter>
+				<id>27</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m2_house_meter</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<indiv_measured_power_1>+0+0i VA</indiv_measured_power_1>
+				<indiv_measured_power_2>+0+0i VA</indiv_measured_power_2>
+				<indiv_measured_power_N>+0+0i VA</indiv_measured_power_N>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_1>+0+0d V</measured_voltage_1>
+				<measured_voltage_2>+0+0d V</measured_voltage_2>
+				<measured_voltage_N>+0+0d V</measured_voltage_N>
+				<measured_current_1>+0+0i A</measured_current_1>
+				<measured_current_2>+0+0i A</measured_current_2>
+				<measured_current_N>+0+0i A</measured_current_N>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_meter>
+			<triplex_meter>
+				<id>32</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m3_house_meter</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<indiv_measured_power_1>+0+0i VA</indiv_measured_power_1>
+				<indiv_measured_power_2>+0+0i VA</indiv_measured_power_2>
+				<indiv_measured_power_N>+0+0i VA</indiv_measured_power_N>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_1>+0+0d V</measured_voltage_1>
+				<measured_voltage_2>+0+0d V</measured_voltage_2>
+				<measured_voltage_N>+0+0d V</measured_voltage_N>
+				<measured_current_1>+0+0i A</measured_current_1>
+				<measured_current_2>+0+0i A</measured_current_2>
+				<measured_current_N>+0+0i A</measured_current_N>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_meter>
+			<triplex_meter>
+				<id>37</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b2m1_house_meter</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<indiv_measured_power_1>+0+0i VA</indiv_measured_power_1>
+				<indiv_measured_power_2>+0+0i VA</indiv_measured_power_2>
+				<indiv_measured_power_N>+0+0i VA</indiv_measured_power_N>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_1>+0+0d V</measured_voltage_1>
+				<measured_voltage_2>+0+0d V</measured_voltage_2>
+				<measured_voltage_N>+0+0d V</measured_voltage_N>
+				<measured_current_1>+0+0i A</measured_current_1>
+				<measured_current_2>+0+0i A</measured_current_2>
+				<measured_current_N>+0+0i A</measured_current_N>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_meter>
+			<triplex_meter>
+				<id>44</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b2m2_house_meter</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<indiv_measured_power_1>+0+0i VA</indiv_measured_power_1>
+				<indiv_measured_power_2>+0+0i VA</indiv_measured_power_2>
+				<indiv_measured_power_N>+0+0i VA</indiv_measured_power_N>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_1>+0+0d V</measured_voltage_1>
+				<measured_voltage_2>+0+0d V</measured_voltage_2>
+				<measured_voltage_N>+0+0d V</measured_voltage_N>
+				<measured_current_1>+0+0i A</measured_current_1>
+				<measured_current_2>+0+0i A</measured_current_2>
+				<measured_current_N>+0+0i A</measured_current_N>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_meter>
+			<triplex_meter>
+				<id>49</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b2m3_house_meter</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<indiv_measured_power_1>+0+0i VA</indiv_measured_power_1>
+				<indiv_measured_power_2>+0+0i VA</indiv_measured_power_2>
+				<indiv_measured_power_N>+0+0i VA</indiv_measured_power_N>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_1>+0+0d V</measured_voltage_1>
+				<measured_voltage_2>+0+0d V</measured_voltage_2>
+				<measured_voltage_N>+0+0d V</measured_voltage_N>
+				<measured_current_1>+0+0i A</measured_current_1>
+				<measured_current_2>+0+0i A</measured_current_2>
+				<measured_current_N>+0+0i A</measured_current_N>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0 $</monthly_bill>
+				<previous_monthly_bill>+0 $</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0 $</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0 $/kWh</price>
+				<price_base>+0 $/kWh</price_base>
+				<first_tier_price>+0 $/kWh</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0 $/kWh</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0 $/kWh</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0 V</maximum_voltage_error>
+				<voltage_1>+0+0d V</voltage_1>
+				<voltage_2>+0+0d V</voltage_2>
+				<voltage_N>+0+0d V</voltage_N>
+				<voltage_12>+0+0d V</voltage_12>
+				<voltage_1N>+0+0d V</voltage_1N>
+				<voltage_2N>+0+0d V</voltage_2N>
+				<current_1>+0+0i A</current_1>
+				<current_2>+0+0i A</current_2>
+				<current_N>+0+0i A</current_N>
+				<current_1_real>+0 A</current_1_real>
+				<current_2_real>+0 A</current_2_real>
+				<current_N_real>+0 A</current_N_real>
+				<current_1_reac>+0 A</current_1_reac>
+				<current_2_reac>+0 A</current_2_reac>
+				<current_N_reac>+0 A</current_N_reac>
+				<current_12>+0+0i A</current_12>
+				<current_12_real>+0 A</current_12_real>
+				<current_12_reac>+0 A</current_12_reac>
+				<residential_nominal_current_1>+0+0j A</residential_nominal_current_1>
+				<residential_nominal_current_2>+0+0j A</residential_nominal_current_2>
+				<residential_nominal_current_12>+0+0j A</residential_nominal_current_12>
+				<residential_nominal_current_1_real>+0 A</residential_nominal_current_1_real>
+				<residential_nominal_current_1_imag>+0 A</residential_nominal_current_1_imag>
+				<residential_nominal_current_2_real>+0 A</residential_nominal_current_2_real>
+				<residential_nominal_current_2_imag>+0 A</residential_nominal_current_2_imag>
+				<residential_nominal_current_12_real>+0 A</residential_nominal_current_12_real>
+				<residential_nominal_current_12_imag>+0 A</residential_nominal_current_12_imag>
+				<power_1>+0+0i VA</power_1>
+				<power_2>+0+0i VA</power_2>
+				<power_12>+0+0i VA</power_12>
+				<power_1_real>+0 W</power_1_real>
+				<power_2_real>+0 W</power_2_real>
+				<power_12_real>+0 W</power_12_real>
+				<power_1_reac>+0 VAr</power_1_reac>
+				<power_2_reac>+0 VAr</power_2_reac>
+				<power_12_reac>+0 VAr</power_12_reac>
+				<shunt_1>+0+0j S</shunt_1>
+				<shunt_2>+0+0j S</shunt_2>
+				<shunt_12>+0+0j S</shunt_12>
+				<impedance_1>+0+0i Ohm</impedance_1>
+				<impedance_2>+0+0i Ohm</impedance_2>
+				<impedance_12>+0+0i Ohm</impedance_12>
+				<impedance_1_real>+0 Ohm</impedance_1_real>
+				<impedance_2_real>+0 Ohm</impedance_2_real>
+				<impedance_12_real>+0 Ohm</impedance_12_real>
+				<impedance_1_reac>+0 Ohm</impedance_1_reac>
+				<impedance_2_reac>+0 Ohm</impedance_2_reac>
+				<impedance_12_reac>+0 Ohm</impedance_12_reac>
+				<house_present>FALSE</house_present>
+				<service_status>IN_SERVICE</service_status>
+				<service_status_double>-1</service_status_double>
+				<previous_uptime>-1 min</previous_uptime>
+				<current_uptime>-1 min</current_uptime>
+				<phases>AS</phases>
+				<nominal_voltage>+124 V</nominal_voltage>
+			</triplex_meter>
+		</triplex_meter_list>
+		<triplex_line_list>
+			<inherits_from>line</inherits_from>
+			<triplex_line>
+				<id>19</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(triplex_line:19)</name>
+				<configuration>triplex_line_config</configuration>
+				<length>+10 ft</length>
+				<status>CLOSED</status>
+				<from>b1m1_house_node</from>
+				<to>b1m1_house_meter</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</triplex_line>
+			<triplex_line>
+				<id>26</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(triplex_line:26)</name>
+				<configuration>triplex_line_config</configuration>
+				<length>+10 ft</length>
+				<status>CLOSED</status>
+				<from>b1m2_house_node</from>
+				<to>b1m2_house_meter</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</triplex_line>
+			<triplex_line>
+				<id>43</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(triplex_line:43)</name>
+				<configuration>triplex_line_config</configuration>
+				<length>+10 ft</length>
+				<status>CLOSED</status>
+				<from>b2m2_house_node</from>
+				<to>b2m2_house_meter</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<continuous_rating>+1000 A</continuous_rating>
+				<emergency_rating>+2000 A</emergency_rating>
+				<inrush_convergence_value>+0.0001 V</inrush_convergence_value>
+				<phases>AS</phases>
+				<nominal_voltage>+0 V</nominal_voltage>
+			</triplex_line>
+		</triplex_line_list>
+		<triplex_line_configuration_list>
+			<triplex_line_configuration>
+				<id>10</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>triplex_line_config</name>
+				<conductor_1>Name_1_0_AA_triplex</conductor_1>
+				<conductor_2>Name_1_0_AA_triplex</conductor_2>
+				<conductor_N>Name_1_0_AA_triplex</conductor_N>
+				<insulation_thickness>+0.1 in</insulation_thickness>
+				<diameter>+0.4 in</diameter>
+				<z11>+0+0j Ohm/mile</z11>
+				<z12>+0+0j Ohm/mile</z12>
+				<z21>+0+0j Ohm/mile</z21>
+				<z22>+0+0j Ohm/mile</z22>
+			</triplex_line_configuration>
+		</triplex_line_configuration_list>
+		<triplex_line_conductor_list>
+			<triplex_line_conductor>
+				<id>11</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>Name_1_0_AA_triplex</name>
+				<resistance>+0.57 Ohm/mile</resistance>
+				<geometric_mean_radius>+0.0111 ft</geometric_mean_radius>
+				<rating.summer.continuous>+202 A</rating.summer.continuous>
+				<rating.summer.emergency>+212.1 A</rating.summer.emergency>
+				<rating.winter.continuous>+202 A</rating.winter.continuous>
+				<rating.winter.emergency>+212.1 A</rating.winter.emergency>
+			</triplex_line_conductor>
+		</triplex_line_conductor_list>
+		<switch_list>
+			<inherits_from>link</inherits_from>
+		</switch_list>
+		<substation_list>
+			<inherits_from>node</inherits_from>
+		</substation_list>
+		<pqload_list>
+			<inherits_from>load</inherits_from>
+		</pqload_list>
+		<voltdump_list>
+		</voltdump_list>
+		<series_reactor_list>
+			<inherits_from>link</inherits_from>
+		</series_reactor_list>
+		<restoration_list>
+		</restoration_list>
+		<frequency_gen_list>
+		</frequency_gen_list>
+		<volt_var_control_list>
+		</volt_var_control_list>
+		<fault_check_list>
+		</fault_check_list>
+		<motor_list>
+			<inherits_from>node</inherits_from>
+		</motor_list>
+		<billdump_list>
+		</billdump_list>
+		<power_metrics_list>
+		</power_metrics_list>
+		<currdump_list>
+		</currdump_list>
+		<recloser_list>
+			<inherits_from>switch</inherits_from>
+		</recloser_list>
+		<sectionalizer_list>
+			<inherits_from>switch</inherits_from>
+		</sectionalizer_list>
+		<emissions_list>
+		</emissions_list>
+		<load_tracker_list>
+		</load_tracker_list>
+		<triplex_load_list>
+			<inherits_from>triplex_node</inherits_from>
+		</triplex_load_list>
+	</powerflow>
+	<tape>
+		<version.major>0</version.major>
+		<version.minor>0</version.minor>
+		<player_list>
+		</player_list>
+		<shaper_list>
+		</shaper_list>
+		<recorder_list>
+			<recorder>
+				<id>51</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>substation_meter</parent>
+				<name>substation_recorder</name>
+				<property>"measured_voltage_A, measured_current_A, measured_power_A"</property>
+				<trigger>""</trigger>
+				<file>substation_data.csv</file>
+				<filetype>txt</filetype>
+				<mode>file</mode>
+				<multifile>""</multifile>
+				<limit>0</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+60 s</interval>
+				<output>SCREEN</output>
+				<header_units>DEFAULT</header_units>
+				<line_units>DEFAULT</line_units>
+			</recorder>
+			<recorder>
+				<id>56</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>Spokane WA</parent>
+				<name>climate_recorder</name>
+				<property>"temperature, humidity, solar_direct, extraterrestrial_direct_normal"</property>
+				<trigger>""</trigger>
+				<file>climate_data.csv</file>
+				<filetype>txt</filetype>
+				<mode>file</mode>
+				<multifile>""</multifile>
+				<limit>0</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+60 s</interval>
+				<output>SCREEN</output>
+				<header_units>DEFAULT</header_units>
+				<line_units>DEFAULT</line_units>
+			</recorder>
+		</recorder_list>
+		<multi_recorder_list>
+			<multi_recorder>
+				<id>52</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>house_load</name>
+				<interval>+60 s</interval>
+				<property>"b1m1_house_meter:measured_real_power, b1m2_house_meter:measured_real_power"</property>
+				<trigger>""</trigger>
+				<file>house_load.csv</file>
+				<filetype>txt</filetype>
+				<mode>file</mode>
+				<multifile>""</multifile>
+				<limit>0</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+				<header_units>DEFAULT</header_units>
+				<line_units>DEFAULT</line_units>
+			</multi_recorder>
+			<multi_recorder>
+				<id>53</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>house_temperatures</name>
+				<interval>+60 s</interval>
+				<property>"b1m1_house:air_temperature, b1m2_house:air_temperature, b1m3_house:air_temperature, b2m1_house:air_temperature, b2m2_house:air_temperature, b2m3_house:air_temperature"</property>
+				<trigger>""</trigger>
+				<file>house_temperatures.csv</file>
+				<filetype>txt</filetype>
+				<mode>file</mode>
+				<multifile>""</multifile>
+				<limit>0</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+				<header_units>DEFAULT</header_units>
+				<line_units>DEFAULT</line_units>
+			</multi_recorder>
+			<multi_recorder>
+				<id>54</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b1m1_house_data</name>
+				<interval>+60 s</interval>
+				<property>"b1m1_house:air_temperature, b1m1_house:outdoor_temperature, b1m1_house:is_COOL_on, b1m1_house:cooling_setpoint, b1m1_house_meter:measured_real_power"</property>
+				<trigger>""</trigger>
+				<file>b1m1_house_data.csv</file>
+				<filetype>txt</filetype>
+				<mode>file</mode>
+				<multifile>""</multifile>
+				<limit>0</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+				<header_units>DEFAULT</header_units>
+				<line_units>DEFAULT</line_units>
+			</multi_recorder>
+			<multi_recorder>
+				<id>55</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>b2m3_house_data</name>
+				<interval>+60 s</interval>
+				<property>"b2m3_house:air_temperature, b2m3_house:outdoor_temperature, b2m3_house:is_COOL_on, b2m3_house:cooling_setpoint, b2m3_house_meter:measured_real_power"</property>
+				<trigger>""</trigger>
+				<file>b2m3_house_data.csv</file>
+				<filetype>txt</filetype>
+				<mode>file</mode>
+				<multifile>""</multifile>
+				<limit>0</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<output>SCREEN</output>
+				<header_units>DEFAULT</header_units>
+				<line_units>DEFAULT</line_units>
+			</multi_recorder>
+		</multi_recorder_list>
+		<collector_list>
+		</collector_list>
+		<histogram_list>
+		</histogram_list>
+		<group_recorder_list>
+		</group_recorder_list>
+	</tape>
+	<climate>
+		<version.major>0</version.major>
+		<version.minor>0</version.minor>
+		<climate_list>
+			<climate>
+				<id>0</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<clock>2009-08-08 04:30:00 PDT</clock>
+				<name>Spokane WA</name>
+				<solar_elevation>+0</solar_elevation>
+				<solar_azimuth>+0</solar_azimuth>
+				<city>""</city>
+				<tmyfile>WA-Spokane-24157.tmy2</tmyfile>
+				<temperature>+59 degF</temperature>
+				<humidity>+75 %</humidity>
+				<solar_flux>+0 W/sf</solar_flux>
+				<solar_direct>+0 W/sf</solar_direct>
+				<solar_diffuse>+0 W/sf</solar_diffuse>
+				<solar_global>+0 W/sf</solar_global>
+				<extraterrestrial_direct_normal>+126.998 W/sf</extraterrestrial_direct_normal>
+				<pressure>+1000 mbar</pressure>
+				<wind_speed>+0 m/s</wind_speed>
+				<wind_dir>+0 deg</wind_dir>
+				<wind_gust>+0 mph</wind_gust>
+				<record.low>+0 degF</record.low>
+				<record.low_day>0</record.low_day>
+				<record.high>+0 degF</record.high>
+				<record.high_day>0</record.high_day>
+				<record.solar>+0 W/sf</record.solar>
+				<rainfall>+0 in/h</rainfall>
+				<snowdepth>+0 in</snowdepth>
+				<interpolate>LINEAR</interpolate>
+				<solar_horiz>+0</solar_horiz>
+				<solar_north>+0</solar_north>
+				<solar_northeast>+0</solar_northeast>
+				<solar_east>+0</solar_east>
+				<solar_southeast>+0</solar_southeast>
+				<solar_south>+0</solar_south>
+				<solar_southwest>+0</solar_southwest>
+				<solar_west>+0</solar_west>
+				<solar_northwest>+0</solar_northwest>
+				<solar_raw>+0 W/sf</solar_raw>
+				<ground_reflectivity>+0.3 pu</ground_reflectivity>
+				<forecast>""</forecast>
+				<cloud_model>NONE</cloud_model>
+				<cloud_opacity>+0.7 pu</cloud_opacity>
+				<cloud_reflectivity>+1 pu</cloud_reflectivity>
+			</climate>
+		</climate_list>
+		<weather_list>
+		</weather_list>
+		<csv_reader_list>
+		</csv_reader_list>
+	</climate>
+	<residential>
+		<version.major>0</version.major>
+		<version.minor>0</version.minor>
+		<residential_enduse_list>
+		</residential_enduse_list>
+		<appliance_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</appliance_list>
+		<house_list>
+			<inherits_from>residential_enduse</inherits_from>
+			<house>
+				<id>21</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>b1m1_house_meter</parent>
+				<name>b1m1_house</name>
+				<floor_area>+1040 sf</floor_area>
+				<gross_wall_area>+0 sf</gross_wall_area>
+				<ceiling_height>+0 ft</ceiling_height>
+				<aspect_ratio>+0</aspect_ratio>
+				<envelope_UA>+0 Btu/degF*h</envelope_UA>
+				<window_wall_ratio>+0</window_wall_ratio>
+				<number_of_doors>+0</number_of_doors>
+				<exterior_wall_fraction>+0</exterior_wall_fraction>
+				<interior_exterior_wall_ratio>+0</interior_exterior_wall_ratio>
+				<exterior_ceiling_fraction>+0</exterior_ceiling_fraction>
+				<exterior_floor_fraction>+0</exterior_floor_fraction>
+				<window_shading>+0</window_shading>
+				<window_exterior_transmission_coefficient>+0</window_exterior_transmission_coefficient>
+				<solar_heatgain_factor>+0</solar_heatgain_factor>
+				<airchange_per_hour>-1 unit/h</airchange_per_hour>
+				<airchange_UA>+0 Btu/degF*h</airchange_UA>
+				<UA>-1 Btu/degF*h</UA>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<incident_solar_radiation>+0 Btu/h*sf</incident_solar_radiation>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<include_solar_quadrant>W|S|E|N</include_solar_quadrant>
+				<horizontal_diffuse_solar_radiation>+0 Btu/h*sf</horizontal_diffuse_solar_radiation>
+				<north_incident_solar_radiation>+0 Btu/h*sf</north_incident_solar_radiation>
+				<northwest_incident_solar_radiation>+0 Btu/h*sf</northwest_incident_solar_radiation>
+				<west_incident_solar_radiation>+0 Btu/h*sf</west_incident_solar_radiation>
+				<southwest_incident_solar_radiation>+0 Btu/h*sf</southwest_incident_solar_radiation>
+				<south_incident_solar_radiation>+0 Btu/h*sf</south_incident_solar_radiation>
+				<southeast_incident_solar_radiation>+0 Btu/h*sf</southeast_incident_solar_radiation>
+				<east_incident_solar_radiation>+0 Btu/h*sf</east_incident_solar_radiation>
+				<northeast_incident_solar_radiation>+0 Btu/h*sf</northeast_incident_solar_radiation>
+				<heating_cop_curve>DEFAULT</heating_cop_curve>
+				<heating_cap_curve>DEFAULT</heating_cap_curve>
+				<cooling_cop_curve>DEFAULT</cooling_cop_curve>
+				<cooling_cap_curve>DEFAULT</cooling_cap_curve>
+				<use_latent_heat>TRUE</use_latent_heat>
+				<include_fan_heatgain>TRUE</include_fan_heatgain>
+				<thermostat_deadband>+2 degF</thermostat_deadband>
+				<dlc_offset>+0 degF</dlc_offset>
+				<thermostat_cycle_time>0</thermostat_cycle_time>
+				<thermostat_off_cycle_time>-1</thermostat_off_cycle_time>
+				<thermostat_on_cycle_time>-1</thermostat_on_cycle_time>
+				<thermostat_last_cycle_time>INIT</thermostat_last_cycle_time>
+				<heating_setpoint>+0 degF</heating_setpoint>
+				<cooling_setpoint>+73 degF</cooling_setpoint>
+				<design_heating_setpoint>+0 degF</design_heating_setpoint>
+				<design_cooling_setpoint>+0 degF</design_cooling_setpoint>
+				<over_sizing_factor>+0</over_sizing_factor>
+				<simulate_window_openings>FALSE</simulate_window_openings>
+				<is_window_open>+0</is_window_open>
+				<window_low_temperature_cutoff>+60 degF</window_low_temperature_cutoff>
+				<window_high_temperature_cutoff>+80 degF</window_high_temperature_cutoff>
+				<window_quadratic_coefficient>+0</window_quadratic_coefficient>
+				<window_linear_coefficient>+0</window_linear_coefficient>
+				<window_constant_coefficient>+1</window_constant_coefficient>
+				<window_temperature_delta>+5</window_temperature_delta>
+				<design_heating_capacity>+0 Btu/h</design_heating_capacity>
+				<design_cooling_capacity>+0 Btu/h</design_cooling_capacity>
+				<cooling_design_temperature>+0 degF</cooling_design_temperature>
+				<heating_design_temperature>+0 degF</heating_design_temperature>
+				<design_peak_solar>+0 Btu/h*sf</design_peak_solar>
+				<design_internal_gains>+0 W/sf</design_internal_gains>
+				<air_heat_fraction>+0 pu</air_heat_fraction>
+				<mass_solar_gain_fraction>+0 pu</mass_solar_gain_fraction>
+				<mass_internal_gain_fraction>+0 pu</mass_internal_gain_fraction>
+				<auxiliary_heat_capacity>+0 Btu/h</auxiliary_heat_capacity>
+				<aux_heat_deadband>+0 degF</aux_heat_deadband>
+				<aux_heat_temperature_lockout>+0 degF</aux_heat_temperature_lockout>
+				<aux_heat_time_delay>+0 s</aux_heat_time_delay>
+				<cooling_supply_air_temp>+50 degF</cooling_supply_air_temp>
+				<heating_supply_air_temp>+150 degF</heating_supply_air_temp>
+				<duct_pressure_drop>+0 inH2O</duct_pressure_drop>
+				<fan_design_power>-1 W</fan_design_power>
+				<fan_low_power_fraction>+0 pu</fan_low_power_fraction>
+				<fan_power>+0 kW</fan_power>
+				<fan_design_airflow>+0 cfm</fan_design_airflow>
+				<fan_impedance_fraction>+0.2534 pu</fan_impedance_fraction>
+				<fan_power_fraction>+0.0135 pu</fan_power_fraction>
+				<fan_current_fraction>+0.7332 pu</fan_current_fraction>
+				<fan_power_factor>+0.96 pu</fan_power_factor>
+				<heating_demand>+0 kW</heating_demand>
+				<cooling_demand>+0 kW</cooling_demand>
+				<heating_COP>+0 pu</heating_COP>
+				<cooling_COP>+3.9 Btu/kWh</cooling_COP>
+				<air_temperature>+72.5 degF</air_temperature>
+				<outdoor_temperature>+0 degF</outdoor_temperature>
+				<outdoor_rh>+0 %</outdoor_rh>
+				<mass_heat_capacity>+0 Btu/degF</mass_heat_capacity>
+				<mass_heat_coeff>+0 Btu/degF*h</mass_heat_coeff>
+				<mass_temperature>+0 degF</mass_temperature>
+				<air_volume>+0 cf</air_volume>
+				<air_mass>+0 lb</air_mass>
+				<air_heat_capacity>+0 Btu/degF</air_heat_capacity>
+				<latent_load_fraction>+0 pu</latent_load_fraction>
+				<total_thermal_mass_per_floor_area>+0 Btu/degF*sf</total_thermal_mass_per_floor_area>
+				<interior_surface_heat_transfer_coeff>+0 Btu/h*degF*sf</interior_surface_heat_transfer_coeff>
+				<number_of_stories>+0</number_of_stories>
+				<is_AUX_on>+0</is_AUX_on>
+				<is_HEAT_on>+0</is_HEAT_on>
+				<is_COOL_on>+0</is_COOL_on>
+				<thermal_storage_present>+0</thermal_storage_present>
+				<thermal_storage_in_use>+0</thermal_storage_in_use>
+				<auxiliary_strategy>NONE</auxiliary_strategy>
+				<system_mode>UNKNOWN</system_mode>
+				<last_system_mode>UNKNOWN</last_system_mode>
+				<heating_system_type>HEAT_PUMP</heating_system_type>
+				<cooling_system_type>0</cooling_system_type>
+				<auxiliary_system_type>0</auxiliary_system_type>
+				<fan_type>0</fan_type>
+				<thermal_integrity_level>LITTLE</thermal_integrity_level>
+				<glass_type>LOW_E_GLASS</glass_type>
+				<window_frame>THERMAL_BREAK</window_frame>
+				<glazing_treatment>CLEAR</glazing_treatment>
+				<glazing_layers>TWO</glazing_layers>
+				<motor_model>NONE</motor_model>
+				<motor_efficiency>AVERAGE</motor_efficiency>
+				<last_mode_timer>0</last_mode_timer>
+				<hvac_motor_efficiency>+1 unit</hvac_motor_efficiency>
+				<hvac_motor_loss_power_factor>+0.125 unit</hvac_motor_loss_power_factor>
+				<Rroof>+0 degF*sf*h/Btu</Rroof>
+				<Rwall>+0 degF*sf*h/Btu</Rwall>
+				<Rfloor>+0 degF*sf*h/Btu</Rfloor>
+				<Rwindows>+0 degF*sf*h/Btu</Rwindows>
+				<Rdoors>+0 degF*sf*h/Btu</Rdoors>
+				<hvac_breaker_rating>+0 A</hvac_breaker_rating>
+				<hvac_power_factor>+0.97 unit</hvac_power_factor>
+				<hvac_load>+0 kW</hvac_load>
+				<last_heating_load>+0 kW</last_heating_load>
+				<last_cooling_load>+0 kW</last_cooling_load>
+				<hvac_power>+0+0i kVA</hvac_power>
+				<total_load>+0 kW</total_load>
+				<panel>power_factor: 0.000000; power.r: 0.000000</panel>
+				<panel.energy>+0+0i kVAh</panel.energy>
+				<panel.power>+0+0i kVA</panel.power>
+				<panel.peak_demand>+0+0i kVA</panel.peak_demand>
+				<panel.heatgain>+0 Btu/h</panel.heatgain>
+				<panel.cumulative_heatgain>+0 Btu</panel.cumulative_heatgain>
+				<panel.heatgain_fraction>+0 pu</panel.heatgain_fraction>
+				<panel.current_fraction>+0 pu</panel.current_fraction>
+				<panel.impedance_fraction>+0 pu</panel.impedance_fraction>
+				<panel.power_fraction>+0 pu</panel.power_fraction>
+				<panel.power_factor>+0</panel.power_factor>
+				<panel.constant_power>+0+0i kVA</panel.constant_power>
+				<panel.constant_current>+0+0i kVA</panel.constant_current>
+				<panel.constant_admittance>+0+0i kVA</panel.constant_admittance>
+				<panel.voltage_factor>+0 pu</panel.voltage_factor>
+				<panel.breaker_amps>+0 A</panel.breaker_amps>
+				<design_internal_gain_density>+0.6 W/sf</design_internal_gain_density>
+				<compressor_on>FALSE</compressor_on>
+				<compressor_count>0</compressor_count>
+				<hvac_last_on>INIT</hvac_last_on>
+				<hvac_last_off>INIT</hvac_last_off>
+				<hvac_period_length>+0 s</hvac_period_length>
+				<hvac_duty_cycle>+0</hvac_duty_cycle>
+				<a>+0</a>
+				<b>+0</b>
+				<c>+0</c>
+				<d>+0</d>
+				<c1>+0</c1>
+				<c2>+0</c2>
+				<A3>+0</A3>
+				<A4>+0</A4>
+				<k1>+0</k1>
+				<k2>+0</k2>
+				<r1>+0</r1>
+				<r2>+0</r2>
+				<Teq>+0</Teq>
+				<Tevent>+0</Tevent>
+				<Qi>+0</Qi>
+				<Qa>+0</Qa>
+				<Qm>+0</Qm>
+				<Qh>+0</Qh>
+				<Qlatent>+0</Qlatent>
+				<dTair>+0</dTair>
+				<adj_cooling_cap>+0</adj_cooling_cap>
+				<adj_heating_cap>+0</adj_heating_cap>
+				<adj_cooling_cop>+0</adj_cooling_cop>
+				<adj_heating_cop>+0</adj_heating_cop>
+				<thermostat_control>FULL</thermostat_control>
+				<shape>FULL</shape>
+				<load>impedance_fraction: 0.200000; power_fraction: 0.800000; power_factor: 0.000000; power.r: 0.000000</load>
+				<energy>+0+0i kVAh</energy>
+				<power>+0+0i kVA</power>
+				<peak_demand>+0+0i kVA</peak_demand>
+				<heatgain>+0 Btu/h</heatgain>
+				<cumulative_heatgain>+0 Btu</cumulative_heatgain>
+				<heatgain_fraction>+0 pu</heatgain_fraction>
+				<current_fraction>+0 pu</current_fraction>
+				<impedance_fraction>+0.2 pu</impedance_fraction>
+				<power_fraction>+0.8 pu</power_fraction>
+				<power_factor>+0</power_factor>
+				<constant_power>+0+0i kVA</constant_power>
+				<constant_current>+0+0i kVA</constant_current>
+				<constant_admittance>+0+0i kVA</constant_admittance>
+				<voltage_factor>+0 pu</voltage_factor>
+				<breaker_amps>+0 A</breaker_amps>
+				<override>NORMAL</override>
+				<power_state>OFF</power_state>
+			</house>
+			<house>
+				<id>28</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>b1m2_house_meter</parent>
+				<name>b1m2_house</name>
+				<floor_area>+0 sf</floor_area>
+				<gross_wall_area>+0 sf</gross_wall_area>
+				<ceiling_height>+0 ft</ceiling_height>
+				<aspect_ratio>+0</aspect_ratio>
+				<envelope_UA>+0 Btu/degF*h</envelope_UA>
+				<window_wall_ratio>+0.5</window_wall_ratio>
+				<number_of_doors>+0</number_of_doors>
+				<exterior_wall_fraction>+0</exterior_wall_fraction>
+				<interior_exterior_wall_ratio>+0</interior_exterior_wall_ratio>
+				<exterior_ceiling_fraction>+0</exterior_ceiling_fraction>
+				<exterior_floor_fraction>+0</exterior_floor_fraction>
+				<window_shading>+0</window_shading>
+				<window_exterior_transmission_coefficient>+0</window_exterior_transmission_coefficient>
+				<solar_heatgain_factor>+0</solar_heatgain_factor>
+				<airchange_per_hour>-1 unit/h</airchange_per_hour>
+				<airchange_UA>+0 Btu/degF*h</airchange_UA>
+				<UA>-1 Btu/degF*h</UA>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<incident_solar_radiation>+0 Btu/h*sf</incident_solar_radiation>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<include_solar_quadrant>W|S|E|N</include_solar_quadrant>
+				<horizontal_diffuse_solar_radiation>+0 Btu/h*sf</horizontal_diffuse_solar_radiation>
+				<north_incident_solar_radiation>+0 Btu/h*sf</north_incident_solar_radiation>
+				<northwest_incident_solar_radiation>+0 Btu/h*sf</northwest_incident_solar_radiation>
+				<west_incident_solar_radiation>+0 Btu/h*sf</west_incident_solar_radiation>
+				<southwest_incident_solar_radiation>+0 Btu/h*sf</southwest_incident_solar_radiation>
+				<south_incident_solar_radiation>+0 Btu/h*sf</south_incident_solar_radiation>
+				<southeast_incident_solar_radiation>+0 Btu/h*sf</southeast_incident_solar_radiation>
+				<east_incident_solar_radiation>+0 Btu/h*sf</east_incident_solar_radiation>
+				<northeast_incident_solar_radiation>+0 Btu/h*sf</northeast_incident_solar_radiation>
+				<heating_cop_curve>DEFAULT</heating_cop_curve>
+				<heating_cap_curve>DEFAULT</heating_cap_curve>
+				<cooling_cop_curve>DEFAULT</cooling_cop_curve>
+				<cooling_cap_curve>DEFAULT</cooling_cap_curve>
+				<use_latent_heat>TRUE</use_latent_heat>
+				<include_fan_heatgain>TRUE</include_fan_heatgain>
+				<thermostat_deadband>+2.5 degF</thermostat_deadband>
+				<dlc_offset>+0 degF</dlc_offset>
+				<thermostat_cycle_time>0</thermostat_cycle_time>
+				<thermostat_off_cycle_time>-1</thermostat_off_cycle_time>
+				<thermostat_on_cycle_time>-1</thermostat_on_cycle_time>
+				<thermostat_last_cycle_time>INIT</thermostat_last_cycle_time>
+				<heating_setpoint>+0 degF</heating_setpoint>
+				<cooling_setpoint>+73 degF</cooling_setpoint>
+				<design_heating_setpoint>+0 degF</design_heating_setpoint>
+				<design_cooling_setpoint>+0 degF</design_cooling_setpoint>
+				<over_sizing_factor>+1.5</over_sizing_factor>
+				<simulate_window_openings>FALSE</simulate_window_openings>
+				<is_window_open>+0</is_window_open>
+				<window_low_temperature_cutoff>+60 degF</window_low_temperature_cutoff>
+				<window_high_temperature_cutoff>+80 degF</window_high_temperature_cutoff>
+				<window_quadratic_coefficient>+0</window_quadratic_coefficient>
+				<window_linear_coefficient>+0</window_linear_coefficient>
+				<window_constant_coefficient>+1</window_constant_coefficient>
+				<window_temperature_delta>+5</window_temperature_delta>
+				<design_heating_capacity>+0 Btu/h</design_heating_capacity>
+				<design_cooling_capacity>+0 Btu/h</design_cooling_capacity>
+				<cooling_design_temperature>+0 degF</cooling_design_temperature>
+				<heating_design_temperature>+0 degF</heating_design_temperature>
+				<design_peak_solar>+0 Btu/h*sf</design_peak_solar>
+				<design_internal_gains>+0 W/sf</design_internal_gains>
+				<air_heat_fraction>+0 pu</air_heat_fraction>
+				<mass_solar_gain_fraction>+0 pu</mass_solar_gain_fraction>
+				<mass_internal_gain_fraction>+0 pu</mass_internal_gain_fraction>
+				<auxiliary_heat_capacity>+0 Btu/h</auxiliary_heat_capacity>
+				<aux_heat_deadband>+0 degF</aux_heat_deadband>
+				<aux_heat_temperature_lockout>+0 degF</aux_heat_temperature_lockout>
+				<aux_heat_time_delay>+0 s</aux_heat_time_delay>
+				<cooling_supply_air_temp>+50 degF</cooling_supply_air_temp>
+				<heating_supply_air_temp>+150 degF</heating_supply_air_temp>
+				<duct_pressure_drop>+0 inH2O</duct_pressure_drop>
+				<fan_design_power>-1 W</fan_design_power>
+				<fan_low_power_fraction>+0 pu</fan_low_power_fraction>
+				<fan_power>+0 kW</fan_power>
+				<fan_design_airflow>+0 cfm</fan_design_airflow>
+				<fan_impedance_fraction>+0.2534 pu</fan_impedance_fraction>
+				<fan_power_fraction>+0.0135 pu</fan_power_fraction>
+				<fan_current_fraction>+0.7332 pu</fan_current_fraction>
+				<fan_power_factor>+0.96 pu</fan_power_factor>
+				<heating_demand>+0 kW</heating_demand>
+				<cooling_demand>+0 kW</cooling_demand>
+				<heating_COP>+0 pu</heating_COP>
+				<cooling_COP>+0 Btu/kWh</cooling_COP>
+				<air_temperature>+72 degF</air_temperature>
+				<outdoor_temperature>+0 degF</outdoor_temperature>
+				<outdoor_rh>+0 %</outdoor_rh>
+				<mass_heat_capacity>+0 Btu/degF</mass_heat_capacity>
+				<mass_heat_coeff>+0 Btu/degF*h</mass_heat_coeff>
+				<mass_temperature>+0 degF</mass_temperature>
+				<air_volume>+0 cf</air_volume>
+				<air_mass>+0 lb</air_mass>
+				<air_heat_capacity>+0 Btu/degF</air_heat_capacity>
+				<latent_load_fraction>+0 pu</latent_load_fraction>
+				<total_thermal_mass_per_floor_area>+0 Btu/degF*sf</total_thermal_mass_per_floor_area>
+				<interior_surface_heat_transfer_coeff>+0 Btu/h*degF*sf</interior_surface_heat_transfer_coeff>
+				<number_of_stories>+0</number_of_stories>
+				<is_AUX_on>+0</is_AUX_on>
+				<is_HEAT_on>+0</is_HEAT_on>
+				<is_COOL_on>+0</is_COOL_on>
+				<thermal_storage_present>+0</thermal_storage_present>
+				<thermal_storage_in_use>+0</thermal_storage_in_use>
+				<auxiliary_strategy>NONE</auxiliary_strategy>
+				<system_mode>UNKNOWN</system_mode>
+				<last_system_mode>UNKNOWN</last_system_mode>
+				<heating_system_type>HEAT_PUMP</heating_system_type>
+				<cooling_system_type>0</cooling_system_type>
+				<auxiliary_system_type>0</auxiliary_system_type>
+				<fan_type>0</fan_type>
+				<thermal_integrity_level>UNKNOWN</thermal_integrity_level>
+				<glass_type>LOW_E_GLASS</glass_type>
+				<window_frame>THERMAL_BREAK</window_frame>
+				<glazing_treatment>CLEAR</glazing_treatment>
+				<glazing_layers>TWO</glazing_layers>
+				<motor_model>NONE</motor_model>
+				<motor_efficiency>AVERAGE</motor_efficiency>
+				<last_mode_timer>0</last_mode_timer>
+				<hvac_motor_efficiency>+1 unit</hvac_motor_efficiency>
+				<hvac_motor_loss_power_factor>+0.125 unit</hvac_motor_loss_power_factor>
+				<Rroof>+30 degF*sf*h/Btu</Rroof>
+				<Rwall>+0 degF*sf*h/Btu</Rwall>
+				<Rfloor>+0 degF*sf*h/Btu</Rfloor>
+				<Rwindows>+0 degF*sf*h/Btu</Rwindows>
+				<Rdoors>+0 degF*sf*h/Btu</Rdoors>
+				<hvac_breaker_rating>+0 A</hvac_breaker_rating>
+				<hvac_power_factor>+0 unit</hvac_power_factor>
+				<hvac_load>+0 kW</hvac_load>
+				<last_heating_load>+0 kW</last_heating_load>
+				<last_cooling_load>+0 kW</last_cooling_load>
+				<hvac_power>+0+0i kVA</hvac_power>
+				<total_load>+0 kW</total_load>
+				<panel>power_factor: 0.000000; power.r: 0.000000</panel>
+				<panel.energy>+0+0i kVAh</panel.energy>
+				<panel.power>+0+0i kVA</panel.power>
+				<panel.peak_demand>+0+0i kVA</panel.peak_demand>
+				<panel.heatgain>+0 Btu/h</panel.heatgain>
+				<panel.cumulative_heatgain>+0 Btu</panel.cumulative_heatgain>
+				<panel.heatgain_fraction>+0 pu</panel.heatgain_fraction>
+				<panel.current_fraction>+0 pu</panel.current_fraction>
+				<panel.impedance_fraction>+0 pu</panel.impedance_fraction>
+				<panel.power_fraction>+0 pu</panel.power_fraction>
+				<panel.power_factor>+0</panel.power_factor>
+				<panel.constant_power>+0+0i kVA</panel.constant_power>
+				<panel.constant_current>+0+0i kVA</panel.constant_current>
+				<panel.constant_admittance>+0+0i kVA</panel.constant_admittance>
+				<panel.voltage_factor>+0 pu</panel.voltage_factor>
+				<panel.breaker_amps>+0 A</panel.breaker_amps>
+				<design_internal_gain_density>+0.6 W/sf</design_internal_gain_density>
+				<compressor_on>FALSE</compressor_on>
+				<compressor_count>0</compressor_count>
+				<hvac_last_on>INIT</hvac_last_on>
+				<hvac_last_off>INIT</hvac_last_off>
+				<hvac_period_length>+0 s</hvac_period_length>
+				<hvac_duty_cycle>+0</hvac_duty_cycle>
+				<a>+0</a>
+				<b>+0</b>
+				<c>+0</c>
+				<d>+0</d>
+				<c1>+0</c1>
+				<c2>+0</c2>
+				<A3>+0</A3>
+				<A4>+0</A4>
+				<k1>+0</k1>
+				<k2>+0</k2>
+				<r1>+0</r1>
+				<r2>+0</r2>
+				<Teq>+0</Teq>
+				<Tevent>+0</Tevent>
+				<Qi>+0</Qi>
+				<Qa>+0</Qa>
+				<Qm>+0</Qm>
+				<Qh>+0</Qh>
+				<Qlatent>+0</Qlatent>
+				<dTair>+0</dTair>
+				<adj_cooling_cap>+0</adj_cooling_cap>
+				<adj_heating_cap>+0</adj_heating_cap>
+				<adj_cooling_cop>+0</adj_cooling_cop>
+				<adj_heating_cop>+0</adj_heating_cop>
+				<thermostat_control>FULL</thermostat_control>
+				<shape>FULL</shape>
+				<load>impedance_fraction: 0.200000; power_fraction: 0.800000; power_factor: 0.000000; power.r: 0.000000</load>
+				<energy>+0+0i kVAh</energy>
+				<power>+0+0i kVA</power>
+				<peak_demand>+0+0i kVA</peak_demand>
+				<heatgain>+0 Btu/h</heatgain>
+				<cumulative_heatgain>+0 Btu</cumulative_heatgain>
+				<heatgain_fraction>+0 pu</heatgain_fraction>
+				<current_fraction>+0 pu</current_fraction>
+				<impedance_fraction>+0.2 pu</impedance_fraction>
+				<power_fraction>+0.8 pu</power_fraction>
+				<power_factor>+0</power_factor>
+				<constant_power>+0+0i kVA</constant_power>
+				<constant_current>+0+0i kVA</constant_current>
+				<constant_admittance>+0+0i kVA</constant_admittance>
+				<voltage_factor>+0 pu</voltage_factor>
+				<breaker_amps>+0 A</breaker_amps>
+				<override>NORMAL</override>
+				<power_state>OFF</power_state>
+			</house>
+			<house>
+				<id>33</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>b1m3_house_meter</parent>
+				<name>b1m3_house</name>
+				<floor_area>+0 sf</floor_area>
+				<gross_wall_area>+0 sf</gross_wall_area>
+				<ceiling_height>+12 ft</ceiling_height>
+				<aspect_ratio>+0</aspect_ratio>
+				<envelope_UA>+0 Btu/degF*h</envelope_UA>
+				<window_wall_ratio>+0</window_wall_ratio>
+				<number_of_doors>+0</number_of_doors>
+				<exterior_wall_fraction>+0</exterior_wall_fraction>
+				<interior_exterior_wall_ratio>+0</interior_exterior_wall_ratio>
+				<exterior_ceiling_fraction>+0</exterior_ceiling_fraction>
+				<exterior_floor_fraction>+0</exterior_floor_fraction>
+				<window_shading>+0</window_shading>
+				<window_exterior_transmission_coefficient>+0</window_exterior_transmission_coefficient>
+				<solar_heatgain_factor>+0</solar_heatgain_factor>
+				<airchange_per_hour>-1 unit/h</airchange_per_hour>
+				<airchange_UA>+0 Btu/degF*h</airchange_UA>
+				<UA>-1 Btu/degF*h</UA>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<incident_solar_radiation>+0 Btu/h*sf</incident_solar_radiation>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<include_solar_quadrant>W|S|E|N</include_solar_quadrant>
+				<horizontal_diffuse_solar_radiation>+0 Btu/h*sf</horizontal_diffuse_solar_radiation>
+				<north_incident_solar_radiation>+0 Btu/h*sf</north_incident_solar_radiation>
+				<northwest_incident_solar_radiation>+0 Btu/h*sf</northwest_incident_solar_radiation>
+				<west_incident_solar_radiation>+0 Btu/h*sf</west_incident_solar_radiation>
+				<southwest_incident_solar_radiation>+0 Btu/h*sf</southwest_incident_solar_radiation>
+				<south_incident_solar_radiation>+0 Btu/h*sf</south_incident_solar_radiation>
+				<southeast_incident_solar_radiation>+0 Btu/h*sf</southeast_incident_solar_radiation>
+				<east_incident_solar_radiation>+0 Btu/h*sf</east_incident_solar_radiation>
+				<northeast_incident_solar_radiation>+0 Btu/h*sf</northeast_incident_solar_radiation>
+				<heating_cop_curve>DEFAULT</heating_cop_curve>
+				<heating_cap_curve>DEFAULT</heating_cap_curve>
+				<cooling_cop_curve>DEFAULT</cooling_cop_curve>
+				<cooling_cap_curve>DEFAULT</cooling_cap_curve>
+				<use_latent_heat>TRUE</use_latent_heat>
+				<include_fan_heatgain>TRUE</include_fan_heatgain>
+				<thermostat_deadband>+2.5 degF</thermostat_deadband>
+				<dlc_offset>+0 degF</dlc_offset>
+				<thermostat_cycle_time>0</thermostat_cycle_time>
+				<thermostat_off_cycle_time>-1</thermostat_off_cycle_time>
+				<thermostat_on_cycle_time>-1</thermostat_on_cycle_time>
+				<thermostat_last_cycle_time>INIT</thermostat_last_cycle_time>
+				<heating_setpoint>+0 degF</heating_setpoint>
+				<cooling_setpoint>+73 degF</cooling_setpoint>
+				<design_heating_setpoint>+0 degF</design_heating_setpoint>
+				<design_cooling_setpoint>+0 degF</design_cooling_setpoint>
+				<over_sizing_factor>+0</over_sizing_factor>
+				<simulate_window_openings>FALSE</simulate_window_openings>
+				<is_window_open>+0</is_window_open>
+				<window_low_temperature_cutoff>+60 degF</window_low_temperature_cutoff>
+				<window_high_temperature_cutoff>+80 degF</window_high_temperature_cutoff>
+				<window_quadratic_coefficient>+0</window_quadratic_coefficient>
+				<window_linear_coefficient>+0</window_linear_coefficient>
+				<window_constant_coefficient>+1</window_constant_coefficient>
+				<window_temperature_delta>+5</window_temperature_delta>
+				<design_heating_capacity>+0 Btu/h</design_heating_capacity>
+				<design_cooling_capacity>+0 Btu/h</design_cooling_capacity>
+				<cooling_design_temperature>+0 degF</cooling_design_temperature>
+				<heating_design_temperature>+0 degF</heating_design_temperature>
+				<design_peak_solar>+0 Btu/h*sf</design_peak_solar>
+				<design_internal_gains>+0 W/sf</design_internal_gains>
+				<air_heat_fraction>+0 pu</air_heat_fraction>
+				<mass_solar_gain_fraction>+0 pu</mass_solar_gain_fraction>
+				<mass_internal_gain_fraction>+0 pu</mass_internal_gain_fraction>
+				<auxiliary_heat_capacity>+0 Btu/h</auxiliary_heat_capacity>
+				<aux_heat_deadband>+0 degF</aux_heat_deadband>
+				<aux_heat_temperature_lockout>+0 degF</aux_heat_temperature_lockout>
+				<aux_heat_time_delay>+0 s</aux_heat_time_delay>
+				<cooling_supply_air_temp>+50 degF</cooling_supply_air_temp>
+				<heating_supply_air_temp>+150 degF</heating_supply_air_temp>
+				<duct_pressure_drop>+0 inH2O</duct_pressure_drop>
+				<fan_design_power>-1 W</fan_design_power>
+				<fan_low_power_fraction>+0 pu</fan_low_power_fraction>
+				<fan_power>+0 kW</fan_power>
+				<fan_design_airflow>+0 cfm</fan_design_airflow>
+				<fan_impedance_fraction>+0.2534 pu</fan_impedance_fraction>
+				<fan_power_fraction>+0.0135 pu</fan_power_fraction>
+				<fan_current_fraction>+0.7332 pu</fan_current_fraction>
+				<fan_power_factor>+0.96 pu</fan_power_factor>
+				<heating_demand>+0 kW</heating_demand>
+				<cooling_demand>+0 kW</cooling_demand>
+				<heating_COP>+0 pu</heating_COP>
+				<cooling_COP>+0 Btu/kWh</cooling_COP>
+				<air_temperature>+72 degF</air_temperature>
+				<outdoor_temperature>+0 degF</outdoor_temperature>
+				<outdoor_rh>+0 %</outdoor_rh>
+				<mass_heat_capacity>+0 Btu/degF</mass_heat_capacity>
+				<mass_heat_coeff>+0 Btu/degF*h</mass_heat_coeff>
+				<mass_temperature>+0 degF</mass_temperature>
+				<air_volume>+0 cf</air_volume>
+				<air_mass>+0 lb</air_mass>
+				<air_heat_capacity>+0 Btu/degF</air_heat_capacity>
+				<latent_load_fraction>+0 pu</latent_load_fraction>
+				<total_thermal_mass_per_floor_area>+0 Btu/degF*sf</total_thermal_mass_per_floor_area>
+				<interior_surface_heat_transfer_coeff>+0 Btu/h*degF*sf</interior_surface_heat_transfer_coeff>
+				<number_of_stories>+0</number_of_stories>
+				<is_AUX_on>+0</is_AUX_on>
+				<is_HEAT_on>+0</is_HEAT_on>
+				<is_COOL_on>+0</is_COOL_on>
+				<thermal_storage_present>+0</thermal_storage_present>
+				<thermal_storage_in_use>+0</thermal_storage_in_use>
+				<auxiliary_strategy>NONE</auxiliary_strategy>
+				<system_mode>UNKNOWN</system_mode>
+				<last_system_mode>UNKNOWN</last_system_mode>
+				<heating_system_type>HEAT_PUMP</heating_system_type>
+				<cooling_system_type>0</cooling_system_type>
+				<auxiliary_system_type>0</auxiliary_system_type>
+				<fan_type>0</fan_type>
+				<thermal_integrity_level>UNKNOWN</thermal_integrity_level>
+				<glass_type>GLASS</glass_type>
+				<window_frame>THERMAL_BREAK</window_frame>
+				<glazing_treatment>CLEAR</glazing_treatment>
+				<glazing_layers>TWO</glazing_layers>
+				<motor_model>NONE</motor_model>
+				<motor_efficiency>AVERAGE</motor_efficiency>
+				<last_mode_timer>0</last_mode_timer>
+				<hvac_motor_efficiency>+0.3 unit</hvac_motor_efficiency>
+				<hvac_motor_loss_power_factor>+0.125 unit</hvac_motor_loss_power_factor>
+				<Rroof>+0 degF*sf*h/Btu</Rroof>
+				<Rwall>+20 degF*sf*h/Btu</Rwall>
+				<Rfloor>+0 degF*sf*h/Btu</Rfloor>
+				<Rwindows>+0 degF*sf*h/Btu</Rwindows>
+				<Rdoors>+0 degF*sf*h/Btu</Rdoors>
+				<hvac_breaker_rating>+0 A</hvac_breaker_rating>
+				<hvac_power_factor>+0 unit</hvac_power_factor>
+				<hvac_load>+0 kW</hvac_load>
+				<last_heating_load>+0 kW</last_heating_load>
+				<last_cooling_load>+0 kW</last_cooling_load>
+				<hvac_power>+0+0i kVA</hvac_power>
+				<total_load>+0 kW</total_load>
+				<panel>power_factor: 0.000000; power.r: 0.000000</panel>
+				<panel.energy>+0+0i kVAh</panel.energy>
+				<panel.power>+0+0i kVA</panel.power>
+				<panel.peak_demand>+0+0i kVA</panel.peak_demand>
+				<panel.heatgain>+0 Btu/h</panel.heatgain>
+				<panel.cumulative_heatgain>+0 Btu</panel.cumulative_heatgain>
+				<panel.heatgain_fraction>+0 pu</panel.heatgain_fraction>
+				<panel.current_fraction>+0 pu</panel.current_fraction>
+				<panel.impedance_fraction>+0 pu</panel.impedance_fraction>
+				<panel.power_fraction>+0 pu</panel.power_fraction>
+				<panel.power_factor>+0</panel.power_factor>
+				<panel.constant_power>+0+0i kVA</panel.constant_power>
+				<panel.constant_current>+0+0i kVA</panel.constant_current>
+				<panel.constant_admittance>+0+0i kVA</panel.constant_admittance>
+				<panel.voltage_factor>+0 pu</panel.voltage_factor>
+				<panel.breaker_amps>+0 A</panel.breaker_amps>
+				<design_internal_gain_density>+0.6 W/sf</design_internal_gain_density>
+				<compressor_on>FALSE</compressor_on>
+				<compressor_count>0</compressor_count>
+				<hvac_last_on>INIT</hvac_last_on>
+				<hvac_last_off>INIT</hvac_last_off>
+				<hvac_period_length>+0 s</hvac_period_length>
+				<hvac_duty_cycle>+0</hvac_duty_cycle>
+				<a>+0</a>
+				<b>+0</b>
+				<c>+0</c>
+				<d>+0</d>
+				<c1>+0</c1>
+				<c2>+0</c2>
+				<A3>+0</A3>
+				<A4>+0</A4>
+				<k1>+0</k1>
+				<k2>+0</k2>
+				<r1>+0</r1>
+				<r2>+0</r2>
+				<Teq>+0</Teq>
+				<Tevent>+0</Tevent>
+				<Qi>+0</Qi>
+				<Qa>+0</Qa>
+				<Qm>+0</Qm>
+				<Qh>+0</Qh>
+				<Qlatent>+0</Qlatent>
+				<dTair>+0</dTair>
+				<adj_cooling_cap>+0</adj_cooling_cap>
+				<adj_heating_cap>+0</adj_heating_cap>
+				<adj_cooling_cop>+0</adj_cooling_cop>
+				<adj_heating_cop>+0</adj_heating_cop>
+				<thermostat_control>FULL</thermostat_control>
+				<shape>FULL</shape>
+				<load>impedance_fraction: 0.200000; power_fraction: 0.800000; power_factor: 0.000000; power.r: 0.000000</load>
+				<energy>+0+0i kVAh</energy>
+				<power>+0+0i kVA</power>
+				<peak_demand>+0+0i kVA</peak_demand>
+				<heatgain>+0 Btu/h</heatgain>
+				<cumulative_heatgain>+0 Btu</cumulative_heatgain>
+				<heatgain_fraction>+0 pu</heatgain_fraction>
+				<current_fraction>+0 pu</current_fraction>
+				<impedance_fraction>+0.2 pu</impedance_fraction>
+				<power_fraction>+0.8 pu</power_fraction>
+				<power_factor>+0</power_factor>
+				<constant_power>+0+0i kVA</constant_power>
+				<constant_current>+0+0i kVA</constant_current>
+				<constant_admittance>+0+0i kVA</constant_admittance>
+				<voltage_factor>+0 pu</voltage_factor>
+				<breaker_amps>+0 A</breaker_amps>
+				<override>NORMAL</override>
+				<power_state>OFF</power_state>
+			</house>
+			<house>
+				<id>38</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>b1m3_house_meter</parent>
+				<name>b2m1_house</name>
+				<floor_area>+0 sf</floor_area>
+				<gross_wall_area>+0 sf</gross_wall_area>
+				<ceiling_height>+0 ft</ceiling_height>
+				<aspect_ratio>+0</aspect_ratio>
+				<envelope_UA>+0 Btu/degF*h</envelope_UA>
+				<window_wall_ratio>+0</window_wall_ratio>
+				<number_of_doors>+0</number_of_doors>
+				<exterior_wall_fraction>+0</exterior_wall_fraction>
+				<interior_exterior_wall_ratio>+0</interior_exterior_wall_ratio>
+				<exterior_ceiling_fraction>+0</exterior_ceiling_fraction>
+				<exterior_floor_fraction>+0</exterior_floor_fraction>
+				<window_shading>+0</window_shading>
+				<window_exterior_transmission_coefficient>+0</window_exterior_transmission_coefficient>
+				<solar_heatgain_factor>+0</solar_heatgain_factor>
+				<airchange_per_hour>-1 unit/h</airchange_per_hour>
+				<airchange_UA>+0 Btu/degF*h</airchange_UA>
+				<UA>-1 Btu/degF*h</UA>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<incident_solar_radiation>+0 Btu/h*sf</incident_solar_radiation>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<include_solar_quadrant>W|S|E|N</include_solar_quadrant>
+				<horizontal_diffuse_solar_radiation>+0 Btu/h*sf</horizontal_diffuse_solar_radiation>
+				<north_incident_solar_radiation>+0 Btu/h*sf</north_incident_solar_radiation>
+				<northwest_incident_solar_radiation>+0 Btu/h*sf</northwest_incident_solar_radiation>
+				<west_incident_solar_radiation>+0 Btu/h*sf</west_incident_solar_radiation>
+				<southwest_incident_solar_radiation>+0 Btu/h*sf</southwest_incident_solar_radiation>
+				<south_incident_solar_radiation>+0 Btu/h*sf</south_incident_solar_radiation>
+				<southeast_incident_solar_radiation>+0 Btu/h*sf</southeast_incident_solar_radiation>
+				<east_incident_solar_radiation>+0 Btu/h*sf</east_incident_solar_radiation>
+				<northeast_incident_solar_radiation>+0 Btu/h*sf</northeast_incident_solar_radiation>
+				<heating_cop_curve>DEFAULT</heating_cop_curve>
+				<heating_cap_curve>DEFAULT</heating_cap_curve>
+				<cooling_cop_curve>DEFAULT</cooling_cop_curve>
+				<cooling_cap_curve>DEFAULT</cooling_cap_curve>
+				<use_latent_heat>TRUE</use_latent_heat>
+				<include_fan_heatgain>TRUE</include_fan_heatgain>
+				<thermostat_deadband>+2.5 degF</thermostat_deadband>
+				<dlc_offset>+0 degF</dlc_offset>
+				<thermostat_cycle_time>0</thermostat_cycle_time>
+				<thermostat_off_cycle_time>-1</thermostat_off_cycle_time>
+				<thermostat_on_cycle_time>-1</thermostat_on_cycle_time>
+				<thermostat_last_cycle_time>INIT</thermostat_last_cycle_time>
+				<heating_setpoint>+0 degF</heating_setpoint>
+				<cooling_setpoint>+72 degF</cooling_setpoint>
+				<design_heating_setpoint>+0 degF</design_heating_setpoint>
+				<design_cooling_setpoint>+0 degF</design_cooling_setpoint>
+				<over_sizing_factor>+0</over_sizing_factor>
+				<simulate_window_openings>FALSE</simulate_window_openings>
+				<is_window_open>+0</is_window_open>
+				<window_low_temperature_cutoff>+60 degF</window_low_temperature_cutoff>
+				<window_high_temperature_cutoff>+80 degF</window_high_temperature_cutoff>
+				<window_quadratic_coefficient>+0</window_quadratic_coefficient>
+				<window_linear_coefficient>+0</window_linear_coefficient>
+				<window_constant_coefficient>+1</window_constant_coefficient>
+				<window_temperature_delta>+5</window_temperature_delta>
+				<design_heating_capacity>+0 Btu/h</design_heating_capacity>
+				<design_cooling_capacity>+0 Btu/h</design_cooling_capacity>
+				<cooling_design_temperature>+0 degF</cooling_design_temperature>
+				<heating_design_temperature>+0 degF</heating_design_temperature>
+				<design_peak_solar>+0 Btu/h*sf</design_peak_solar>
+				<design_internal_gains>+0 W/sf</design_internal_gains>
+				<air_heat_fraction>+0 pu</air_heat_fraction>
+				<mass_solar_gain_fraction>+0 pu</mass_solar_gain_fraction>
+				<mass_internal_gain_fraction>+0 pu</mass_internal_gain_fraction>
+				<auxiliary_heat_capacity>+0 Btu/h</auxiliary_heat_capacity>
+				<aux_heat_deadband>+0 degF</aux_heat_deadband>
+				<aux_heat_temperature_lockout>+0 degF</aux_heat_temperature_lockout>
+				<aux_heat_time_delay>+0 s</aux_heat_time_delay>
+				<cooling_supply_air_temp>+50 degF</cooling_supply_air_temp>
+				<heating_supply_air_temp>+150 degF</heating_supply_air_temp>
+				<duct_pressure_drop>+0.7 inH2O</duct_pressure_drop>
+				<fan_design_power>-1 W</fan_design_power>
+				<fan_low_power_fraction>+0 pu</fan_low_power_fraction>
+				<fan_power>+0 kW</fan_power>
+				<fan_design_airflow>+0 cfm</fan_design_airflow>
+				<fan_impedance_fraction>+0.2534 pu</fan_impedance_fraction>
+				<fan_power_fraction>+0.0135 pu</fan_power_fraction>
+				<fan_current_fraction>+0.7332 pu</fan_current_fraction>
+				<fan_power_factor>+0.96 pu</fan_power_factor>
+				<heating_demand>+0 kW</heating_demand>
+				<cooling_demand>+0 kW</cooling_demand>
+				<heating_COP>+0 pu</heating_COP>
+				<cooling_COP>+0 Btu/kWh</cooling_COP>
+				<air_temperature>+71.5 degF</air_temperature>
+				<outdoor_temperature>+0 degF</outdoor_temperature>
+				<outdoor_rh>+0 %</outdoor_rh>
+				<mass_heat_capacity>+0 Btu/degF</mass_heat_capacity>
+				<mass_heat_coeff>+0 Btu/degF*h</mass_heat_coeff>
+				<mass_temperature>+0 degF</mass_temperature>
+				<air_volume>+0 cf</air_volume>
+				<air_mass>+0 lb</air_mass>
+				<air_heat_capacity>+0 Btu/degF</air_heat_capacity>
+				<latent_load_fraction>+0.45 pu</latent_load_fraction>
+				<total_thermal_mass_per_floor_area>+0 Btu/degF*sf</total_thermal_mass_per_floor_area>
+				<interior_surface_heat_transfer_coeff>+0 Btu/h*degF*sf</interior_surface_heat_transfer_coeff>
+				<number_of_stories>+3</number_of_stories>
+				<is_AUX_on>+0</is_AUX_on>
+				<is_HEAT_on>+0</is_HEAT_on>
+				<is_COOL_on>+0</is_COOL_on>
+				<thermal_storage_present>+0</thermal_storage_present>
+				<thermal_storage_in_use>+0</thermal_storage_in_use>
+				<auxiliary_strategy>NONE</auxiliary_strategy>
+				<system_mode>UNKNOWN</system_mode>
+				<last_system_mode>UNKNOWN</last_system_mode>
+				<heating_system_type>HEAT_PUMP</heating_system_type>
+				<cooling_system_type>0</cooling_system_type>
+				<auxiliary_system_type>0</auxiliary_system_type>
+				<fan_type>0</fan_type>
+				<thermal_integrity_level>UNKNOWN</thermal_integrity_level>
+				<glass_type>LOW_E_GLASS</glass_type>
+				<window_frame>THERMAL_BREAK</window_frame>
+				<glazing_treatment>CLEAR</glazing_treatment>
+				<glazing_layers>TWO</glazing_layers>
+				<motor_model>NONE</motor_model>
+				<motor_efficiency>AVERAGE</motor_efficiency>
+				<last_mode_timer>0</last_mode_timer>
+				<hvac_motor_efficiency>+1 unit</hvac_motor_efficiency>
+				<hvac_motor_loss_power_factor>+0.125 unit</hvac_motor_loss_power_factor>
+				<Rroof>+0 degF*sf*h/Btu</Rroof>
+				<Rwall>+0 degF*sf*h/Btu</Rwall>
+				<Rfloor>+0 degF*sf*h/Btu</Rfloor>
+				<Rwindows>+0 degF*sf*h/Btu</Rwindows>
+				<Rdoors>+0 degF*sf*h/Btu</Rdoors>
+				<hvac_breaker_rating>+0 A</hvac_breaker_rating>
+				<hvac_power_factor>+0 unit</hvac_power_factor>
+				<hvac_load>+0 kW</hvac_load>
+				<last_heating_load>+0 kW</last_heating_load>
+				<last_cooling_load>+0 kW</last_cooling_load>
+				<hvac_power>+0+0i kVA</hvac_power>
+				<total_load>+0 kW</total_load>
+				<panel>power_factor: 0.000000; power.r: 0.000000</panel>
+				<panel.energy>+0+0i kVAh</panel.energy>
+				<panel.power>+0+0i kVA</panel.power>
+				<panel.peak_demand>+0+0i kVA</panel.peak_demand>
+				<panel.heatgain>+0 Btu/h</panel.heatgain>
+				<panel.cumulative_heatgain>+0 Btu</panel.cumulative_heatgain>
+				<panel.heatgain_fraction>+0 pu</panel.heatgain_fraction>
+				<panel.current_fraction>+0 pu</panel.current_fraction>
+				<panel.impedance_fraction>+0 pu</panel.impedance_fraction>
+				<panel.power_fraction>+0 pu</panel.power_fraction>
+				<panel.power_factor>+0</panel.power_factor>
+				<panel.constant_power>+0+0i kVA</panel.constant_power>
+				<panel.constant_current>+0+0i kVA</panel.constant_current>
+				<panel.constant_admittance>+0+0i kVA</panel.constant_admittance>
+				<panel.voltage_factor>+0 pu</panel.voltage_factor>
+				<panel.breaker_amps>+0 A</panel.breaker_amps>
+				<design_internal_gain_density>+0.6 W/sf</design_internal_gain_density>
+				<compressor_on>FALSE</compressor_on>
+				<compressor_count>0</compressor_count>
+				<hvac_last_on>INIT</hvac_last_on>
+				<hvac_last_off>INIT</hvac_last_off>
+				<hvac_period_length>+0 s</hvac_period_length>
+				<hvac_duty_cycle>+0</hvac_duty_cycle>
+				<a>+0</a>
+				<b>+0</b>
+				<c>+0</c>
+				<d>+0</d>
+				<c1>+0</c1>
+				<c2>+0</c2>
+				<A3>+0</A3>
+				<A4>+0</A4>
+				<k1>+0</k1>
+				<k2>+0</k2>
+				<r1>+0</r1>
+				<r2>+0</r2>
+				<Teq>+0</Teq>
+				<Tevent>+0</Tevent>
+				<Qi>+0</Qi>
+				<Qa>+0</Qa>
+				<Qm>+0</Qm>
+				<Qh>+0</Qh>
+				<Qlatent>+0</Qlatent>
+				<dTair>+0</dTair>
+				<adj_cooling_cap>+0</adj_cooling_cap>
+				<adj_heating_cap>+0</adj_heating_cap>
+				<adj_cooling_cop>+0</adj_cooling_cop>
+				<adj_heating_cop>+0</adj_heating_cop>
+				<thermostat_control>FULL</thermostat_control>
+				<shape>FULL</shape>
+				<load>impedance_fraction: 0.200000; power_fraction: 0.800000; power_factor: 0.000000; power.r: 0.000000</load>
+				<energy>+0+0i kVAh</energy>
+				<power>+0+0i kVA</power>
+				<peak_demand>+0+0i kVA</peak_demand>
+				<heatgain>+0 Btu/h</heatgain>
+				<cumulative_heatgain>+0 Btu</cumulative_heatgain>
+				<heatgain_fraction>+0 pu</heatgain_fraction>
+				<current_fraction>+0 pu</current_fraction>
+				<impedance_fraction>+0.2 pu</impedance_fraction>
+				<power_fraction>+0.8 pu</power_fraction>
+				<power_factor>+0</power_factor>
+				<constant_power>+0+0i kVA</constant_power>
+				<constant_current>+0+0i kVA</constant_current>
+				<constant_admittance>+0+0i kVA</constant_admittance>
+				<voltage_factor>+0 pu</voltage_factor>
+				<breaker_amps>+0 A</breaker_amps>
+				<override>NORMAL</override>
+				<power_state>OFF</power_state>
+			</house>
+			<house>
+				<id>45</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>b2m2_house_meter</parent>
+				<name>b2m2_house</name>
+				<floor_area>+0 sf</floor_area>
+				<gross_wall_area>+0 sf</gross_wall_area>
+				<ceiling_height>+0 ft</ceiling_height>
+				<aspect_ratio>+0</aspect_ratio>
+				<envelope_UA>+0 Btu/degF*h</envelope_UA>
+				<window_wall_ratio>+0</window_wall_ratio>
+				<number_of_doors>+0</number_of_doors>
+				<exterior_wall_fraction>+0</exterior_wall_fraction>
+				<interior_exterior_wall_ratio>+0</interior_exterior_wall_ratio>
+				<exterior_ceiling_fraction>+0</exterior_ceiling_fraction>
+				<exterior_floor_fraction>+0</exterior_floor_fraction>
+				<window_shading>+0</window_shading>
+				<window_exterior_transmission_coefficient>+0</window_exterior_transmission_coefficient>
+				<solar_heatgain_factor>+0</solar_heatgain_factor>
+				<airchange_per_hour>-1 unit/h</airchange_per_hour>
+				<airchange_UA>+0 Btu/degF*h</airchange_UA>
+				<UA>-1 Btu/degF*h</UA>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<incident_solar_radiation>+0 Btu/h*sf</incident_solar_radiation>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<include_solar_quadrant>W|S|E|N</include_solar_quadrant>
+				<horizontal_diffuse_solar_radiation>+0 Btu/h*sf</horizontal_diffuse_solar_radiation>
+				<north_incident_solar_radiation>+0 Btu/h*sf</north_incident_solar_radiation>
+				<northwest_incident_solar_radiation>+0 Btu/h*sf</northwest_incident_solar_radiation>
+				<west_incident_solar_radiation>+0 Btu/h*sf</west_incident_solar_radiation>
+				<southwest_incident_solar_radiation>+0 Btu/h*sf</southwest_incident_solar_radiation>
+				<south_incident_solar_radiation>+0 Btu/h*sf</south_incident_solar_radiation>
+				<southeast_incident_solar_radiation>+0 Btu/h*sf</southeast_incident_solar_radiation>
+				<east_incident_solar_radiation>+0 Btu/h*sf</east_incident_solar_radiation>
+				<northeast_incident_solar_radiation>+0 Btu/h*sf</northeast_incident_solar_radiation>
+				<heating_cop_curve>DEFAULT</heating_cop_curve>
+				<heating_cap_curve>DEFAULT</heating_cap_curve>
+				<cooling_cop_curve>DEFAULT</cooling_cop_curve>
+				<cooling_cap_curve>DEFAULT</cooling_cap_curve>
+				<use_latent_heat>TRUE</use_latent_heat>
+				<include_fan_heatgain>TRUE</include_fan_heatgain>
+				<thermostat_deadband>+2 degF</thermostat_deadband>
+				<dlc_offset>+0 degF</dlc_offset>
+				<thermostat_cycle_time>0</thermostat_cycle_time>
+				<thermostat_off_cycle_time>-1</thermostat_off_cycle_time>
+				<thermostat_on_cycle_time>-1</thermostat_on_cycle_time>
+				<thermostat_last_cycle_time>INIT</thermostat_last_cycle_time>
+				<heating_setpoint>+0 degF</heating_setpoint>
+				<cooling_setpoint>+74 degF</cooling_setpoint>
+				<design_heating_setpoint>+0 degF</design_heating_setpoint>
+				<design_cooling_setpoint>+0 degF</design_cooling_setpoint>
+				<over_sizing_factor>+0</over_sizing_factor>
+				<simulate_window_openings>FALSE</simulate_window_openings>
+				<is_window_open>+0</is_window_open>
+				<window_low_temperature_cutoff>+60 degF</window_low_temperature_cutoff>
+				<window_high_temperature_cutoff>+80 degF</window_high_temperature_cutoff>
+				<window_quadratic_coefficient>+0</window_quadratic_coefficient>
+				<window_linear_coefficient>+0</window_linear_coefficient>
+				<window_constant_coefficient>+1</window_constant_coefficient>
+				<window_temperature_delta>+5</window_temperature_delta>
+				<design_heating_capacity>+0 Btu/h</design_heating_capacity>
+				<design_cooling_capacity>+0 Btu/h</design_cooling_capacity>
+				<cooling_design_temperature>+0 degF</cooling_design_temperature>
+				<heating_design_temperature>+0 degF</heating_design_temperature>
+				<design_peak_solar>+0 Btu/h*sf</design_peak_solar>
+				<design_internal_gains>+0 W/sf</design_internal_gains>
+				<air_heat_fraction>+0 pu</air_heat_fraction>
+				<mass_solar_gain_fraction>+0 pu</mass_solar_gain_fraction>
+				<mass_internal_gain_fraction>+0 pu</mass_internal_gain_fraction>
+				<auxiliary_heat_capacity>+0 Btu/h</auxiliary_heat_capacity>
+				<aux_heat_deadband>+0 degF</aux_heat_deadband>
+				<aux_heat_temperature_lockout>+0 degF</aux_heat_temperature_lockout>
+				<aux_heat_time_delay>+0 s</aux_heat_time_delay>
+				<cooling_supply_air_temp>+50 degF</cooling_supply_air_temp>
+				<heating_supply_air_temp>+150 degF</heating_supply_air_temp>
+				<duct_pressure_drop>+0 inH2O</duct_pressure_drop>
+				<fan_design_power>-1 W</fan_design_power>
+				<fan_low_power_fraction>+0 pu</fan_low_power_fraction>
+				<fan_power>+0 kW</fan_power>
+				<fan_design_airflow>+0 cfm</fan_design_airflow>
+				<fan_impedance_fraction>+0.2534 pu</fan_impedance_fraction>
+				<fan_power_fraction>+0.0135 pu</fan_power_fraction>
+				<fan_current_fraction>+0.7332 pu</fan_current_fraction>
+				<fan_power_factor>+0.96 pu</fan_power_factor>
+				<heating_demand>+0 kW</heating_demand>
+				<cooling_demand>+0 kW</cooling_demand>
+				<heating_COP>+0 pu</heating_COP>
+				<cooling_COP>+0 Btu/kWh</cooling_COP>
+				<air_temperature>+73 degF</air_temperature>
+				<outdoor_temperature>+0 degF</outdoor_temperature>
+				<outdoor_rh>+0 %</outdoor_rh>
+				<mass_heat_capacity>+0 Btu/degF</mass_heat_capacity>
+				<mass_heat_coeff>+0 Btu/degF*h</mass_heat_coeff>
+				<mass_temperature>+0 degF</mass_temperature>
+				<air_volume>+0 cf</air_volume>
+				<air_mass>+0 lb</air_mass>
+				<air_heat_capacity>+0 Btu/degF</air_heat_capacity>
+				<latent_load_fraction>+0 pu</latent_load_fraction>
+				<total_thermal_mass_per_floor_area>+2.7 Btu/degF*sf</total_thermal_mass_per_floor_area>
+				<interior_surface_heat_transfer_coeff>+0 Btu/h*degF*sf</interior_surface_heat_transfer_coeff>
+				<number_of_stories>+0</number_of_stories>
+				<is_AUX_on>+0</is_AUX_on>
+				<is_HEAT_on>+0</is_HEAT_on>
+				<is_COOL_on>+0</is_COOL_on>
+				<thermal_storage_present>+0</thermal_storage_present>
+				<thermal_storage_in_use>+0</thermal_storage_in_use>
+				<auxiliary_strategy>NONE</auxiliary_strategy>
+				<system_mode>UNKNOWN</system_mode>
+				<last_system_mode>UNKNOWN</last_system_mode>
+				<heating_system_type>HEAT_PUMP</heating_system_type>
+				<cooling_system_type>0</cooling_system_type>
+				<auxiliary_system_type>0</auxiliary_system_type>
+				<fan_type>0</fan_type>
+				<thermal_integrity_level>UNKNOWN</thermal_integrity_level>
+				<glass_type>LOW_E_GLASS</glass_type>
+				<window_frame>THERMAL_BREAK</window_frame>
+				<glazing_treatment>CLEAR</glazing_treatment>
+				<glazing_layers>TWO</glazing_layers>
+				<motor_model>NONE</motor_model>
+				<motor_efficiency>AVERAGE</motor_efficiency>
+				<last_mode_timer>0</last_mode_timer>
+				<hvac_motor_efficiency>+1 unit</hvac_motor_efficiency>
+				<hvac_motor_loss_power_factor>+0.125 unit</hvac_motor_loss_power_factor>
+				<Rroof>+0 degF*sf*h/Btu</Rroof>
+				<Rwall>+13.5 degF*sf*h/Btu</Rwall>
+				<Rfloor>+0 degF*sf*h/Btu</Rfloor>
+				<Rwindows>+0 degF*sf*h/Btu</Rwindows>
+				<Rdoors>+0 degF*sf*h/Btu</Rdoors>
+				<hvac_breaker_rating>+0 A</hvac_breaker_rating>
+				<hvac_power_factor>+0 unit</hvac_power_factor>
+				<hvac_load>+0 kW</hvac_load>
+				<last_heating_load>+0 kW</last_heating_load>
+				<last_cooling_load>+0 kW</last_cooling_load>
+				<hvac_power>+0+0i kVA</hvac_power>
+				<total_load>+0 kW</total_load>
+				<panel>power_factor: 0.000000; power.r: 0.000000</panel>
+				<panel.energy>+0+0i kVAh</panel.energy>
+				<panel.power>+0+0i kVA</panel.power>
+				<panel.peak_demand>+0+0i kVA</panel.peak_demand>
+				<panel.heatgain>+0 Btu/h</panel.heatgain>
+				<panel.cumulative_heatgain>+0 Btu</panel.cumulative_heatgain>
+				<panel.heatgain_fraction>+0 pu</panel.heatgain_fraction>
+				<panel.current_fraction>+0 pu</panel.current_fraction>
+				<panel.impedance_fraction>+0 pu</panel.impedance_fraction>
+				<panel.power_fraction>+0 pu</panel.power_fraction>
+				<panel.power_factor>+0</panel.power_factor>
+				<panel.constant_power>+0+0i kVA</panel.constant_power>
+				<panel.constant_current>+0+0i kVA</panel.constant_current>
+				<panel.constant_admittance>+0+0i kVA</panel.constant_admittance>
+				<panel.voltage_factor>+0 pu</panel.voltage_factor>
+				<panel.breaker_amps>+0 A</panel.breaker_amps>
+				<design_internal_gain_density>+0.6 W/sf</design_internal_gain_density>
+				<compressor_on>FALSE</compressor_on>
+				<compressor_count>0</compressor_count>
+				<hvac_last_on>INIT</hvac_last_on>
+				<hvac_last_off>INIT</hvac_last_off>
+				<hvac_period_length>+0 s</hvac_period_length>
+				<hvac_duty_cycle>+0</hvac_duty_cycle>
+				<a>+0</a>
+				<b>+0</b>
+				<c>+0</c>
+				<d>+0</d>
+				<c1>+0</c1>
+				<c2>+0</c2>
+				<A3>+0</A3>
+				<A4>+0</A4>
+				<k1>+0</k1>
+				<k2>+0</k2>
+				<r1>+0</r1>
+				<r2>+0</r2>
+				<Teq>+0</Teq>
+				<Tevent>+0</Tevent>
+				<Qi>+0</Qi>
+				<Qa>+0</Qa>
+				<Qm>+0</Qm>
+				<Qh>+0</Qh>
+				<Qlatent>+0</Qlatent>
+				<dTair>+0</dTair>
+				<adj_cooling_cap>+0</adj_cooling_cap>
+				<adj_heating_cap>+0</adj_heating_cap>
+				<adj_cooling_cop>+0</adj_cooling_cop>
+				<adj_heating_cop>+0</adj_heating_cop>
+				<thermostat_control>FULL</thermostat_control>
+				<shape>FULL</shape>
+				<load>impedance_fraction: 0.200000; power_fraction: 0.800000; power_factor: 0.000000; power.r: 0.000000</load>
+				<energy>+0+0i kVAh</energy>
+				<power>+0+0i kVA</power>
+				<peak_demand>+0+0i kVA</peak_demand>
+				<heatgain>+0 Btu/h</heatgain>
+				<cumulative_heatgain>+0 Btu</cumulative_heatgain>
+				<heatgain_fraction>+0 pu</heatgain_fraction>
+				<current_fraction>+0 pu</current_fraction>
+				<impedance_fraction>+0.2 pu</impedance_fraction>
+				<power_fraction>+0.8 pu</power_fraction>
+				<power_factor>+0</power_factor>
+				<constant_power>+0+0i kVA</constant_power>
+				<constant_current>+0+0i kVA</constant_current>
+				<constant_admittance>+0+0i kVA</constant_admittance>
+				<voltage_factor>+0 pu</voltage_factor>
+				<breaker_amps>+0 A</breaker_amps>
+				<override>NORMAL</override>
+				<power_state>OFF</power_state>
+			</house>
+			<house>
+				<id>50</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>b2m3_house_meter</parent>
+				<name>b2m3_house</name>
+				<floor_area>+0 sf</floor_area>
+				<gross_wall_area>+0 sf</gross_wall_area>
+				<ceiling_height>+0 ft</ceiling_height>
+				<aspect_ratio>+3</aspect_ratio>
+				<envelope_UA>+0 Btu/degF*h</envelope_UA>
+				<window_wall_ratio>+0</window_wall_ratio>
+				<number_of_doors>+0</number_of_doors>
+				<exterior_wall_fraction>+0</exterior_wall_fraction>
+				<interior_exterior_wall_ratio>+0</interior_exterior_wall_ratio>
+				<exterior_ceiling_fraction>+0</exterior_ceiling_fraction>
+				<exterior_floor_fraction>+0</exterior_floor_fraction>
+				<window_shading>+0</window_shading>
+				<window_exterior_transmission_coefficient>+0</window_exterior_transmission_coefficient>
+				<solar_heatgain_factor>+0</solar_heatgain_factor>
+				<airchange_per_hour>+0.8 unit/h</airchange_per_hour>
+				<airchange_UA>+0 Btu/degF*h</airchange_UA>
+				<UA>-1 Btu/degF*h</UA>
+				<internal_gain>+0 Btu/h</internal_gain>
+				<solar_gain>+0 Btu/h</solar_gain>
+				<incident_solar_radiation>+0 Btu/h*sf</incident_solar_radiation>
+				<heat_cool_gain>+0 Btu/h</heat_cool_gain>
+				<include_solar_quadrant>W|S|E|N</include_solar_quadrant>
+				<horizontal_diffuse_solar_radiation>+0 Btu/h*sf</horizontal_diffuse_solar_radiation>
+				<north_incident_solar_radiation>+0 Btu/h*sf</north_incident_solar_radiation>
+				<northwest_incident_solar_radiation>+0 Btu/h*sf</northwest_incident_solar_radiation>
+				<west_incident_solar_radiation>+0 Btu/h*sf</west_incident_solar_radiation>
+				<southwest_incident_solar_radiation>+0 Btu/h*sf</southwest_incident_solar_radiation>
+				<south_incident_solar_radiation>+0 Btu/h*sf</south_incident_solar_radiation>
+				<southeast_incident_solar_radiation>+0 Btu/h*sf</southeast_incident_solar_radiation>
+				<east_incident_solar_radiation>+0 Btu/h*sf</east_incident_solar_radiation>
+				<northeast_incident_solar_radiation>+0 Btu/h*sf</northeast_incident_solar_radiation>
+				<heating_cop_curve>DEFAULT</heating_cop_curve>
+				<heating_cap_curve>DEFAULT</heating_cap_curve>
+				<cooling_cop_curve>DEFAULT</cooling_cop_curve>
+				<cooling_cap_curve>DEFAULT</cooling_cap_curve>
+				<use_latent_heat>TRUE</use_latent_heat>
+				<include_fan_heatgain>TRUE</include_fan_heatgain>
+				<thermostat_deadband>+1.5 degF</thermostat_deadband>
+				<dlc_offset>+0 degF</dlc_offset>
+				<thermostat_cycle_time>0</thermostat_cycle_time>
+				<thermostat_off_cycle_time>-1</thermostat_off_cycle_time>
+				<thermostat_on_cycle_time>-1</thermostat_on_cycle_time>
+				<thermostat_last_cycle_time>INIT</thermostat_last_cycle_time>
+				<heating_setpoint>+0 degF</heating_setpoint>
+				<cooling_setpoint>+73.5 degF</cooling_setpoint>
+				<design_heating_setpoint>+0 degF</design_heating_setpoint>
+				<design_cooling_setpoint>+0 degF</design_cooling_setpoint>
+				<over_sizing_factor>+0</over_sizing_factor>
+				<simulate_window_openings>FALSE</simulate_window_openings>
+				<is_window_open>+0</is_window_open>
+				<window_low_temperature_cutoff>+60 degF</window_low_temperature_cutoff>
+				<window_high_temperature_cutoff>+80 degF</window_high_temperature_cutoff>
+				<window_quadratic_coefficient>+0</window_quadratic_coefficient>
+				<window_linear_coefficient>+0</window_linear_coefficient>
+				<window_constant_coefficient>+1</window_constant_coefficient>
+				<window_temperature_delta>+5</window_temperature_delta>
+				<design_heating_capacity>+0 Btu/h</design_heating_capacity>
+				<design_cooling_capacity>+0 Btu/h</design_cooling_capacity>
+				<cooling_design_temperature>+0 degF</cooling_design_temperature>
+				<heating_design_temperature>+0 degF</heating_design_temperature>
+				<design_peak_solar>+0 Btu/h*sf</design_peak_solar>
+				<design_internal_gains>+0 W/sf</design_internal_gains>
+				<air_heat_fraction>+0 pu</air_heat_fraction>
+				<mass_solar_gain_fraction>+0 pu</mass_solar_gain_fraction>
+				<mass_internal_gain_fraction>+0 pu</mass_internal_gain_fraction>
+				<auxiliary_heat_capacity>+0 Btu/h</auxiliary_heat_capacity>
+				<aux_heat_deadband>+0 degF</aux_heat_deadband>
+				<aux_heat_temperature_lockout>+0 degF</aux_heat_temperature_lockout>
+				<aux_heat_time_delay>+0 s</aux_heat_time_delay>
+				<cooling_supply_air_temp>+50 degF</cooling_supply_air_temp>
+				<heating_supply_air_temp>+150 degF</heating_supply_air_temp>
+				<duct_pressure_drop>+0 inH2O</duct_pressure_drop>
+				<fan_design_power>-1 W</fan_design_power>
+				<fan_low_power_fraction>+0 pu</fan_low_power_fraction>
+				<fan_power>+0 kW</fan_power>
+				<fan_design_airflow>+0 cfm</fan_design_airflow>
+				<fan_impedance_fraction>+0.2534 pu</fan_impedance_fraction>
+				<fan_power_fraction>+0.0135 pu</fan_power_fraction>
+				<fan_current_fraction>+0.7332 pu</fan_current_fraction>
+				<fan_power_factor>+0.96 pu</fan_power_factor>
+				<heating_demand>+0 kW</heating_demand>
+				<cooling_demand>+0 kW</cooling_demand>
+				<heating_COP>+0 pu</heating_COP>
+				<cooling_COP>+0 Btu/kWh</cooling_COP>
+				<air_temperature>+73 degF</air_temperature>
+				<outdoor_temperature>+0 degF</outdoor_temperature>
+				<outdoor_rh>+0 %</outdoor_rh>
+				<mass_heat_capacity>+0 Btu/degF</mass_heat_capacity>
+				<mass_heat_coeff>+0 Btu/degF*h</mass_heat_coeff>
+				<mass_temperature>+0 degF</mass_temperature>
+				<air_volume>+0 cf</air_volume>
+				<air_mass>+0 lb</air_mass>
+				<air_heat_capacity>+0 Btu/degF</air_heat_capacity>
+				<latent_load_fraction>+0 pu</latent_load_fraction>
+				<total_thermal_mass_per_floor_area>+0 Btu/degF*sf</total_thermal_mass_per_floor_area>
+				<interior_surface_heat_transfer_coeff>+0 Btu/h*degF*sf</interior_surface_heat_transfer_coeff>
+				<number_of_stories>+0</number_of_stories>
+				<is_AUX_on>+0</is_AUX_on>
+				<is_HEAT_on>+0</is_HEAT_on>
+				<is_COOL_on>+0</is_COOL_on>
+				<thermal_storage_present>+0</thermal_storage_present>
+				<thermal_storage_in_use>+0</thermal_storage_in_use>
+				<auxiliary_strategy>NONE</auxiliary_strategy>
+				<system_mode>UNKNOWN</system_mode>
+				<last_system_mode>UNKNOWN</last_system_mode>
+				<heating_system_type>HEAT_PUMP</heating_system_type>
+				<cooling_system_type>0</cooling_system_type>
+				<auxiliary_system_type>0</auxiliary_system_type>
+				<fan_type>0</fan_type>
+				<thermal_integrity_level>UNKNOWN</thermal_integrity_level>
+				<glass_type>LOW_E_GLASS</glass_type>
+				<window_frame>ALUMINIUM</window_frame>
+				<glazing_treatment>CLEAR</glazing_treatment>
+				<glazing_layers>TWO</glazing_layers>
+				<motor_model>NONE</motor_model>
+				<motor_efficiency>AVERAGE</motor_efficiency>
+				<last_mode_timer>0</last_mode_timer>
+				<hvac_motor_efficiency>+1 unit</hvac_motor_efficiency>
+				<hvac_motor_loss_power_factor>+0.125 unit</hvac_motor_loss_power_factor>
+				<Rroof>+0 degF*sf*h/Btu</Rroof>
+				<Rwall>+0 degF*sf*h/Btu</Rwall>
+				<Rfloor>+0 degF*sf*h/Btu</Rfloor>
+				<Rwindows>+0 degF*sf*h/Btu</Rwindows>
+				<Rdoors>+0 degF*sf*h/Btu</Rdoors>
+				<hvac_breaker_rating>+0 A</hvac_breaker_rating>
+				<hvac_power_factor>+0 unit</hvac_power_factor>
+				<hvac_load>+0 kW</hvac_load>
+				<last_heating_load>+0 kW</last_heating_load>
+				<last_cooling_load>+0 kW</last_cooling_load>
+				<hvac_power>+0+0i kVA</hvac_power>
+				<total_load>+0 kW</total_load>
+				<panel>power_factor: 0.000000; power.r: 0.000000</panel>
+				<panel.energy>+0+0i kVAh</panel.energy>
+				<panel.power>+0+0i kVA</panel.power>
+				<panel.peak_demand>+0+0i kVA</panel.peak_demand>
+				<panel.heatgain>+0 Btu/h</panel.heatgain>
+				<panel.cumulative_heatgain>+0 Btu</panel.cumulative_heatgain>
+				<panel.heatgain_fraction>+0 pu</panel.heatgain_fraction>
+				<panel.current_fraction>+0 pu</panel.current_fraction>
+				<panel.impedance_fraction>+0 pu</panel.impedance_fraction>
+				<panel.power_fraction>+0 pu</panel.power_fraction>
+				<panel.power_factor>+0</panel.power_factor>
+				<panel.constant_power>+0+0i kVA</panel.constant_power>
+				<panel.constant_current>+0+0i kVA</panel.constant_current>
+				<panel.constant_admittance>+0+0i kVA</panel.constant_admittance>
+				<panel.voltage_factor>+0 pu</panel.voltage_factor>
+				<panel.breaker_amps>+0 A</panel.breaker_amps>
+				<design_internal_gain_density>+0.6 W/sf</design_internal_gain_density>
+				<compressor_on>FALSE</compressor_on>
+				<compressor_count>0</compressor_count>
+				<hvac_last_on>INIT</hvac_last_on>
+				<hvac_last_off>INIT</hvac_last_off>
+				<hvac_period_length>+0 s</hvac_period_length>
+				<hvac_duty_cycle>+0</hvac_duty_cycle>
+				<a>+0</a>
+				<b>+0</b>
+				<c>+0</c>
+				<d>+0</d>
+				<c1>+0</c1>
+				<c2>+0</c2>
+				<A3>+0</A3>
+				<A4>+0</A4>
+				<k1>+0</k1>
+				<k2>+0</k2>
+				<r1>+0</r1>
+				<r2>+0</r2>
+				<Teq>+0</Teq>
+				<Tevent>+0</Tevent>
+				<Qi>+0</Qi>
+				<Qa>+0</Qa>
+				<Qm>+0</Qm>
+				<Qh>+0</Qh>
+				<Qlatent>+0</Qlatent>
+				<dTair>+0</dTair>
+				<adj_cooling_cap>+0</adj_cooling_cap>
+				<adj_heating_cap>+0</adj_heating_cap>
+				<adj_cooling_cop>+0</adj_cooling_cop>
+				<adj_heating_cop>+0</adj_heating_cop>
+				<thermostat_control>FULL</thermostat_control>
+				<shape>FULL</shape>
+				<load>impedance_fraction: 0.200000; power_fraction: 0.800000; power_factor: 0.000000; power.r: 0.000000</load>
+				<energy>+0+0i kVAh</energy>
+				<power>+0+0i kVA</power>
+				<peak_demand>+0+0i kVA</peak_demand>
+				<heatgain>+0 Btu/h</heatgain>
+				<cumulative_heatgain>+0 Btu</cumulative_heatgain>
+				<heatgain_fraction>+0 pu</heatgain_fraction>
+				<current_fraction>+0 pu</current_fraction>
+				<impedance_fraction>+0.2 pu</impedance_fraction>
+				<power_fraction>+0.8 pu</power_fraction>
+				<power_factor>+0</power_factor>
+				<constant_power>+0+0i kVA</constant_power>
+				<constant_current>+0+0i kVA</constant_current>
+				<constant_admittance>+0+0i kVA</constant_admittance>
+				<voltage_factor>+0 pu</voltage_factor>
+				<breaker_amps>+0 A</breaker_amps>
+				<override>NORMAL</override>
+				<power_state>OFF</power_state>
+			</house>
+		</house_list>
+		<waterheater_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</waterheater_list>
+		<lights_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</lights_list>
+		<refrigerator_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</refrigerator_list>
+		<clotheswasher_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</clotheswasher_list>
+		<dishwasher_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</dishwasher_list>
+		<occupantload_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</occupantload_list>
+		<plugload_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</plugload_list>
+		<microwave_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</microwave_list>
+		<range_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</range_list>
+		<freezer_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</freezer_list>
+		<dryer_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</dryer_list>
+		<evcharger_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</evcharger_list>
+		<ZIPload_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</ZIPload_list>
+		<thermal_storage_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</thermal_storage_list>
+		<evcharger_det_list>
+			<inherits_from>residential_enduse</inherits_from>
+		</evcharger_det_list>
+	</residential>
+</gridlabd>

@@ -1,0 +1,2 @@
+WARNING  [INIT] : house_e:0 has no parent triplex_meter defined; using static voltages
+WARNING  [2000-01-01 14:00:00 PST] : last warning message was repeated 21 times

@@ -1,0 +1,11 @@
+# file...... hist_test.csv
+# date...... Mon Feb 15 10:35:14 2016
+# user...... hard312
+# host...... (null)
+# group.... class=node
+# counting interval.. 10.000000
+# sampling interval.. 10.000000
+# limit..... 1
+# timestamp,2000-3000,2600-3400, [3000-4000], (3000 .. 4000), ..3600, ..4800
+2000-01-01 00:00:10 EST,6,8,10,7,14,20,
+# end of tape

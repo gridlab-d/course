@@ -1,0 +1,10 @@
+# file...... test_powerflow_triplex_load.csv
+# date...... Mon Feb 15 10:34:07 2016
+# user...... hard312
+# host...... (null)
+# target.... triplex_load 6
+# trigger... (none)
+# interval.. 300
+# limit..... 13
+# timestamp,constant_power_1,constant_power_2,constant_power_12,constant_current_1,constant_current_2,constant_current_12,constant_impedance_1,constant_impedance_2,constant_impedance_12,tpm:measured_power
+2012-01-01 00:00:00 PST,+593.75+195.156j,+0+200j,+900-435.89j,+2.08333+25.8419d,+3.33333-31.7883d,+0+0j,+115.2-0j,+34.2-11.241j,+51.84+25.1073j,+3463.25+6.12512d

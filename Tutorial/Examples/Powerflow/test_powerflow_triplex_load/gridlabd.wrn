@@ -1,0 +1,2 @@
+WARNING  [INIT] : Node:tpl is parented to a swing node and will get folded into it.
+WARNING  [INIT] : Node:tpl does not have the same nominal voltage as its parent - copying voltage from parent.

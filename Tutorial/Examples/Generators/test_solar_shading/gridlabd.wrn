@@ -1,0 +1,8 @@
+WARNING  [INIT] : Node:trip_fixed_meter is parented to a swing node and will get folded into it.
+WARNING  [INIT] : Inverter control mode is not specified! Using default: CONSTANT_PF
+WARNING  [INIT] : Inverter status is unknown! Using default: ONLINE
+WARNING  [INIT] : Inverter type is unknown! Using default: PWM
+WARNING  [INIT] : Efficiency unspecified - defaulted to 0.900000 for this inverter type
+WARNING  [INIT] : Generator control mode is not specified! Using default: SUPPLY_DRIVEN
+WARNING  [INIT] : Solar panel status is unknown! Using default: ONLINE
+WARNING  [INIT] : Solar panel type is unknown! Using default: SINGLE_CRYSTAL_SILICON

@@ -1,0 +1,41 @@
+Reliability report for test_deterministic.glm
+Number of customers = 26
+
+1366 metrics based around 1-hour base (outage-hours)
+
+Events for year starting at 2000-01-01 00:00:00
+Annual Event #,Metric Interval Event #,Starting DateTime (YYYY-MM-DD hh:mm:ss),Ending DateTime (YYYY-MM-DD hh:mm:ss),Object type,Object Name,Inducing Object,"Protective" Device,Desired Fault type,Implemented Fault Type,Number customers affected,Secondary number of customers affected
+1,1,2000-01-01 03:00:00,2000-01-01 03:07:00,fuse,node703-703b,testgendev,node703-703b,FUS-ABC,FUS-ABC,4,0
+
+SAIFI = 0.153846, SAIDI = 0.017949, CAIDI = 0.116667, ASAI = 0.999998, MAIFI = 0.000000
+Interval values: SAIFI = 0.153846, SAIDI = 0.017949, CAIDI = 0.116667, ASAI = 0.999998, MAIFI = 0.000000
+
+New Metric Interval started at 2000-01-01 05:00:00
+
+2,1,2000-01-01 05:02:05,2000-01-01 05:02:10,underground_line,node720-706,testgendevB,node704-704b,DLG-X,DLG-BC,4,3
+3,2,2000-01-01 05:03:05,2000-01-01 05:03:10,underground_line,node704-714,testgendevB,N/A,DLG-X,None,0,0
+4,3,2000-01-01 05:03:00,2000-01-01 05:07:00,underground_line,node702-703,testgendever,reg799-781,SLG-A,SLG-A,26,0
+5,4,2000-01-01 05:05:00,2000-01-01 05:10:00,underground_line,node711-741,testgendev,N/A,SLG-A,None,0,0
+6,5,2000-01-01 05:10:11,2000-01-01 05:12:15,switch,sw_load834_834b,testgen_sw,sw_load834_834b,SW-AC,SW-CA,7,0
+7,6,2000-01-01 05:10:11,2000-01-01 05:19:15,fuse,node703-703b,testgen_fuse,node703-703b,FUS-ABC,FUS-ABC,7,0
+8,7,2000-01-01 05:21:00,2000-01-01 05:24:10,underground_line,node733-734,testgendev,node708-708b,SLG-A,SLG-A,9,2
+
+SAIFI = 0.423077, SAIDI = 0.058632, CAIDI = 0.138586, ASAI = 0.999993, MAIFI = 1.961538
+Interval values: SAIFI = 0.269231, SAIDI = 0.040684, CAIDI = 0.151111, ASAI = 0.999993, MAIFI = 1.961538
+
+New Metric Interval started at 2000-01-01 10:00:00
+
+9,1,2000-01-01 10:25:00,2000-01-01 10:40:00,underground_line,node711-741,testgendevTLL,sw_838_838b,TLL,TLL,3,8
+
+SAIFI = 0.538462, SAIDI = 0.087479, CAIDI = 0.162460, ASAI = 0.999990, MAIFI = 2.269231
+Interval values: SAIFI = 0.115385, SAIDI = 0.028846, CAIDI = 0.250000, ASAI = 0.999990, MAIFI = 0.307692
+
+New Metric Interval started at 2000-01-01 15:00:00
+
+10,1,2000-01-01 15:10:11,2000-01-01 15:19:15,fuse,node703-703b,testgen_fuse,node703-703b,FUS-ABC,FUS-ABC,4,0
+
+SAIFI = 0.692308, SAIDI = 0.110726, CAIDI = 0.159938, ASAI = 0.999987, MAIFI = 2.269231
+Interval values: SAIFI = 0.153846, SAIDI = 0.023248, CAIDI = 0.151111, ASAI = 0.999987, MAIFI = 0.000000
+
+New Metric Interval started at 2000-01-01 20:00:00
+

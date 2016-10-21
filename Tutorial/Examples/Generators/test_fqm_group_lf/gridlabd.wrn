@@ -1,0 +1,8 @@
+WARNING  [INIT] : inverter:battery_inverter_633 is LOAD_FOLLOWING and/or power-factor regulating based on a meter or triplex_meter, ensure the inverter is connected inline with that object!
+WARNING  [INIT] : v_max was not given -- using default value (battery: 63)
+WARNING  [INIT] : eta_rt was not given -- using default value (battery: 63)
+WARNING  [INIT] : inverter:battery_inverter_684 is LOAD_FOLLOWING and/or power-factor regulating based on a meter or triplex_meter, ensure the inverter is connected inline with that object!
+WARNING  [INIT] : v_max was not given -- using default value (battery: 70)
+WARNING  [INIT] : eta_rt was not given -- using default value (battery: 70)
+WARNING  [2014-01-01 08:13:48 PST] : inverter:battery_inverter_633 - battery at or below the SOC reserve - no discharging allowed
+WARNING  [2014-01-01 22:01:30 PST] : last warning message was repeated 2 times
